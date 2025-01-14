@@ -1,5 +1,5 @@
-import Button from "@/component/global/Button";
-import UserModal from "@/component/modal/UserModal";
+import Button from "@/components/global/Button";
+import UserModal from "@/components/modal/UserModal";
 
 export default function Home() {
   return (

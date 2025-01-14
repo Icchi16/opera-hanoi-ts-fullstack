@@ -5,22 +5,22 @@ import {
   Plus_Jakarta_Sans,
 } from "next/font/google";
 import "./globals.css";
-import Header from "@/component/layout/Header";
-import Footer from "@/component/layout/Footer";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 const playfair = Playfair_Display({
-  variable: "--font-playfair-display",
+  variable: "--font-title",
   subsets: ["vietnamese"],
 });
 
 const playfair_sc = Playfair_Display_SC({
   weight: ["400", "700", "900"],
-  variable: "--font-playfair-display-sc",
+  variable: "--cta",
   subsets: ["vietnamese"],
 });
 
 const jakarta = Plus_Jakarta_Sans({
-  variable: "--font-plus-jakarta-sans",
+  variable: "--body",
   subsets: ["vietnamese"],
 });
 
