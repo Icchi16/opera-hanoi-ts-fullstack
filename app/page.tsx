@@ -1,4 +1,5 @@
 import Button from "@/components/global/Button";
+import Title from "@/components/global/Title";
 import UserModal from "@/components/modal/UserModal";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
       <UserModal />
       <main>
         This is main
+        <Title>hello</Title>
         <Button type="arrow" />
       </main>
     </div>
