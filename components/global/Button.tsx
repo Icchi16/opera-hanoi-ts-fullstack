@@ -1,32 +1,31 @@
-import clsx from "clsx";
-
-interface ButtonProps {
-  type: "box" | "arrow" | "icon";
-  children: React.ReactNode;
-  className?: string;
+interface ButtonProps extends React.HTMLAttributes<HTMLDivElement> {
+  type?: "box" | "arrow" | "icon";
 }
-
-const Button: React.FC<ButtonProps> = ({ type, children, className }) => {
+const Button: React.FC<ButtonProps> = ({ type, children, ...props }) => {
   return (
     <>
       {(() => {
         switch (type) {
           case "box":
             return (
-              <div className={clsx(className?.concat(" ", " "))}>
+              <div {...props}>
                 {children}
               </div>
             );
           case "arrow":
-            return <div className={className}>{children}</div>;
+            return (
+              <div {...props}>
+                {children}
+              </div>
+            );
           case "icon":
             return (
-              <div className={clsx(className?.concat(" ", "text-bg1"))}>
+              <div {...props}>
                 {children}
               </div>
             );
           default:
-            return <></>;
+            return <div {...props}>{children}</div>;
         }
       })()}
     </>

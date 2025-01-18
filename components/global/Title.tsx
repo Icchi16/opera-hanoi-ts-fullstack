@@ -3,7 +3,7 @@ interface TitleProps {
 }
 
 const Title: React.FC<TitleProps> = ({ children }) => {
-  return <div>{children}</div>;
+  return <div className="">{children}</div>;
 };
 
 export default Title;
