@@ -9,7 +9,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
 const playfair = Playfair_Display({
-  variable: "--font-title",
+  variable: "--title",
   subsets: ["vietnamese"],
 });
 
@@ -35,14 +35,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${playfair.variable} ${playfair_sc.variable} ${jakarta.variable} antialiased`}
-      >
-        <Header />
-        <>{children}</>
-        <Footer />
-      </body>
-    </html>
+      <html lang="en">
+        <body
+          className={`${playfair.variable} ${playfair_sc.variable} ${jakarta.variable} antialiased`}
+        >
+          <Header />
+          <>{children}</>
+          <Footer />
+        </body>
+      </html>
   );
 }

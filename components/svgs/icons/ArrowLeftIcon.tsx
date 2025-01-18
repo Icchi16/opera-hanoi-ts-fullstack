@@ -1,4 +1,4 @@
-const ArrowLeft = ({ ...props }) => (
+const ArrowLeftIcon = ({ ...props }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={800}
@@ -15,4 +15,4 @@ const ArrowLeft = ({ ...props }) => (
     />
   </svg>
 );
-export default ArrowLeft;
+export default ArrowLeftIcon;
