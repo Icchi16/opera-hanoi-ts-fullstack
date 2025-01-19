@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Button from "../global/Button";
 import ArrowLeft from "../svgs/icons/ArrowLeftIcon";
 import CrossIcon from "../svgs/icons/CrossIcon";
-import Signin from "./SignIn";
+import Signin from "./SignInmodal";
 import Signup from "./SignUp";
 import UserPanel from "./UserPanel";
 import clsx from "clsx";
@@ -28,7 +28,7 @@ const UserModal: React.FC<UserModalProps> = ({ isOpen }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-y-0 right-0 w-[414px] bg-main text-secondary p-8 flex flex-col space-y-[30px]">
+    <div className="h-full bg-main text-secondary p-8 flex flex-col space-y-[30px]">
       {/*back and close*/}
       <div className="flex justify-between ">
         <Button
@@ -44,7 +44,11 @@ const UserModal: React.FC<UserModalProps> = ({ isOpen }) => {
           <span className="leading-none relative bottom-[2px]">quay lại</span>
         </Button>
         <Button onClick={handleClose}>
-          <CrossIcon width={32} height={32} className="stroke-2" />
+          <CrossIcon
+            width={32}
+            height={32}
+            className="fill-secondary stroke-secondary"
+          />
         </Button>
       </div>
 
