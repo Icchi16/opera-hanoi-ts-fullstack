@@ -20,7 +20,7 @@ const Button: React.FC<ButtonProps> = ({
             return (
               <div
                 className={clsx(
-                  "font-bold py-[10px] w-full bg-main text-secondary",
+                  "waves waves-primary w-full btn btn-lg rounded-none ",
                   className
                 )}
                 {...props}

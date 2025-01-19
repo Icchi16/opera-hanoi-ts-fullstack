@@ -1,11 +1,13 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Button from "../global/Button";
 import ArrowLeft from "../svgs/icons/ArrowLeftIcon";
 import CrossIcon from "../svgs/icons/CrossIcon";
-import Signin from "./Signin";
-import Signup from "./Signup";
+import Signin from "./SignIn";
+import Signup from "./SignUp";
 import UserPanel from "./UserPanel";
+import clsx from "clsx";
 
 interface UserModalProps {
   isOpen: boolean;
@@ -13,10 +15,10 @@ interface UserModalProps {
 }
 
 const UserModal: React.FC<UserModalProps> = ({ isOpen }) => {
-  // const iconSize = 32;
+  const [currentDisplay, setCurrentDisplay] = useState("siggup");
 
   const handleGoBack = () => {
-    console.log("clicked on quay lai");
+    console.log(currentDisplay);
   };
 
   const handleClose = () => {
@@ -30,8 +32,13 @@ const UserModal: React.FC<UserModalProps> = ({ isOpen }) => {
       {/*back and close*/}
       <div className="flex justify-between ">
         <Button
-          className="font-bold cursor-pointer flex items-center"
-          onClick={handleGoBack}
+          className={clsx(
+            "font-bold cursor-pointer flex items-center",
+            currentDisplay === "signin" && "hidden"
+          )}
+          onClick={() => {
+            setCurrentDisplay("signin");
+          }}
         >
           <ArrowLeft width={32} height={24} className="stroke-2" />
           <span className="leading-none relative bottom-[2px]">quay lại</span>
@@ -40,10 +47,11 @@ const UserModal: React.FC<UserModalProps> = ({ isOpen }) => {
           <CrossIcon width={32} height={32} className="stroke-2" />
         </Button>
       </div>
-      
+
+      {/* modal content */}
       <UserPanel currentDisplay={false} />
-      <Signin currentDisplay={false} />
-      <Signup currentDisplay={true} />
+      <Signin currentDisplay={currentDisplay === "signin"} />
+      <Signup currentDisplay={false} />
     </div>
   );
 };

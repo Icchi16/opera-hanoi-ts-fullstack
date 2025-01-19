@@ -1,12 +1,17 @@
+
+
 import type { Metadata } from "next";
 import {
   Playfair_Display,
   Playfair_Display_SC,
   Plus_Jakarta_Sans,
 } from "next/font/google";
+import 'node-waves/dist/waves.css';
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import FlyonuiScript from "../components/FlyonuiScript";
+import Script from "next/script";
 
 const playfair = Playfair_Display({
   variable: "--title",
@@ -34,15 +39,22 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+
   return (
-      <html lang="en">
-        <body
-          className={`${playfair.variable} ${playfair_sc.variable} ${jakarta.variable} antialiased`}
-        >
-          <Header />
-          <>{children}</>
-          <Footer />
-        </body>
-      </html>
+    <html lang="en" data-theme="opera">
+      <body
+        className={`${playfair.variable} ${playfair_sc.variable} ${jakarta.variable} antialiased`}
+      >
+        <FlyonuiScript />
+        <Header />
+        <>{children}</>
+        <Footer />
+        <Script
+          type="text/javascript"
+          src="/node-waves/dist/waves.min.js"
+        ></Script>
+      </body>
+    </html>
   );
 }
