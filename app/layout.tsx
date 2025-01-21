@@ -4,12 +4,12 @@ import {
   Playfair_Display_SC,
   Plus_Jakarta_Sans,
 } from "next/font/google";
+import "swiper/css";
 import "node-waves/dist/waves.css";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import FlyonuiScript from "../components/FlyonuiScript";
-// import Script from "next/script";
 
 const playfair = Playfair_Display({
   variable: "--title",

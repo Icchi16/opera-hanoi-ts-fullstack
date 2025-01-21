@@ -6,6 +6,9 @@ html,
 body,
 :root {
   height: 100%;
+  color: var(--main);
+  background: var(--secondary);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 :root {
@@ -17,8 +20,10 @@ body,
   --cardBackground: #232121;
 }
 
-body {
-  color: var(--main);
-  background: var(--secondary);
-  font-family: Arial, Helvetica, sans-serif;
+
+.container {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 2rem 0 2rem;
 }

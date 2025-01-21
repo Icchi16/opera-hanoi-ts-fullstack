@@ -1,24 +1,23 @@
+"use client";
+
 import CartIcon from "../svgs/icons/CartIcon";
 import SearchIcon from "../svgs/icons/SearchIcon";
 import Logo from "../svgs/Logo";
 import UserIcon from "../svgs/icons/UserIcon";
 import UserModal from "../modal/UserModal";
+import Button from "../global/Button";
 
-interface HeaderProps {}
-
-const Header: React.FC<HeaderProps> = () => {
-  const iconSize = 32;
-
+const Header: React.FC<HTMLDivElement> = () => {
   return (
-    <div className="bg-[#2b2a28] min-h-32 flex items-center">
+    <header className="fixed inset-x-0 top-0 bg-[#2b2928] min-h-32 flex items-center z-10 font-[family-name:var(--body)]">
       <nav className="navbar max-w-[1440px] md:px-8 mx-auto bg-transparent flex justify-between items-center">
         <a href="">
           <Logo width={182} height={80} className="fill-white" />
         </a>
         <div className="flex">
           <ul className="menu md:menu-horizontal bg-transparent rounded-none [&_li>*]:rounded-none [&_li>*]:text-white hover:[&_li>*]:bg-transparent w-[521px] flex justify-between">
-            <li className="link link-animated">
-              <a href="#">Sự kiện</a>
+            <li className="link link-animated ">
+              <a href="#/">Sự kiện</a>
             </li>
             <li className="link link-animated">
               <a href="#">Lịch tình</a>
@@ -47,15 +46,15 @@ const Header: React.FC<HeaderProps> = () => {
               </a>
             </li>
             <li>
-              <button
-                type="button"
+              <Button
+                type="icon"
                 aria-haspopup="dialog"
                 aria-expanded="false"
                 aria-controls="overlay-end-example"
                 data-overlay="#overlay-end-example"
               >
                 <UserIcon className="stroke-white" />
-              </button>
+              </Button>
             </li>
           </ul>
           <ul className="flex space-x-1 text-white text-sm">
@@ -79,7 +78,7 @@ const Header: React.FC<HeaderProps> = () => {
           <UserModal isOpen={true} />
         </div>
       </nav>
-    </div>
+    </header>
   );
 };
 

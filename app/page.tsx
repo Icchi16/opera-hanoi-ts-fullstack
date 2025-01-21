@@ -2,19 +2,58 @@
 // import Waves from "node-waves";
 import Title from "@/components/global/Title";
 import UserModal from "@/components/modal/UserModal";
+import HeroSlick from "./components/HeroSlick";
+import { heroShows, highlightShows } from "@/samples/shows";
+import HighlightSlick from "./components/HighlightSlick";
+import Button from "@/components/global/Button";
 
 export default function Home() {
-  // useEffect(() => {
-  //   Waves.init();
-  //   Waves.attach(".waves");
-  // }, []);
-
   return (
-    <div className="font-[family-name:var(--body)] text-main max-w-[1440px] md:px-8 mx-auto">
+    <div className="font-[family-name:var(--body)] text-main ">
       <UserModal isOpen={false} />
-      <main>
-        This is main
-        <Title>hello</Title>
+      <main className="">
+        {/* hero */}
+        <section id="hero" className="h-screen">
+          <HeroSlick heroShows={heroShows} />
+        </section>
+
+        {/* Highlight */}
+        <section id="highlight" className="bg-bg1 m-0 py-1">
+          <div className="container">
+            <Title>Nổi bật</Title>
+            <HighlightSlick highlightShows={highlightShows} />
+          </div>
+        </section>
+
+        {/* For You */}
+        <section id="forU" className="bg-bg1 m-0 p-1">
+          <div className="container">
+            <Title>Dành cho bạn</Title>
+            <Button type="box">Hi</Button>
+          </div>
+        </section>
+
+        {/* AboutUs */}
+        <section id="aboutUs" className="bg-bg1 m-0 p-1">
+          <div className="container">aboutUs</div>
+        </section>
+
+        {/* News */}
+        <section id="news" className="bg-bg1 m-0 p-1">
+          <div className="container">
+            <Title>Tin tức</Title>
+          </div>
+
+          {/* Partners */}
+          <section id="partners" className="bg-bg1 m-0 p-1">
+            <div className="container">partners</div>
+          </section>
+
+          {/* Subscribe */}
+          <section id="subscribe" className="bg-bg1 m-0 p-1">
+            <div className="container">subscribe</div>
+          </section>
+        </section>
       </main>
     </div>
   );
