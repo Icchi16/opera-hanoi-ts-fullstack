@@ -10,6 +10,7 @@ const shows: ShowMetadata[] = [
     title: "Hàm Lệ Minh Châu",
     date: new Date("2025-10-11"),
     time: 120,
+    forUser: true,
     staff: [
       { id: 0, pos: "Director", name: "Emeritus Artist Trần Ly Ly" },
       { id: 1, pos: "Artistic Director", name: "Phan Mạnh Đức" },
@@ -23,6 +24,7 @@ const shows: ShowMetadata[] = [
     title: "Les Misérables",
     date: new Date("2025-09-20"),
     time: 150,
+    forUser: true,
     staff: [
       { id: 0, pos: "Director", name: "Emeritus Artist Trần Ly Ly" },
       { id: 1, pos: "Artistic Director", name: "Phan Mạnh Đức" },
@@ -36,6 +38,7 @@ const shows: ShowMetadata[] = [
     title: "Hương Sắc Tình Yêu",
     date: new Date("2025-01-21"),
     time: 120,
+    forUser: true,
     staff: [
       { id: 0, pos: "Director", name: "Emeritus Artist Trần Ly Ly" },
       { id: 1, pos: "Artistic Director", name: "Phan Mạnh Đức" },
@@ -49,6 +52,7 @@ const shows: ShowMetadata[] = [
     title: "Ánh Sáng Vĩnh Cửu",
     date: new Date("2025-05-13"),
     time: 120,
+    forUser: true,
     staff: [
       { id: 0, pos: "Director", name: "Emeritus Artist Trần Ly Ly" },
       { id: 1, pos: "Artistic Director", name: "Phan Mạnh Đức" },
@@ -62,6 +66,7 @@ const shows: ShowMetadata[] = [
     title: "Dưới Ánh Trăng Mờ",
     date: new Date("2025-01-09"),
     time: 120,
+    forUser: true,
     staff: [
       { id: 0, pos: "Director", name: "Emeritus Artist Trần Ly Ly" },
       { id: 1, pos: "Artistic Director", name: "Phan Mạnh Đức" },
@@ -75,6 +80,7 @@ const shows: ShowMetadata[] = [
     title: "Dưới Ánh Trăng Mờ",
     date: new Date("2025-01-09"),
     time: 120,
+    forUser: false,
     staff: [
       { id: 0, pos: "Director", name: "Emeritus Artist Trần Ly Ly" },
       { id: 1, pos: "Artistic Director", name: "Phan Mạnh Đức" },
@@ -88,6 +94,7 @@ const shows: ShowMetadata[] = [
     title: "Dưới Ánh Trăng Mờ",
     date: new Date("2025-01-09"),
     time: 120,
+    forUser: false,
     staff: [
       { id: 0, pos: "Director", name: "Emeritus Artist Trần Ly Ly" },
       { id: 1, pos: "Artistic Director", name: "Phan Mạnh Đức" },
@@ -101,6 +108,7 @@ const shows: ShowMetadata[] = [
     title: "Dưới Ánh Trăng Mờ",
     date: new Date("2025-01-09"),
     time: 120,
+    forUser: false,
     staff: [
       { id: 0, pos: "Director", name: "Emeritus Artist Trần Ly Ly" },
       { id: 1, pos: "Artistic Director", name: "Phan Mạnh Đức" },
@@ -112,3 +120,4 @@ export default shows;
 
 export const heroShows = _.filter(shows, (show) => show.isHero);
 export const highlightShows = _.filter(shows, (show) => show.isHighlight);
+export const forYouShows = _.filter(shows, (show) => show.forUser);

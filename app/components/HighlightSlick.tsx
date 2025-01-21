@@ -7,7 +7,6 @@ import Button from "@/components/global/Button";
 import { ShowMetadata } from "@/types/extra";
 import dayjs from "dayjs";
 import "dayjs/locale/vi";
-import { highlightShows } from "../../samples/shows";
 
 interface HighlightProps {
   highlightShows: ShowMetadata[];

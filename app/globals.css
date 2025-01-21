@@ -20,10 +20,18 @@ body,
   --cardBackground: #232121;
 }
 
-
 .container {
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
   padding: 0 2rem 0 2rem;
+}
+
+#forYouMenu .active {
+  font-weight: 900;
+  background: none;
+}
+
+.menu.no-flash .menu-item:active {
+  background-color: transparent;
 }

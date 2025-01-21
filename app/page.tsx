@@ -5,7 +5,7 @@ import UserModal from "@/components/modal/UserModal";
 import HeroSlick from "./components/HeroSlick";
 import { heroShows, highlightShows } from "@/samples/shows";
 import HighlightSlick from "./components/HighlightSlick";
-import Button from "@/components/global/Button";
+import ForYou from "./components/ForYou";
 
 export default function Home() {
   return (
@@ -26,10 +26,12 @@ export default function Home() {
         </section>
 
         {/* For You */}
-        <section id="forU" className="bg-bg1 m-0 p-1">
+        <section id="forU" className="bg-bg1 m-0 py-1">
           <div className="container">
             <Title>Dành cho bạn</Title>
-            <Button type="box">Hi</Button>
+            <div className="px-8">
+              <ForYou />
+            </div>
           </div>
         </section>
 
@@ -46,7 +48,9 @@ export default function Home() {
 
           {/* Partners */}
           <section id="partners" className="bg-bg1 m-0 p-1">
-            <div className="container">partners</div>
+            <div className="container">
+              <div className="px-2">partners</div>
+            </div>
           </section>
 
           {/* Subscribe */}
