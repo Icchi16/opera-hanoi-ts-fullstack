@@ -7,5 +7,7 @@ export interface ShowMetadata {
   title: string;
   date: Date;
   time: number;
+  shortDesc?: string;
+  longDesc?: string
   staff: { id: number; pos: string; name: string }[];
 }

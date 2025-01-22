@@ -3,7 +3,7 @@
 import Title from "@/components/global/Title";
 import UserModal from "@/components/modal/UserModal";
 import HeroSlick from "./components/HeroSlick";
-import { heroShows, highlightShows } from "@/samples/shows";
+import { forYouShows, heroShows, highlightShows } from "@/samples/shows";
 import HighlightSlick from "./components/HighlightSlick";
 import ForYou from "./components/ForYou";
 
@@ -30,7 +30,7 @@ export default function Home() {
           <div className="container">
             <Title>Dành cho bạn</Title>
             <div className="px-8">
-              <ForYou />
+              <ForYou forYouShows={forYouShows} />
             </div>
           </div>
         </section>
