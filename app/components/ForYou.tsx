@@ -1,6 +1,9 @@
+"use client";
+
 import Button from "@/components/global/Button";
 import { ShowMetadata } from "@/types/extra";
 import clsx from "clsx";
+import dayjs from "dayjs";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -16,13 +19,13 @@ interface ForYouProps {
 
 const ForYou: React.FC<ForYouProps> = ({ forYouShows }) => {
   const forYouMenu: ForYouItem[] = [
-    { id: 0, name: "giao hưởng", link: "#" },
-    { id: 1, name: "ballet", link: "#" },
-    { id: 2, name: "kịch", link: "#" },
-    { id: 3, name: "ca nhạc", link: "#" },
-    { id: 4, name: "liveshow", link: "#" },
-    { id: 5, name: "xiếc", link: "#" },
-    { id: 6, name: "sự kiện", link: "#" },
+    { id: 0, name: "giao hưởng", link: "/asf" },
+    { id: 1, name: "ballet", link: "/asf" },
+    { id: 2, name: "kịch", link: "/asf" },
+    { id: 3, name: "ca nhạc", link: "/sdg" },
+    { id: 4, name: "liveshow", link: "/dfgdf" },
+    { id: 5, name: "xiếc", link: "/hhfg" },
+    { id: 6, name: "sự kiện", link: "/retter" },
   ];
 
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -32,45 +35,84 @@ const ForYou: React.FC<ForYouProps> = ({ forYouShows }) => {
   };
 
   return (
-    <div className="flex justify-between">
+    <div className="flex justify-between py-4">
       {/* menu */}
-      <div className="flex w-[300px]">
+      <div className="flex w-[400px]">
         <ul
-          className="[&_li>*]:transition-all hover:[&_li>*]:font-black no-flash"
+          className="[&_li>*]:transition-all hover:[&_li>*]:font-black no-flash flex flex-col space-y-3"
           id="forYouMenu"
         >
           {forYouMenu.map((menu, index) => (
             <li key={menu.id}>
-              <a
-                href={menu.link}
-                className={clsx("capitalize", index == activeIndex && "active")}
+              <button
+                className={clsx(
+                  "uppercase cursor-pointer text-[24px]",
+                  index === activeIndex && "active"
+                )}
+                onClick={() => handleMenuClick(index)}
               >
-                <button onClick={() => handleMenuClick(index)}>
-                  {menu.name}
-                </button>
-              </a>
+                {menu.name}
+              </button>
             </li>
           ))}
         </ul>
       </div>
 
       {/* card */}
-      <div className="flex flex-wrap">
+      <div className="flex flex-col justify-between w-full">
         {forYouShows.map((show) => (
-          <div id="forYouCard" key={show.id}>
-            <div className="flex">
-              /
-              <div className="">
-                <Image />
-              </div>
+          <a id="forYouCard" key={show.id} href="#" className="">
+            <div className="mb-12 bg-cardBg shadow-black shadow-2xl hover:shadow-2xl transition-shadow">
               <div className="flex">
-                <div>{}</div>
-                <div>{show.title}</div>
-                <div>{show.shortDesc}</div>
-                <Button type="arrow">Book Now</Button>
+                {/* Cover */}
+                <div className="relative min-w-[383px] min-h-[526px]">
+                  <Image
+                    alt={show.title}
+                    layout="fill"
+                    src={show.cover}
+                    className="object-cover object-center"
+                  />
+                </div>
+                {/* Info */}
+                <div className="flex flex-col px-12 py-13 w-full self-stretch space-y-4 justify-between">
+                  <div className="self-end font-[family-name:var(--title)] italic text-3xl">
+                    {dayjs(show.date).format("DD MMMM")}
+                  </div>
+                  <div className="text-white line-clamp-2 text-4xl font-[family-name:var(--title)]">
+                    {show.title} - {show.shortDesc}
+                  </div>
+                  <div className="text-white line-clamp-4">
+                    sdasdasjkhkajsdfh askdjhf lksed sdlkfjha skjfdh kasl
+                    sdasdasjkhkajsdfh askdjhf lksed sdlkfjha skjfdh kasl
+                    sdasdasjkhkajsdfh askdjhf lksed sdlkfjha skjfdh kasl
+                    sdasdasjkhkajsdfh askdjhf lksed sdlkfjha skjfdh kasl
+                    sdasdasjkhkajsdfh askdjhf lksed sdlkfjha skjfdh kasl
+                    sdasdasjkhkajsdfh askdjhf lksed sdlkfjha skjfdh kasl
+                    sdasdasjkhkajsdfh askdjhf lksed sdlkfjha skjfdh kasl
+                    sdasdasjkhkajsdfh askdjhf lksed sdlkfjha skjfdh kasl
+                    sdasdasjkhkajsdfh askdjhf lksed sdlkfjha skjfdh kasl
+                    sdasdasjkhkajsdfh askdjhf lksed sdlkfjha skjfdh kasl
+                    sdasdasjkhkajsdfh askdjhf lksed sdlkfjha skjfdh kasl
+                    sdasdasjkhkajsdfh askdjhf lksed sdlkfjha skjfdh kasl
+                    sdasdasjkhkajsdfh askdjhf lksed sdlkfjha skjfdh kasl
+                    sdasdasjkhkajsdfh askdjhf lksed sdlkfjha skjfdh kasl
+                    sdasdasjkhkajsdfh askdjhf lksed sdlkfjha skjfdh kasl
+                    sdasdasjkhkajsdfh askdjhf lksed sdlkfjha skjfdh kasl
+                    sdasdasjkhkajsdfh askdjhf lksed sdlkfjha skjfdh kasl
+                    sdasdasjkhkajsdfh askdjhf lksed sdlkfjha skjfdh kasl
+                    sdasdasjkhkajsdfh askdjhf lksed sdlkfjha skjfdh kasl
+                    sdasdasjkhkajsdfh askdjhf lksed sdlkfjha skjfdh kasl
+                  </div>
+                  <Button
+                    type="arrow"
+                    className="w-fit italic font-[family-name:var(--cta)] text-5xl"
+                  >
+                    Đặt Vé<span></span>
+                  </Button>
+                </div>
               </div>
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </div>

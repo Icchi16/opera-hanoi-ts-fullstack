@@ -12,7 +12,7 @@ const shows: ShowMetadata[] = [
     time: 120,
     forUser: true,
     staff: [
-      { id: 0, pos: "Director, Emeritus Artist", name: "Trần Ly Ly" },
+      { id: 0, pos: "Director", name: "Trần Ly Ly" },
       { id: 1, pos: "Artistic Director", name: "Phan Mạnh Đức" },
     ],
   },
@@ -122,5 +122,5 @@ export const heroShows = _.filter(shows, (show) => show.isHero);
 export const highlightShows = _.filter(shows, (show) => show.isHighlight);
 export const forYouShows = _.sampleSize(
   _.filter(shows, (show) => show.forUser),
-  4
+  2
 );

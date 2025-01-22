@@ -18,7 +18,7 @@ export default function Home() {
         </section>
 
         {/* Highlight */}
-        <section id="highlight" className="bg-bg1 m-0 py-1">
+        <section id="highlight" className="bg-bg1 m-0 pb-24 pt-6">
           <div className="container">
             <Title>Nổi bật</Title>
             <HighlightSlick highlightShows={highlightShows} />
@@ -26,7 +26,7 @@ export default function Home() {
         </section>
 
         {/* For You */}
-        <section id="forU" className="bg-bg1 m-0 py-1">
+        <section id="forU" className="bg-bg2 m-0 pb-24 pt-6">
           <div className="container">
             <Title>Dành cho bạn</Title>
             <div className="px-8">

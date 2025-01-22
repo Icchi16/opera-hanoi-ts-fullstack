@@ -1,3 +1,4 @@
+import React, { forwardRef } from "react";
 import clsx from "clsx";
 
 interface ButtonProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -5,43 +6,46 @@ interface ButtonProps extends React.HTMLAttributes<HTMLDivElement> {
   onClick?: () => void;
   className?: string;
 }
-const Button: React.FC<ButtonProps> = ({
-  type,
-  children,
-  className,
-  onClick,
-  ...props
-}) => {
-  return (
-    <button onClick={onClick}>
-      {(() => {
-        switch (type) {
-          case "box":
-            return (
-              <div
-                className={clsx(
-                  "waves waves-primary w-full btn btn-lg rounded-none ",
-                  className
-                )}
-                {...props}
-              >
-                {children}
-              </div>
-            );
-          case "arrow":
-            return <div {...props}>{children}</div>;
-          case "icon":
-            return <div {...props}>{children}</div>;
-          default:
-            return (
-              <div className={className} {...props}>
-                {children}
-              </div>
-            );
-        }
-      })()}
-    </button>
-  );
-};
+
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ type, children, className, onClick, ...props }, ref) => {
+    return (
+      <button onClick={onClick} ref={ref}>
+        {(() => {
+          switch (type) {
+            case "box":
+              return (
+                <div
+                  className={clsx(
+                    "waves waves-primary w-full btn btn-lg rounded-none ",
+                    className
+                  )}
+                  {...props}
+                >
+                  {children}
+                </div>
+              );
+            case "arrow":
+              return (
+                <div className={clsx("", className)} {...props}>
+                  {children}
+                </div>
+              );
+            case "icon":
+              return <div {...props}>{children}</div>;
+            default:
+              return (
+                <div className={className} {...props}>
+                  {children}
+                </div>
+              );
+          }
+        })()}
+      </button>
+    );
+  }
+);
+
+Button.displayName = "Button";
 
 export default Button;

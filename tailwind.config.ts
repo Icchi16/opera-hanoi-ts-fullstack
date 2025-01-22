@@ -22,6 +22,9 @@ export default {
       },
     },
   },
+  variants: {
+    boxShadow: ["responsive", "hover", "focus"],
+  },
   flyonui: {
     themes: [
       {
