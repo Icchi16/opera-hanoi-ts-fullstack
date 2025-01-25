@@ -1,34 +1,31 @@
 "use client";
 
-import { useForm, SubmitHandler } from "react-hook-form";
+import { useForm, FieldValues, SubmitHandler } from "react-hook-form";
 import Field from "../global/Field";
 import Button from "../global/Button";
+import { useState } from "react";
 
 interface SignupProps {
   currentDisplay: boolean;
   onSwitchModal: (modal: string) => void;
 }
 
-interface Inputs {
-  example: string;
-  exampleRequired: string;
-}
-
 const SignUpModal: React.FC<SignupProps> = ({
   currentDisplay,
   onSwitchModal,
 }) => {
-  if (!currentDisplay) return null;
+  const [isLoading, setIsLoading] = useState(false);
 
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
-  } = useForm<Inputs>();
+  } = useForm<FieldValues>({ defaultValues: {} });
 
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+  // Handle Submit
+  const onSubmit: SubmitHandler<FieldValues> = (data) => console.log(data);
 
+  if (!currentDisplay) return null;
   return (
     <div className="flex flex-col space-y-6">
       {/* Modal Content */}
@@ -50,6 +47,10 @@ const SignUpModal: React.FC<SignupProps> = ({
             inputClassName=""
             labelClassName="!text-secondary"
             borderClassName="!bg-secondary"
+            register={register}
+            errors={errors}
+            disabled={isLoading}
+            required
           />
           <Field
             type="text"
@@ -59,6 +60,10 @@ const SignUpModal: React.FC<SignupProps> = ({
             inputClassName=""
             labelClassName="!text-secondary"
             borderClassName="!bg-secondary"
+            register={register}
+            errors={errors}
+            disabled={isLoading}
+            required
           />
           <Field
             type="email"
@@ -68,6 +73,10 @@ const SignUpModal: React.FC<SignupProps> = ({
             inputClassName=""
             labelClassName="!text-secondary"
             borderClassName="!bg-secondary"
+            register={register}
+            errors={errors}
+            disabled={isLoading}
+            required
           />
           <Field
             type="text"
@@ -77,6 +86,9 @@ const SignUpModal: React.FC<SignupProps> = ({
             inputClassName=""
             labelClassName="!text-secondary"
             borderClassName="!bg-secondary"
+            register={register}
+            errors={errors}
+            disabled={isLoading}
           />
           <Field
             type="password"
@@ -86,6 +98,9 @@ const SignUpModal: React.FC<SignupProps> = ({
             inputClassName=""
             labelClassName="!text-secondary"
             borderClassName="!bg-secondary"
+            register={register}
+            errors={errors}
+            disabled={isLoading}
           />
           <Field
             type="password"
@@ -95,8 +110,11 @@ const SignUpModal: React.FC<SignupProps> = ({
             inputClassName=""
             labelClassName="!text-secondary"
             borderClassName="!bg-secondary"
+            register={register}
+            errors={errors}
+            disabled={isLoading}
           />
-          <Button type="box" className="btn-secondary mt-8">
+          <Button type="box" className="btn-secondary mt-8" submit>
             Đăng ký
           </Button>
           <div>

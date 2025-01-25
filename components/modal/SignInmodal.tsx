@@ -1,7 +1,9 @@
 "use client";
 
+import { useForm, FieldValues, SubmitHandler } from "react-hook-form";
 import Button from "../global/Button";
 import Field from "../global/Field";
+import { useState } from "react";
 
 interface SigninProps {
   currentDisplay: boolean;
@@ -12,12 +14,26 @@ const SignInModal: React.FC<SigninProps> = ({
   currentDisplay,
   onSwitchModal,
 }) => {
-  // const iconSize = 32;
-  if (!currentDisplay) return null;
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSignIn = () => {
-    console.log("clicked sign in");
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FieldValues>();
+
+  // Handle Submit
+  const onSubmit: SubmitHandler<FieldValues> = (data) => {
+    console.log("form submitted");
+    console.log(data);
   };
+
+  const onError: SubmitHandler<FieldValues> = (data) => {
+    console.log("form is error");
+    console.log(data);
+  };
+
+  if (!currentDisplay) return null;
 
   return (
     <div className="flex flex-col space-y-6" aria-live="assertive">
@@ -32,7 +48,10 @@ const SignInModal: React.FC<SigninProps> = ({
       {/* Login Button */}
       <div className="flex flex-col space-y-4 relative bottom-2">
         <div className="flex flex-col space-y-4">
-          <div className="flex flex-col space-y-3">
+          <form
+            onSubmit={handleSubmit(onSubmit, onError)}
+            className="flex flex-col space-y-3"
+          >
             <Field
               type="email"
               id="email"
@@ -41,6 +60,10 @@ const SignInModal: React.FC<SigninProps> = ({
               inputClassName=""
               labelClassName="!text-secondary"
               borderClassName="!bg-secondary"
+              register={register}
+              errors={errors}
+              disabled={isLoading}
+              required
             />
             <Field
               type="password"
@@ -50,11 +73,15 @@ const SignInModal: React.FC<SigninProps> = ({
               inputClassName=""
               labelClassName="!text-secondary"
               borderClassName="!bg-secondary"
+              register={register}
+              errors={errors}
+              disabled={isLoading}
+              required
             />
-          </div>
-          <Button type="box" className="btn-secondary" onClick={handleSignIn}>
-            Đăng nhập
-          </Button>
+            <Button type="box" className="btn-secondary" submit>
+              Đăng nhập
+            </Button>
+          </form>
         </div>
         {/* Divider */}
         <div className="flex items-center justify-center">

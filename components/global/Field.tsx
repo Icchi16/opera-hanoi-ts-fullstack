@@ -2,6 +2,7 @@
 
 import clsx from "clsx";
 import { useState } from "react";
+import { FieldErrors, FieldValues, UseFormRegister } from "react-hook-form";
 
 interface FieldProps {
   label: string;
@@ -11,6 +12,12 @@ interface FieldProps {
   inputClassName?: string;
   labelClassName?: string;
   borderClassName?: string;
+  required?: boolean;
+  register: UseFormRegister<FieldValues>;
+  errors: FieldErrors;
+  disabled?: boolean;
+  regexValidate?: RegExp;
+  validate?: (...args: unknown[]) => boolean;
 }
 
 const Field: React.FC<FieldProps> = ({
@@ -21,13 +28,26 @@ const Field: React.FC<FieldProps> = ({
   inputClassName,
   labelClassName,
   borderClassName,
+  register,
+  required,
+  errors,
+  disabled,
+  validate,
+  regexValidate,
 }) => {
-  const [fieldValue, setFieldValue] = useState("");
   const [isFocused, setIsFocused] = useState(false);
 
   return (
     <div className="relative w-full">
       <input
+        {...register(id, {
+          validate: validate,
+          required: required,
+          pattern: {
+            value: regexValidate ?? /./g,
+            message: "Invalid input",
+          },
+        })}
         type={type}
         placeholder={placeholder}
         className={clsx(
@@ -35,10 +55,7 @@ const Field: React.FC<FieldProps> = ({
           inputClassName
         )}
         id={id}
-        value={fieldValue}
-        onChange={(e) => {
-          setFieldValue(e.target.value);
-        }}
+        name={id}
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
       />

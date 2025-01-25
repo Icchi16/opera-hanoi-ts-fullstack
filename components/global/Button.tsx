@@ -5,12 +5,13 @@ interface ButtonProps extends React.HTMLAttributes<HTMLDivElement> {
   type?: "box" | "arrow" | "icon";
   onClick?: () => void;
   className?: string;
+  submit?: boolean;
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ type, children, className, onClick, ...props }, ref) => {
+  ({ type, children, className, onClick, submit, ...props }, ref) => {
     return (
-      <button onClick={onClick} ref={ref}>
+      <button onClick={onClick} ref={ref} type={submit ? "submit" : "button"}>
         {(() => {
           switch (type) {
             case "box":
