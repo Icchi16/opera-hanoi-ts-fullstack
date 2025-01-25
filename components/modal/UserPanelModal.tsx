@@ -6,10 +6,10 @@ interface UserPanelProps {
   currentDisplay: boolean;
 }
 
-const UserPanel: React.FC<UserPanelProps> = ({ currentDisplay }) => {
+const UserPanelModal: React.FC<UserPanelProps> = ({ currentDisplay }) => {
   if (!currentDisplay) return null;
 
   return <div>sdasd</div>;
 };
 
-export default UserPanel;
+export default UserPanelModal;

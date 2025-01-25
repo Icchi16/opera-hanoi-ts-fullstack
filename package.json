@@ -24,7 +24,9 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@iconify-icon/react": "^2.3.0",
     "@iconify/json": "^2.2.297",
+    "@iconify/react": "^5.2.0",
     "@iconify/tailwind": "^1.2.0",
     "@types/lodash": "^4.17.14",
     "@types/node": "^20",

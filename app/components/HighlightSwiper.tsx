@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useRef, useEffect } from "react";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import React, { useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import Image from "next/image";
 import Button from "@/components/global/Button";
@@ -9,12 +9,15 @@ import { ShowMetadata } from "@/types/extra";
 import dayjs from "dayjs";
 import "dayjs/locale/vi";
 import { NavigationOptions } from "swiper/types";
+import ArrowLeftIcon from "@/components/svgs/icons/ArrowLeftIcon";
+import ArrowRightIcon from "@/components/svgs/icons/ArrowRightIcon";
 
 interface HighlightProps {
   highlightShows: ShowMetadata[];
 }
 
-const HighlightSlick: React.FC<HighlightProps> = ({ highlightShows }) => {
+const HighlightSwiper
+: React.FC<HighlightProps> = ({ highlightShows }) => {
   dayjs.locale("vi");
 
   const prevRef = useRef<HTMLButtonElement>(null);
@@ -24,7 +27,7 @@ const HighlightSlick: React.FC<HighlightProps> = ({ highlightShows }) => {
     <div className="flex space-x-8">
       <Swiper
         slidesPerView={4}
-        spaceBetween={30}
+        spaceBetween={32}
         modules={[Navigation]}
         navigation={{
           nextEl: nextRef.current!,
@@ -52,7 +55,7 @@ const HighlightSlick: React.FC<HighlightProps> = ({ highlightShows }) => {
         {highlightShows.map((highlight) => (
           <SwiperSlide key={highlight.id}>
             <a href="#" className="group w-full">
-              <figure className="absolute inset-0 z-0 shadow-2xl shadow-black group-hover:shadow-xl transition-all">
+              <figure className="absolute inset-0 z-0 shadow-lg shadow-black group-hover:shadow-2xl group-hover:shadow-black transition-all">
                 <Image
                   alt={highlight.title}
                   src={highlight.cover}
@@ -110,16 +113,21 @@ const HighlightSlick: React.FC<HighlightProps> = ({ highlightShows }) => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="flex flex-col">
-        <Button type="box" ref={prevRef} className="swiper-button-prev">
-          Prev
+      <div className="flex flex-col justify-center space-y-4">
+        <Button type="box" ref={prevRef} className="swiper-button-prev px-4">
+          <span>
+            <ArrowLeftIcon className="h-10 w-10" />
+          </span>
         </Button>
-        <Button type="box" ref={nextRef} className="swiper-button-next">
-          Next
+        <Button type="box" ref={nextRef} className="swiper-button-next px-4">
+          <span>
+            <ArrowRightIcon className="h-10 w-10" />
+          </span>
         </Button>
       </div>
     </div>
   );
 };
 
-export default HighlightSlick;
+export default HighlightSwiper
+;

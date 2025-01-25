@@ -24,7 +24,8 @@ body,
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 2rem 0 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 #forYouMenu .active {
@@ -34,4 +35,58 @@ body,
 
 .menu.no-flash .menu-item:active {
   background-color: transparent;
+}
+
+#aboutUs .swiper-pagination {
+}
+
+.swiper-pagination-bullet {
+  background-color: #ccc; /* Default bullet color */
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: transparent; /* Ensures background is not filled */
+  border: 2px solid #007aff; /* Ring color */
+  width: 16px;
+  height: 16px;
+}
+
+iconify-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.slide-in {
+  animation: slideIn 0.3s forwards;
+}
+
+.slide-out {
+  animation: slideOut 0.3s forwards;
+}
+
+.modal-enter {
+  opacity: 0;
+  transform: translateX(10%);
 }

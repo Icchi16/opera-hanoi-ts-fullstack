@@ -4,10 +4,31 @@ import CartIcon from "../svgs/icons/CartIcon";
 import SearchIcon from "../svgs/icons/SearchIcon";
 import Logo from "../svgs/Logo";
 import UserIcon from "../svgs/icons/UserIcon";
-import UserModal from "../modal/UserModal";
 import Button from "../global/Button";
+import ModalFrame from "../modal/ModalFrame";
+import { useEffect, useState } from "react";
 
 const Header: React.FC<HTMLDivElement> = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  const handleClose = () => {
+    setIsOpen(false);
+  };
+
+  useEffect(() => {
+    const handleEsc = (event: KeyboardEvent) => {
+      if (event.key === "Escape" && isOpen) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("keydown", handleEsc);
+
+    return () => {
+      document.removeEventListener("keydown", handleEsc);
+    };
+  }, [isOpen]);
+
   return (
     <header className="fixed inset-x-0 top-0 bg-[#2b2928] min-h-32 flex items-center z-10 font-[family-name:var(--body)]">
       <nav className="navbar max-w-[1440px] md:px-8 mx-auto bg-transparent flex justify-between items-center">
@@ -34,29 +55,22 @@ const Header: React.FC<HTMLDivElement> = () => {
           </ul>
         </div>
         <div className="flex items-center space-x-8">
-          <ul className="flex bg-transparent rounded-none space-x-5">
-            <li>
-              <a href="#">
-                <SearchIcon className="stroke-white " />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <CartIcon className="stroke-white" />
-              </a>
-            </li>
-            <li>
-              <Button
-                type="icon"
-                aria-haspopup="dialog"
-                aria-expanded="false"
-                aria-controls="overlay-end-example"
-                data-overlay="#overlay-end-example"
-              >
-                <UserIcon className="stroke-white" />
-              </Button>
-            </li>
-          </ul>
+          <div className="flex items-center bg-transparent rounded-none space-x-5">
+            <a href="#">
+              <SearchIcon className="stroke-white " />
+            </a>
+            <a href="#">
+              <CartIcon className="stroke-white" />
+            </a>
+            <Button
+              type="icon"
+              onClick={() => {
+                setIsOpen(!isOpen);
+              }}
+            >
+              <UserIcon className="stroke-white" />
+            </Button>
+          </div>
           <ul className="flex space-x-1 text-white text-sm">
             <li>
               <a href="#">VN</a>
@@ -69,14 +83,8 @@ const Header: React.FC<HTMLDivElement> = () => {
             </li>
           </ul>
         </div>
-        <div
-          id="overlay-end-example"
-          className="overlay overlay-open:-translate-x-10 drawer drawer-end !max-w-[414px] hidden"
-          role="dialog"
-          tabIndex={-1}
-        >
-          <UserModal isOpen={true} />
-        </div>
+
+        <ModalFrame isOpen={isOpen} onClose={handleClose} />
       </nav>
     </header>
   );

@@ -5,6 +5,7 @@ import {
   Plus_Jakarta_Sans,
 } from "next/font/google";
 import "swiper/css";
+import "swiper/css/pagination";
 import "node-waves/dist/waves.css";
 import "./globals.css";
 import Header from "@/components/layout/Header";
@@ -42,11 +43,11 @@ export default function RootLayout({
       <body
         className={`${playfair.variable} ${playfair_sc.variable} ${jakarta.variable} antialiased`}
       >
-        <FlyonuiScript />
         <Header />
+        <FlyonuiScript />
         <>{children}</>
-        <Footer />
         {/* <Script type="text/javascript" src="/node-waves/dist/waves.js"></Script> */}
+        <Footer />
       </body>
     </html>
   );

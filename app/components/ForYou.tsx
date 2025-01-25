@@ -62,7 +62,7 @@ const ForYou: React.FC<ForYouProps> = ({ forYouShows }) => {
       <div className="flex flex-col justify-between w-full">
         {forYouShows.map((show) => (
           <a id="forYouCard" key={show.id} href="#" className="">
-            <div className="mb-12 bg-cardBg shadow-black shadow-2xl hover:shadow-2xl transition-shadow">
+            <div className="mb-12 bg-cardBg shadow-black shadow-lg hover:shadow-2xl hover:shadow-black transition-shadow">
               <div className="flex">
                 {/* Cover */}
                 <div className="relative min-w-[383px] min-h-[526px]">
@@ -105,9 +105,12 @@ const ForYou: React.FC<ForYouProps> = ({ forYouShows }) => {
                   </div>
                   <Button
                     type="arrow"
-                    className="w-fit italic font-[family-name:var(--cta)] text-5xl"
+                    className="flex space-x-3 w-fit italic font-[family-name:var(--cta)] text-5xl hover:text-white transition-all duration-300"
                   >
-                    Đặt Vé<span></span>
+                    <div>Đặt Vé</div>
+                    {/* <div>
+                      <ArrowRightIcon className="w-16 h-16 relative bottom-1" />
+                    </div> */}
                   </Button>
                 </div>
               </div>

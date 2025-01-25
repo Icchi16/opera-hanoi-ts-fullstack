@@ -17,7 +17,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
               return (
                 <div
                   className={clsx(
-                    "waves waves-primary w-full btn btn-lg rounded-none ",
+                    "waves waves-primary w-full btn btn-lg rounded-none h-fit",
                     className
                   )}
                   {...props}
@@ -32,7 +32,11 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
                 </div>
               );
             case "icon":
-              return <div {...props}>{children}</div>;
+              return (
+                <div className={clsx("w-fit h-fit", className)} {...props}>
+                  {children}
+                </div>
+              );
             default:
               return (
                 <div className={className} {...props}>

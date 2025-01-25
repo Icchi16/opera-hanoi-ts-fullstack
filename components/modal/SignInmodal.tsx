@@ -5,9 +5,13 @@ import Field from "../global/Field";
 
 interface SigninProps {
   currentDisplay: boolean;
+  onSwitchModal: (modal: string) => void;
 }
 
-const Signin: React.FC<SigninProps> = ({ currentDisplay }) => {
+const SignInModal: React.FC<SigninProps> = ({
+  currentDisplay,
+  onSwitchModal,
+}) => {
   // const iconSize = 32;
   if (!currentDisplay) return null;
 
@@ -16,7 +20,7 @@ const Signin: React.FC<SigninProps> = ({ currentDisplay }) => {
   };
 
   return (
-    <div className="flex flex-col space-y-6">
+    <div className="flex flex-col space-y-6" aria-live="assertive">
       {/* Modal Content */}
       <h2 className="text-[40px] font-[family-name:var(--title)] text-secondary ">
         Tài khoản của bạn
@@ -73,10 +77,15 @@ const Signin: React.FC<SigninProps> = ({ currentDisplay }) => {
       {/* Sign up */}
       <div className="flex flex-col items-start text-sm leading-tight">
         <p className="">Ban chưa có tài khoản?</p>
-        <Button className="font-bold underline">Đăng ký ngay</Button>
+        <Button
+          onClick={() => onSwitchModal("signUp")}
+          className="font-bold underline"
+        >
+          Đăng ký ngay
+        </Button>
       </div>
     </div>
   );
 };
 
-export default Signin;
+export default SignInModal;

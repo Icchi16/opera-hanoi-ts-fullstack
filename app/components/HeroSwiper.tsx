@@ -2,7 +2,6 @@
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
 
 import Image from "next/image";
 import Button from "@/components/global/Button";
@@ -13,22 +12,9 @@ interface HeroProps {
   heroShows: ShowMetadata[];
 }
 
-const HeroSlick: React.FC<HeroProps> = ({ heroShows }) => {
-  const pagination = {
-    clickable: true,
-    dynamicBullets: true,
-    renderBullet: function (index: number, className: string) {
-      return '<span class="' + className + '">' + (index + 1) + "</span>";
-    },
-  };
-
+const HeroSwiper: React.FC<HeroProps> = ({ heroShows }) => {
   return (
-    <Swiper
-      direction={"vertical"}
-      pagination={pagination}
-      modules={[Pagination]}
-      className="mySwiper h-screen w-screen"
-    >
+    <Swiper direction={"vertical"} className="mySwiper h-screen w-screen">
       {heroShows.map((hero) => (
         <SwiperSlide key={hero.id}>
           <a href="#">
@@ -83,4 +69,4 @@ const HeroSlick: React.FC<HeroProps> = ({ heroShows }) => {
   );
 };
 
-export default HeroSlick;
+export default HeroSwiper;
