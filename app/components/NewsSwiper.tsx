@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useRef } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import React, { useEffect, useRef } from "react";
+import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import Image from "next/image";
 import Button from "@/components/global/Button";
@@ -18,6 +18,23 @@ interface NewsSlickProps {
 const NewsSwiper: React.FC<NewsSlickProps> = ({ news }) => {
   const prevRef = useRef<HTMLButtonElement>(null);
   const nextRef = useRef<HTMLButtonElement>(null);
+  const swiperRef = useRef<SwiperClass | null>(null);
+
+  useEffect(() => {
+    if (swiperRef.current && prevRef.current && nextRef.current) {
+      const swiperInstance = swiperRef.current;
+      const navigation = swiperInstance.params?.navigation as NavigationOptions;
+
+      if (navigation) {
+        navigation.prevEl = prevRef.current;
+        navigation.nextEl = nextRef.current;
+
+        swiperInstance.navigation.destroy(); // Destroy previous navigation instance
+        swiperInstance.navigation.init(); // Initialize new navigation instance
+        swiperInstance.navigation.update(); // Update the navigation
+      }
+    }
+  }, [news]);
 
   return (
     <div className="flex space-x-8">
@@ -32,9 +49,9 @@ const NewsSwiper: React.FC<NewsSlickProps> = ({ news }) => {
         onSwiper={(swiper) => {
           // Delay execution for the refs to be defined
           setTimeout(() => {
-            const navigation = swiper.params.navigation as NavigationOptions;
+            if (swiper.params && prevRef.current && nextRef.current) {
+              const navigation = swiper.params.navigation as NavigationOptions;
 
-            if (navigation) {
               // Override prevEl & nextEl now that refs are defined
               navigation.prevEl = prevRef.current;
               navigation.nextEl = nextRef.current;
@@ -44,7 +61,7 @@ const NewsSwiper: React.FC<NewsSlickProps> = ({ news }) => {
               swiper.navigation.init();
               swiper.navigation.update();
             }
-          });
+          }, 0); // Ensure immediate execution
         }}
         className="mySwiper py-4 pb-12"
       >

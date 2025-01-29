@@ -16,8 +16,7 @@ interface HighlightProps {
   highlightShows: ShowMetadata[];
 }
 
-const HighlightSwiper
-: React.FC<HighlightProps> = ({ highlightShows }) => {
+const HighlightSwiper: React.FC<HighlightProps> = ({ highlightShows }) => {
   dayjs.locale("vi");
 
   const prevRef = useRef<HTMLButtonElement>(null);
@@ -36,9 +35,13 @@ const HighlightSwiper
         onSwiper={(swiper) => {
           // Delay execution for the refs to be defined
           setTimeout(() => {
-            const navigation = swiper.params.navigation as NavigationOptions;
+            if (
+              swiper.params &&
+              prevRef.current &&
+              nextRef.current
+            ) {
+              const navigation = swiper.params.navigation as NavigationOptions;
 
-            if (navigation) {
               // Override prevEl & nextEl now that refs are defined
               navigation.prevEl = prevRef.current;
               navigation.nextEl = nextRef.current;
@@ -48,7 +51,7 @@ const HighlightSwiper
               swiper.navigation.init();
               swiper.navigation.update();
             }
-          });
+          }, 0); // Ensure immediate execution
         }}
         className="mySwiper py-4 pb-12"
       >
@@ -72,12 +75,12 @@ const HighlightSwiper
                   <div className="flex flex-col px-10 py-4 space-y-4">
                     <div className="flex justify-start space-x-4">
                       <div className="font-[family-name:var(--cta)] font-bold text-8xl italic flex justify-start items-center relative bottom-5 leading-none w-1/2">
-                        {dayjs(highlight.date).format("D")}
+                        {dayjs(highlight.date.startDate).format("D")}
                       </div>
                       <div className="flex flex-col uppercase space-y-1 ww-full">
-                        <div>{dayjs(highlight.date).format("MMMM")}</div>
-                        <div>{dayjs(highlight.date).format("dddd")}</div>
-                        <div>{dayjs(highlight.date).format("YYYY")}</div>
+                        <div>{dayjs(highlight.date.startDate).format("MMMM")}</div>
+                        <div>{dayjs(highlight.date.startDate).format("dddd")}</div>
+                        <div>{dayjs(highlight.date.startDate).format("YYYY")}</div>
                       </div>
                     </div>
 
@@ -129,5 +132,4 @@ const HighlightSwiper
   );
 };
 
-export default HighlightSwiper
-;
+export default HighlightSwiper;

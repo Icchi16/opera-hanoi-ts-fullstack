@@ -10,7 +10,6 @@ import "node-waves/dist/waves.css";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import FlyonuiScript from "../components/FlyonuiScript";
 
 const playfair = Playfair_Display({
   variable: "--title",
@@ -44,7 +43,6 @@ export default function RootLayout({
         className={`${playfair.variable} ${playfair_sc.variable} ${jakarta.variable} antialiased`}
       >
         <Header />
-        <FlyonuiScript />
         <>{children}</>
         {/* <Script type="text/javascript" src="/node-waves/dist/waves.js"></Script> */}
         <Footer />

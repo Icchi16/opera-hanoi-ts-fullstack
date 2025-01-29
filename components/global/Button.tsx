@@ -28,7 +28,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
               );
             case "arrow":
               return (
-                <div className={clsx("", className)} {...props}>
+                <div className={clsx("btn btn-lg btn-text", className)} {...props}>
                   {children}
                 </div>
               );
@@ -40,7 +40,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
               );
             default:
               return (
-                <div className={className} {...props}>
+                <div className={clsx("", className)} {...props}>
                   {children}
                 </div>
               );

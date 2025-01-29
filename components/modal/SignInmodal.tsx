@@ -4,6 +4,7 @@ import { useForm, FieldValues, SubmitHandler } from "react-hook-form";
 import Button from "../global/Button";
 import Field from "../global/Field";
 import { useState } from "react";
+import { Icon } from "@iconify-icon/react/dist/iconify.mjs";
 
 interface SigninProps {
   currentDisplay: boolean;
@@ -93,11 +94,11 @@ const SignInModal: React.FC<SigninProps> = ({
         </div>
         {/* Social Buttons */}
         <div className="flex flex-col space-y-3">
-          <Button type="box" className="btn-secondary">
-            <span className="mr-2">G</span> Google
+          <Button type="box" className="btn-secondary flex items-center">
+            <Icon icon="formkit:google" height={16} className="mr-1"/> <div className="leading-none relative bottom-[1px]">Google</div>
           </Button>
-          <Button type="box" className="btn-secondary">
-            <span className="mr-2">F</span> Facebook
+          <Button type="box" className="btn-secondary flex items-center">
+            <Icon icon="brandico:facebook" height={16} className="mr-1"/> <div className="leading-none relative bottom-[1px]">Facebook</div>
           </Button>
         </div>
       </div>

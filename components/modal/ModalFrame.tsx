@@ -18,7 +18,8 @@ const ModalFrame: React.FC<ModalFrameProps> = ({ isOpen, onClose }) => {
 
   const signinStatus = true;
   const [selectedModal, setSelectedModal] = useState("signUp");
-  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [isExiting, setIsExiting] = useState(false);
+  const [isEntering, setIsEntering] = useState(false);
 
   useEffect(() => {
     if (isOpen) {
@@ -34,11 +35,15 @@ const ModalFrame: React.FC<ModalFrameProps> = ({ isOpen, onClose }) => {
   }, [isOpen]);
 
   const handleSwitchModal = (modal: string) => {
-    setIsTransitioning(true);
+    setIsExiting(true);
     setTimeout(() => {
       setSelectedModal(modal);
-      setIsTransitioning(false);
-    }, 300); // Animation duration
+      setIsExiting(false);
+      setIsEntering(true);
+    }, 150); // Animation duration
+    setTimeout(() => {
+      setIsEntering(false);
+    }, 150);
   };
 
   return (
@@ -47,11 +52,10 @@ const ModalFrame: React.FC<ModalFrameProps> = ({ isOpen, onClose }) => {
         id="modal-frame"
         ref={modalFrame}
         className={clsx(
-          "fixed w-[414px] inset-y-0 right-0 bg-primary z-50 transform transition-transform text-secondary",
+          "fixed w-[414px] inset-y-0 right-0 bg-primary z-50 transform transition-transform text-secondary overflow-hidden",
           isOpen ? "slide-in" : "hidden"
         )}
         tabIndex={-1}
-        aria-hidden={!isOpen}
       >
         <div className="absolute flex right-12 top-8">
           <Button type="icon" onClick={onClose} className="relative -top-2">
@@ -89,9 +93,12 @@ const ModalFrame: React.FC<ModalFrameProps> = ({ isOpen, onClose }) => {
           </div>
           {/* main content */}
           <div
-            className={clsx("opacity-100 translate-x-0 transition-all duration-300",{
-              "modal-enter": isTransitioning,
-            })}
+            className={clsx(
+              "opacity-100 translate-x-0",
+              isExiting && "modal-exit transition-all duration-150 opacity-0",
+              isEntering &&
+                "modal-enter transition-all duration-150 opacity-100"
+            )}
           >
             <SignInModal
               currentDisplay={selectedModal === "signIn"}

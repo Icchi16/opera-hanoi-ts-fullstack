@@ -6,9 +6,13 @@ const shows: ShowMetadata[] = [
     id: 0,
     isHero: true,
     isHighlight: true,
+    link: "ham-le-minh-chau",
     cover: "/show1.jpg",
     title: "Hàm Lệ Minh Châu",
-    date: new Date("2025-10-11"),
+    date: {
+      startDate: new Date("2025-10-11"),
+      endDate: new Date("2025-10-21"),
+    },
     time: 120,
     forUser: true,
     staff: [
@@ -20,9 +24,13 @@ const shows: ShowMetadata[] = [
     id: 1,
     isHero: true,
     isHighlight: true,
+    link: "les-miserables",
     cover: "/show2.jpg",
     title: "Les Misérables",
-    date: new Date("2025-09-20"),
+    date: {
+      startDate: new Date("2025-09-20"),
+      endDate: new Date("2025-09-30"),
+    },
     time: 150,
     forUser: true,
     staff: [
@@ -35,9 +43,13 @@ const shows: ShowMetadata[] = [
     isHero: true,
     isHighlight: true,
     cover: "/show3.jpg",
+    link: "huong-sac-tinh-yeu",
     title: "Hương Sắc Tình Yêu",
-    date: new Date("2025-01-21"),
-    time: 120,
+    date: {
+      startDate: new Date("2025-01-21"),
+      endDate: new Date("2025-01-30"),
+    },
+    time: 175,
     forUser: true,
     staff: [
       { id: 0, pos: "Director", name: "Emeritus Artist Trần Ly Ly" },
@@ -49,9 +61,13 @@ const shows: ShowMetadata[] = [
     isHero: true,
     isHighlight: true,
     cover: "/show4.jpg",
+    link: "anh-sang-vinh-cuu",
     title: "Ánh Sáng Vĩnh Cửu",
-    date: new Date("2025-05-13"),
-    time: 120,
+    date: {
+      startDate: new Date("2025-05-13"),
+      endDate: new Date("2025-05-27"),
+    },
+    time: 90,
     forUser: true,
     staff: [
       { id: 0, pos: "Director", name: "Emeritus Artist Trần Ly Ly" },
@@ -63,8 +79,12 @@ const shows: ShowMetadata[] = [
     isHero: true,
     isHighlight: true,
     cover: "/show5.jpg",
+    link: "duoi-anh-trang-mo",
     title: "Dưới Ánh Trăng Mờ",
-    date: new Date("2025-01-09"),
+    date: {
+      startDate: new Date("2025-03-19"),
+      endDate: new Date("2025-03-25"),
+    },
     time: 120,
     forUser: true,
     staff: [
@@ -76,9 +96,13 @@ const shows: ShowMetadata[] = [
     id: 5,
     isHero: false,
     isHighlight: true,
-    cover: "/show5.jpg",
-    title: "Dưới Ánh Trăng Mờ",
-    date: new Date("2025-01-09"),
+    cover: "/show6.jpg",
+    link: "vu-khuc-tren-may",
+    title: "Vũ khúc Trên Mây",
+    date: {
+      startDate: new Date("2025-07-11"),
+      endDate: new Date("2025-07-21"),
+    },
     time: 120,
     forUser: false,
     staff: [
@@ -90,9 +114,13 @@ const shows: ShowMetadata[] = [
     id: 6,
     isHero: false,
     isHighlight: true,
-    cover: "/show5.jpg",
-    title: "Dưới Ánh Trăng Mờ",
-    date: new Date("2025-01-09"),
+    cover: "/show7.jpg",
+    link: "nang-mai-ruc-ro",
+    title: "Nắng Mai Rạng Rỡ",
+    date: {
+      startDate: new Date("2025-04-12"),
+      endDate: new Date("2025-04-22"),
+    },
     time: 120,
     forUser: false,
     staff: [
@@ -104,9 +132,13 @@ const shows: ShowMetadata[] = [
     id: 7,
     isHero: false,
     isHighlight: true,
-    cover: "/show5.jpg",
-    title: "Dưới Ánh Trăng Mờ",
-    date: new Date("2025-01-09"),
+    cover: "/show8.jpg",
+    link: "giai-dieu-vinh-cuu",
+    title: "Giai Điệu Vĩnh Cửu",
+    date: {
+      startDate: new Date("2025-03-30"),
+      endDate: new Date("2025-04-18"),
+    },
     time: 120,
     forUser: false,
     staff: [
@@ -124,4 +156,3 @@ export const forYouShows = _.sampleSize(
   _.filter(shows, (show) => show.forUser),
   2
 );
-

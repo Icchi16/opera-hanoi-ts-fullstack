@@ -90,3 +90,38 @@ iconify-icon {
   opacity: 0;
   transform: translateX(10%);
 }
+
+.modal-exit {
+  opacity: 0;
+  transform: translateX(-10%);
+}
+
+@keyframes modalExitToLeft {
+  0% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+  100% {
+      transform: translateX(-10%);
+      opacity: 0;
+  }
+}
+
+@keyframes modalEnterFromRight {
+  0% {
+      transform: translateX(10%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+.modal-exit {
+  animation: modalExitToLeft 150ms forwards;
+}
+
+.modal-enter {
+  animation: modalEnterFromRight 150ms forwards;
+}

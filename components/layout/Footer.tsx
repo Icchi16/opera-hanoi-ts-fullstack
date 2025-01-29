@@ -4,7 +4,7 @@ import React from "react";
 import { Icon } from "@iconify-icon/react";
 import { Icon as IconProp } from "@/types/extra";
 
-const Footer: React.FC<HTMLDivElement> = () => {
+const Footer: React.FC = () => {
   const icons: IconProp[] = [
     { id: 0, href: "#", dom: "fa:facebook" },
     { id: 1, href: "#", dom: "fa6-brands:x-twitter" },

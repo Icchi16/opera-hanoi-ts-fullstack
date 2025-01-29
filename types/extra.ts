@@ -5,10 +5,11 @@ export interface ShowMetadata {
   forUser: boolean;
   cover: string;
   title: string;
-  date: Date;
+  date: { startDate: Date; endDate: Date };
   time: number;
   shortDesc?: string;
   longDesc?: string;
+  link: string;
   staff: { id: number; pos: string; name: string }[];
 }
 
