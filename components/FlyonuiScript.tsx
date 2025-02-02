@@ -1,8 +1,9 @@
 "use client";
+
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
-import { IStaticMethods } from "flyonui/flyonui";
 
+import { IStaticMethods } from "flyonui/flyonui";
 declare global {
   interface Window {
     HSStaticMethods: IStaticMethods;
@@ -11,6 +12,7 @@ declare global {
 
 export default function FlyonuiScript() {
   const path = usePathname();
+
   useEffect(() => {
     const loadFlyonui = async () => {
       await import("flyonui/flyonui");
@@ -18,5 +20,6 @@ export default function FlyonuiScript() {
     };
     loadFlyonui();
   }, [path]);
+
   return null;
 }

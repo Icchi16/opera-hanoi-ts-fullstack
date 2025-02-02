@@ -37,3 +37,10 @@ export interface Icon {
   href: string;
   dom: string;
 }
+
+export interface FAQ {
+  index: number;
+  id: string;
+  header: string;
+  body: string;
+}

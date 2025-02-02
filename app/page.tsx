@@ -12,6 +12,7 @@ import NewsSlick from "./components/NewsSwiper";
 import news from "@/samples/news";
 import partners from "@/samples/partners";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -28,12 +29,14 @@ export default function Home() {
             <Title>Nổi bật</Title>
             <HighlightSlick highlightShows={highlightShows} />
             <div className="flex justify-center mt-8">
-              <Button type="box" className="px-10 py-3 uppercase">
-                Lịch chương trình
-                <span>
-                  <ArrowRightIcon className="h-8 w-8 stoke-1" />
-                </span>
-              </Button>
+              <Link href="/calendar">
+                <Button type="box" className="px-10 py-3 uppercase">
+                  Lịch chương trình
+                  <span>
+                    <ArrowRightIcon className="h-8 w-8 stoke-1" />
+                  </span>
+                </Button>
+              </Link>
             </div>
           </div>
         </section>
