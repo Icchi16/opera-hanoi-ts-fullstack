@@ -12,7 +12,7 @@ interface ShowPageParams {
   showId: string;
 }
 
-const ShowPage = async ({ params }: { params: ShowPageParams }) => {
+const ShowPage = async ({ params }: { params: Promise<ShowPageParams> }) => {
   dayjs.locale("vi");
 
   const showFAQs: FAQType[] = [
@@ -40,9 +40,21 @@ const ShowPage = async ({ params }: { params: ShowPageParams }) => {
       header: "Sẽ có kiêm tra túi xách khi vào khán phòng? ",
       body: "Để đảm bảo không quay lén, nên các quý vị khán giả vui lòng xuất trình túi xách trước khi vào phòng hoà nhạc",
     },
-    { id: 3, header: "Sẽ có đồ ăn và đồ uống phục vụ tại rạp hát?", body: "Vui lòng mua trước dồ uống tại quầy, không mang đồ ăn, đồ uống bên ngoài vào phòng hoà nhạc" },
-    { id: 4, header: "Em bé của tôi có thồi ngồi lên đùi tôi không?", body: "Với trẻ em dưới 4 tuổi sẽ được miễn vé, và ngồi chung 1 ghế" },
-    { id: 5, header: "Tôi có thể hút thuốc tại nhà hát không?", body: "Vui lòng hút thuốc lá bên ngoài phòng hoà nhạc tại khu hút thuốc đã được chỉ định sẵn" },
+    {
+      id: 3,
+      header: "Sẽ có đồ ăn và đồ uống phục vụ tại rạp hát?",
+      body: "Vui lòng mua trước dồ uống tại quầy, không mang đồ ăn, đồ uống bên ngoài vào phòng hoà nhạc",
+    },
+    {
+      id: 4,
+      header: "Em bé của tôi có thồi ngồi lên đùi tôi không?",
+      body: "Với trẻ em dưới 4 tuổi sẽ được miễn vé, và ngồi chung 1 ghế",
+    },
+    {
+      id: 5,
+      header: "Tôi có thể hút thuốc tại nhà hát không?",
+      body: "Vui lòng hút thuốc lá bên ngoài phòng hoà nhạc tại khu hút thuốc đã được chỉ định sẵn",
+    },
   ];
 
   const { showId } = await params;

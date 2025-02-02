@@ -6,12 +6,12 @@ import Field from "../global/Field";
 // import { useState } from "react";
 import { Icon } from "@iconify-icon/react/dist/iconify.mjs";
 
-interface SigninProps {
+interface SignInProps {
   currentDisplay: boolean;
   onSwitchModal: (modal: string) => void;
 }
 
-const SignInModal: React.FC<SigninProps> = ({
+const SignInModal: React.FC<SignInProps> = ({
   currentDisplay,
   onSwitchModal,
 }) => {

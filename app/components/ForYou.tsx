@@ -76,7 +76,7 @@ const ForYou: React.FC<ForYouProps> = ({ forYouShows }) => {
                 {/* Info */}
                 <div className="flex flex-col px-12 py-13 w-full self-stretch space-y-4 justify-between">
                   <div className="self-end font-[family-name:var(--title)] italic text-3xl">
-                    {dayjs(show.date).format("DD MMMM")}
+                    {dayjs(show.date.startDate).format("DD MMMM")}
                   </div>
                   <div className="text-white line-clamp-2 text-4xl font-[family-name:var(--title)]">
                     {show.title} - {show.shortDesc}

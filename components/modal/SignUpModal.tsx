@@ -5,12 +5,12 @@ import Field from "../global/Field";
 import Button from "../global/Button";
 // import { useState } from "react";
 
-interface SignupProps {
+interface SignUpProps {
   currentDisplay: boolean;
   onSwitchModal: (modal: string) => void;
 }
 
-const SignUpModal: React.FC<SignupProps> = ({
+const SignUpModal: React.FC<SignUpProps> = ({
   currentDisplay,
   onSwitchModal,
 }) => {
