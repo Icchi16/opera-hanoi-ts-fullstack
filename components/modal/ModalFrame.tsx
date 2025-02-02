@@ -4,7 +4,7 @@ import clsx from "clsx";
 import { useEffect, useRef, useState } from "react";
 import Button from "../global/Button";
 import { Icon } from "@iconify-icon/react/dist/iconify.mjs";
-import SignInModal from "./SignInModal";
+import SignInModal from "./SignInModalr";
 import SignUpModal from "./SignUpModal";
 
 // import UserPanelModal from "./UserPanelModal";
