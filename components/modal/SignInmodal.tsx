@@ -89,7 +89,7 @@ const SignInModal: React.FC<SignInProps> = ({
         <div className="flex items-center justify-center">
           <div className="flex-grow border-t border-black"></div>
           <span className="px-3 text-sm text-black relative bottom-[2px]">
-            hoặc qua
+            hoặc
           </span>
           <div className="flex-grow border-t border-black"></div>
         </div>
