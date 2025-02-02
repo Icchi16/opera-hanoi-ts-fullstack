@@ -30,8 +30,6 @@ const Field: React.FC<FieldProps> = ({
   borderClassName,
   register,
   required,
-  errors,
-  disabled,
   validate,
   regexValidate,
 }) => {

@@ -1,12 +1,11 @@
 import { createContext } from "react";
 
 interface UserContextType {
-  user: any;
+  user: undefined;
   loading: boolean;
-  error: any;
+  error: undefined;
 }
 
 export const UserContext = createContext<UserContextType | undefined>(
   undefined
 );
-

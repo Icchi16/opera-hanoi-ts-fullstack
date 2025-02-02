@@ -3,7 +3,7 @@
 import { useForm, FieldValues, SubmitHandler } from "react-hook-form";
 import Field from "../global/Field";
 import Button from "../global/Button";
-import { useState } from "react";
+// import { useState } from "react";
 
 interface SignupProps {
   currentDisplay: boolean;
@@ -14,7 +14,8 @@ const SignUpModal: React.FC<SignupProps> = ({
   currentDisplay,
   onSwitchModal,
 }) => {
-  const [isLoading, setIsLoading] = useState(false);
+  // const [isLoading, setIsLoading] = useState(false);
+  const isLoading = false;
 
   const {
     register,

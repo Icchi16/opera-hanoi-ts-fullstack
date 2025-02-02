@@ -1,7 +1,5 @@
 "use client";
 
-import Button from "../global/Button";
-
 interface UserPanelProps {
   currentDisplay: boolean;
 }
