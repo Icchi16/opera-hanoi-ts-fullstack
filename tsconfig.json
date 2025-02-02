@@ -29,7 +29,9 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "./types/iconify.d.ts"
+    "./types/iconify.d.ts",
+    "./components/**/*.tsx",
+    "./components/**/*.ts"
   ],
   "exclude": ["node_modules"]
 }
