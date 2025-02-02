@@ -1,5 +1,9 @@
+"use client";
+
 import { FAQ as FAQType } from "@/types/extra";
+import clsx from "clsx";
 import _ from "lodash";
+import { useState } from "react";
 
 interface FAQProps {
   faqArr: FAQType[];
@@ -7,52 +11,156 @@ interface FAQProps {
 }
 
 const FAQ: React.FC<FAQProps> = ({ faqArr, title }) => {
-  const oddFAQs = _.filter(faqArr, (faq) => faq.index % 2 !== 0);
-  const evenFAQs = _.filter(faqArr, (faq) => faq.index % 2 === 0);
+  const oddFAQs = _.filter(faqArr, (faq) => faq.id % 2 !== 0);
+  const evenFAQs = _.filter(faqArr, (faq) => faq.id % 2 === 0);
+
+  const [openIndexes, setOpenIndexes] = useState<number[]>([]);
+
+  const toggleAccordion = (index: number) => {
+    if (_.includes(openIndexes, index)) {
+      setOpenIndexes(_.without(openIndexes, index));
+    } else {
+      setOpenIndexes([...openIndexes, index]);
+    }
+  };
 
   return (
-    <div className="">
+    <>
       <div className="text-3xl font-[family-name:var(--title)] font-bold tracking-wide pb-8 border-b-[1px] border-primary border-opacity-35 w-full">
         {title || ""}
       </div>
-      <div className="grid grid-cols-2">
-        <div
-          className="accordion divide-neutral/20 divide-y"
-          data-accordion-always-open=""
-        >
-          {oddFAQs.map((faq) => (
-            <div key={faq.id}>
-              <div className="accordion-item active" id="payment-always">
-                <button
-                  className="accordion-toggle inline-flex items-center gap-x-4 text-start"
-                  aria-controls="payment-always-collapse"
-                  aria-expanded="true"
-                >
-                  <span className="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0"></span>
-                  <span className="icon-[tabler--minus] accordion-item-active:block text-base-content size-4.5 hidden shrink-0"></span>
-                  When is payment taken for my order?
-                </button>
+      <div className="grid grid-cols-2 grid-flow-row-dense gap-x-12 font-[family-name:var(--body)]">
+        {/* left Accordion */}
+        <div>
+          {evenFAQs.map((faq) => {
+            const isOpen = openIndexes.includes(faq.id);
+            return (
+              <div
+                key={faq.id}
+                className="flex flex-col py-6 px-3 border-primary border-b-[1px] border-opacity-35"
+              >
+                <div id="left-accordion w-ful">
+                  <button
+                    type="button"
+                    className={clsx(
+                      "flex items-center cursor-pointer transition-colors duration-200 space-x-3 ",
+                      isOpen ? "" : ""
+                    )}
+                    onClick={() => toggleAccordion(faq.id)}
+                  >
+                    <span>
+                      <svg
+                        className="fill-primary shrink-0"
+                        width="16"
+                        height="16"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <rect
+                          y="7"
+                          width="16"
+                          height="3"
+                          rx="1"
+                          className={`transform origin-center transition duration-200 ease-out ${
+                            isOpen && "!rotate-180"
+                          }`}
+                        />
+                        <rect
+                          y="7"
+                          width="16"
+                          height="3"
+                          rx="1"
+                          className={`transform origin-center rotate-90 transition duration-200 ease-out ${
+                            isOpen && "!rotate-180"
+                          }`}
+                        />
+                      </svg>
+                    </span>
+                    <div className="text-xl font-light">{faq.header}</div>
+                  </button>
+                </div>
                 <div
-                  id="payment-always-collapse"
-                  className="accordion-content w-full overflow-hidden transition-[height] duration-300"
-                  aria-labelledby="payment-always"
-                  role="region"
+                  className={clsx(
+                    "grid overflow-hidden transition-all duration-300 ease-in-out",
+                    isOpen
+                      ? "grid-rows-[1fr] opacity-100 mt-5"
+                      : "grid-rows-[0fr] opacity-0 mt-0"
+                  )}
                 >
-                  <div className="px-5 pb-4">
-                    <p className="text-base-content/80 font-normal">
-                      Payment is taken during the checkout process when you pay
-                      for your order. The order number that appears on the
-                      confirmation screen indicates payment has been successfully
-                      processed.
-                    </p>
+                  <div className="overflow-hidden text-base tracking-wide leading-relaxed">
+                    {faq.body}
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
+        </div>
+
+        {/* Right Accordion */}
+        <div>
+          {oddFAQs.map((faq) => {
+            const isOpen = openIndexes.includes(faq.id);
+            return (
+              <div
+                key={faq.id}
+                className="flex flex-col py-6 px-3 border-primary border-b-[1px] border-opacity-35"
+              >
+                <div id="left-accordion w-ful">
+                  <button
+                    type="button"
+                    className={clsx(
+                      "flex items-center cursor-pointer transition-colors duration-200 space-x-3 ",
+                      isOpen ? "" : ""
+                    )}
+                    onClick={() => toggleAccordion(faq.id)}
+                  >
+                    <span>
+                      <svg
+                        className="fill-primary shrink-0"
+                        width="16"
+                        height="16"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <rect
+                          y="7"
+                          width="16"
+                          height="3"
+                          rx="1"
+                          className={`transform origin-center transition duration-200 ease-out ${
+                            isOpen && "!rotate-180"
+                          }`}
+                        />
+                        <rect
+                          y="7"
+                          width="16"
+                          height="3"
+                          rx="1"
+                          className={`transform origin-center rotate-90 transition duration-200 ease-out ${
+                            isOpen && "!rotate-180"
+                          }`}
+                        />
+                      </svg>
+                    </span>
+                    <div className="text-xl font-light">{faq.header}</div>
+                  </button>
+                </div>
+                <div
+                  className={clsx(
+                    "grid overflow-hidden transition-all duration-300 ease-in-out",
+                    isOpen
+                      ? "grid-rows-[1fr] opacity-100 mt-5"
+                      : "grid-rows-[0fr] opacity-0 mt-0"
+                  )}
+                >
+                  <div className="overflow-hidden text-base tracking-wide leading-relaxed">
+                    {faq.body}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

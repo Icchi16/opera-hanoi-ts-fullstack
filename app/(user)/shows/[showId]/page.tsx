@@ -17,20 +17,12 @@ const ShowPage = async ({ params }: { params: ShowPageParams }) => {
 
   const showFAQs: FAQType[] = [
     {
-      index: 0,
-      id: "1",
+      id: 0,
       header: "Tôi cần đến trước bao lâu trước khi bắt đầu? ",
       body: "Nên đến trước 30 phút chương trình bắt đầu",
     },
     {
-      index: 1,
-      id: "2",
-      header: "Sẽ có kiêm tra túi xách khi vào khán phòng? ",
-      body: "Để đảm bảo không quay lén, nên các quý vị khán giả vui lòng xuất trình túi xách trước khi vào phòng hoà nhạc",
-    },
-    {
-      index: 2,
-      id: "3",
+      id: 1,
       header: "Tôi cần làm gì khi tôi không thể đến được sự kiện?",
       body: (
         <div>
@@ -43,9 +35,14 @@ const ShowPage = async ({ params }: { params: ShowPageParams }) => {
         </div>
       ),
     },
-    { index: 3, id: "4", header: "sdasd", body: "hello" },
-    { index: 4, id: "5", header: "sdasd", body: "hello" },
-    { index: 5, id: "6", header: "sdasd", body: "hello" },
+    {
+      id: 2,
+      header: "Sẽ có kiêm tra túi xách khi vào khán phòng? ",
+      body: "Để đảm bảo không quay lén, nên các quý vị khán giả vui lòng xuất trình túi xách trước khi vào phòng hoà nhạc",
+    },
+    { id: 3, header: "Sẽ có đồ ăn và đồ uống phục vụ tại rạp hát?", body: "Vui lòng mua trước dồ uống tại quầy, không mang đồ ăn, đồ uống bên ngoài vào phòng hoà nhạc" },
+    { id: 4, header: "Em bé của tôi có thồi ngồi lên đùi tôi không?", body: "Với trẻ em dưới 4 tuổi sẽ được miễn vé, và ngồi chung 1 ghế" },
+    { id: 5, header: "Tôi có thể hút thuốc tại nhà hát không?", body: "Vui lòng hút thuốc lá bên ngoài phòng hoà nhạc tại khu hút thuốc đã được chỉ định sẵn" },
   ];
 
   const { showId } = await params;
@@ -111,7 +108,7 @@ const ShowPage = async ({ params }: { params: ShowPageParams }) => {
         </div>
         {/* FAQ Accordion */}
       </div>
-      <div className="bg-secondary">
+      <div className="bg-cardBg">
         <div className="container">
           <div className="px-8 py-12">
             <FAQ faqArr={showFAQs} title="Các câu hỏi thường gặp" />

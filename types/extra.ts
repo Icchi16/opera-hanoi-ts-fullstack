@@ -1,3 +1,5 @@
+import { ReactElement } from "react";
+
 export interface ShowMetadata {
   id: number;
   isHighlight: boolean;
@@ -39,8 +41,7 @@ export interface Icon {
 }
 
 export interface FAQ {
-  index: number;
-  id: string;
+  id: number;
   header: string;
-  body: string;
+  body: string | ReactElement;
 }

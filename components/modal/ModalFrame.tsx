@@ -6,7 +6,7 @@ import Button from "../global/Button";
 import { Icon } from "@iconify-icon/react/dist/iconify.mjs";
 import SignInModal from "./SignInModal";
 import SignUpModal from "./SignUpModal";
-import UserPanelModal from "./UserPanelModal";
+// import UserPanelModal from "./UserPanelModal";
 
 interface ModalFrameProps {
   isOpen: boolean;
@@ -16,7 +16,6 @@ interface ModalFrameProps {
 const ModalFrame: React.FC<ModalFrameProps> = ({ isOpen, onClose }) => {
   const modalFrame = useRef<HTMLDivElement>(null);
 
-  const signinStatus = true;
   const [selectedModal, setSelectedModal] = useState("signUp");
   const [isExiting, setIsExiting] = useState(false);
   const [isEntering, setIsEntering] = useState(false);
@@ -108,10 +107,10 @@ const ModalFrame: React.FC<ModalFrameProps> = ({ isOpen, onClose }) => {
               currentDisplay={selectedModal === "signUp"}
               onSwitchModal={handleSwitchModal}
             />
-            <UserPanelModal
+            {/* <UserPanelModal
               currentDisplay={selectedModal === "userPanel"}
               onSwitchModal={handleSwitchModal}
-            />
+            /> */}
           </div>
         </div>
       </div>

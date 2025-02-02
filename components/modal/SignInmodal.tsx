@@ -3,7 +3,7 @@
 import { useForm, FieldValues, SubmitHandler } from "react-hook-form";
 import Button from "../global/Button";
 import Field from "../global/Field";
-import { useState } from "react";
+// import { useState } from "react";
 import { Icon } from "@iconify-icon/react/dist/iconify.mjs";
 
 interface SigninProps {
@@ -15,7 +15,8 @@ const SignInModal: React.FC<SigninProps> = ({
   currentDisplay,
   onSwitchModal,
 }) => {
-  const [isLoading, setIsLoading] = useState(false);
+  // const [isLoading, setIsLoading] = useState(false);
+  const isLoading = false;
 
   const {
     register,
@@ -95,10 +96,12 @@ const SignInModal: React.FC<SigninProps> = ({
         {/* Social Buttons */}
         <div className="flex flex-col space-y-3">
           <Button type="box" className="btn-secondary flex items-center">
-            <Icon icon="formkit:google" height={16} className="mr-1"/> <div className="leading-none relative bottom-[1px]">Google</div>
+            <Icon icon="formkit:google" height={16} className="mr-1" />{" "}
+            <div className="leading-none relative bottom-[1px]">Google</div>
           </Button>
           <Button type="box" className="btn-secondary flex items-center">
-            <Icon icon="brandico:facebook" height={16} className="mr-1"/> <div className="leading-none relative bottom-[1px]">Facebook</div>
+            <Icon icon="brandico:facebook" height={16} className="mr-1" />{" "}
+            <div className="leading-none relative bottom-[1px]">Facebook</div>
           </Button>
         </div>
       </div>
