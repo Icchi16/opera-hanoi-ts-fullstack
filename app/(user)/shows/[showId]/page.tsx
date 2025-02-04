@@ -7,6 +7,7 @@ import "dayjs/locale/vi";
 import _ from "lodash";
 import Image from "next/image";
 import { FAQ as FAQType } from "@/types/extra";
+import Link from "next/link";
 
 interface ShowPageParams {
   showId: string;
@@ -59,6 +60,7 @@ const ShowPage = async ({ params }: { params: Promise<ShowPageParams> }) => {
 
   const { showId } = await params;
   const show = _.find(shows, { link: showId });
+  console.log(showId)
 
   return (
     <div className="bg-bg1">
@@ -114,7 +116,7 @@ const ShowPage = async ({ params }: { params: Promise<ShowPageParams> }) => {
               type="arrow"
               className="font-[family-name:var(--cta)] italic font-bold text-5xl transition-all duration-300 px-0 hover:text-white border-0"
             >
-              Đặt Vé Ngay
+              <Link href={`/shows/booking/${showId}`}>Đặt Vé Ngay</Link>
             </Button>
           </div>
         </div>

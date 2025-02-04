@@ -62,7 +62,7 @@ const HighlightSwiper: React.FC<HighlightProps> = ({ highlightShows }) => {
                 <Image
                   alt={highlight.title}
                   src={highlight.cover}
-                  layout="fill"
+                  fill
                   className="object-cover object-center"
                 />
               </figure>

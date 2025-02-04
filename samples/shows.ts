@@ -19,6 +19,13 @@ const shows: ShowMetadata[] = [
       { id: 0, pos: "Director", name: "Trần Ly Ly" },
       { id: 1, pos: "Artistic Director", name: "Phan Mạnh Đức" },
     ],
+    bookingData: {
+      date: [
+        { id: 0, date: new Date("2025-10-11 19:00") },
+        { id: 1, date: new Date("2025-10-12 17:00") },
+        { id: 2, date: new Date("2025-10-12 20:00") },
+      ],
+    },
   },
   {
     id: 1,

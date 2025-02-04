@@ -68,7 +68,7 @@ const ForYou: React.FC<ForYouProps> = ({ forYouShows }) => {
                 <div className="relative min-w-[383px] min-h-[526px]">
                   <Image
                     alt={show.title}
-                    layout="fill"
+                    fill
                     src={show.cover}
                     className="object-cover object-center"
                   />

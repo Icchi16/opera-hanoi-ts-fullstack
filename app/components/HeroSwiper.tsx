@@ -33,7 +33,7 @@ const HeroSwiper: React.FC<HeroProps> = ({ heroShows }) => {
             <Image
               alt=""
               className="object-cover object-left-top"
-              layout="fill"
+              fill
               src={hero.cover}
             />
             <div className="absolute block top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1440px] md:px-16 mx-auto text-white text-3xl z-20">

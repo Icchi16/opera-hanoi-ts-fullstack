@@ -25,7 +25,7 @@ const AboutUsSwiper = () => {
               <SwiperSlide key={cover.id} className="min-h-[700px]">
                 <Image
                   alt="about us"
-                  layout="fill"
+                  fill
                   className="object-cover object-center"
                   src={cover.src}
                 />

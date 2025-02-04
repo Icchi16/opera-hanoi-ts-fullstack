@@ -73,7 +73,7 @@ const NewsSwiper: React.FC<NewsSlickProps> = ({ news }) => {
                 <div className="relative min-h-[286px]">
                   <Image
                     alt={news.title}
-                    layout="fill"
+                    fill
                     src={news.cover}
                     className="object-cover object-center"
                   />

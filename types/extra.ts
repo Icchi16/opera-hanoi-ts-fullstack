@@ -13,6 +13,9 @@ export interface ShowMetadata {
   longDesc?: string;
   link: string;
   staff: { id: number; pos: string; name: string }[];
+  bookingData?: {
+    date: { id: number; date: Date }[];
+  };
 }
 
 export interface AboutUsCover {

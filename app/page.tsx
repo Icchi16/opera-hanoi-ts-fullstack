@@ -95,7 +95,7 @@ export default function Home() {
                       <Image
                         alt={partner.alt}
                         src={partner.logo}
-                        layout="fill"
+                        fill
                         className="object-cover object-center p-8"
                       />
                     </div>
@@ -114,7 +114,7 @@ export default function Home() {
                 <div className="relative min-w-[472px] min-h-full">
                   <Image
                     alt="subscribe"
-                    layout="fill"
+                    fill
                     className="object-cover object-center"
                     src="/show1.jpg"
                   />
