@@ -35,11 +35,7 @@ const HighlightSwiper: React.FC<HighlightProps> = ({ highlightShows }) => {
         onSwiper={(swiper) => {
           // Delay execution for the refs to be defined
           setTimeout(() => {
-            if (
-              swiper.params &&
-              prevRef.current &&
-              nextRef.current
-            ) {
+            if (swiper.params && prevRef.current && nextRef.current) {
               const navigation = swiper.params.navigation as NavigationOptions;
 
               // Override prevEl & nextEl now that refs are defined
@@ -62,8 +58,10 @@ const HighlightSwiper: React.FC<HighlightProps> = ({ highlightShows }) => {
                 <Image
                   alt={highlight.title}
                   src={highlight.cover}
+                  blurDataURL={highlight.cover}
                   fill
                   className="object-cover object-center"
+                  placeholder="blur"
                 />
               </figure>
               <div className="h-[700px] relative overflow-hidden">
@@ -78,9 +76,15 @@ const HighlightSwiper: React.FC<HighlightProps> = ({ highlightShows }) => {
                         {dayjs(highlight.date.startDate).format("D")}
                       </div>
                       <div className="flex flex-col uppercase space-y-1 ww-full">
-                        <div>{dayjs(highlight.date.startDate).format("MMMM")}</div>
-                        <div>{dayjs(highlight.date.startDate).format("dddd")}</div>
-                        <div>{dayjs(highlight.date.startDate).format("YYYY")}</div>
+                        <div>
+                          {dayjs(highlight.date.startDate).format("MMMM")}
+                        </div>
+                        <div>
+                          {dayjs(highlight.date.startDate).format("dddd")}
+                        </div>
+                        <div>
+                          {dayjs(highlight.date.startDate).format("YYYY")}
+                        </div>
                       </div>
                     </div>
 

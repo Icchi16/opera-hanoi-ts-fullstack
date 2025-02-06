@@ -73,7 +73,7 @@ const HeroSwiper: React.FC<HeroProps> = ({ heroShows }) => {
                 </Button>
               </div>
             </div>
-            <span className="absolute inset-0 bg-[linear-gradient(180deg,_rgba(43,41,40,1)_14%,_rgba(96,90,83,0.46)_35%,_rgba(96,90,83,0.58)_58%,_rgba(45,41,39,1)_96%)] pointer-events-none z-10"></span>
+            <span className="absolute inset-0 bg-[linear-gradient(180deg,_rgba(43,41,40,1)_16%,_rgba(96,90,83,0.46)_35%,_rgba(96,90,83,0.58)_58%,_rgba(45,41,39,1)_96%)] pointer-events-none z-10"></span>
           </Link>
         </SwiperSlide>
       ))}

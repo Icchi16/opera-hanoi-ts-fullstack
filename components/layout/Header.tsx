@@ -76,8 +76,10 @@ const Header: React.FC = () => {
   return (
     <header
       className={clsx(
-        "fixed inset-x-0 top-0 bg-[#2b2928] flex items-center font-[family-name:var(--body)] transition-all duration-200 z-[100]",
-        isScrolled ? "min-h-24 shadow-black shadow-lg" : "min-h-32"
+        "fixed inset-x-0 top-0 flex items-center font-[family-name:var(--body)] transition-all duration-200 z-[100]",
+        isScrolled
+          ? "min-h-24 shadow-black shadow-lg bg-[#2b2928]"
+          : "min-h-32 bg-transparent"
       )}
     >
       <nav className="navbar max-w-[1440px] md:px-8 mx-auto bg-transparent flex justify-between items-center">
