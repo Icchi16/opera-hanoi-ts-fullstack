@@ -8,8 +8,7 @@ import Button from "@/components/global/Button";
 import { News } from "@/types/extra";
 import "dayjs/locale/vi";
 import { NavigationOptions } from "swiper/types";
-import ArrowLeftIcon from "@/components/svgs/icons/ArrowLeftIcon";
-import ArrowRightIcon from "@/components/svgs/icons/ArrowRightIcon";
+import { Icon } from "@iconify-icon/react/dist/iconify.mjs";
 
 interface NewsSlickProps {
   news: News[];
@@ -94,15 +93,19 @@ const NewsSwiper: React.FC<NewsSlickProps> = ({ news }) => {
         ))}
       </Swiper>
       <div className="flex flex-col justify-center space-y-4">
-        <Button type="box" ref={prevRef} className="swiper-button-prev px-4">
-          <span>
-            <ArrowLeftIcon className="h-10 w-10" />
-          </span>
+        <Button
+          type="box"
+          ref={prevRef}
+          className="swiper-button-prev px-5 py-1"
+        >
+          <Icon icon="pajamas:arrow-left" className="text-5xl" />
         </Button>
-        <Button type="box" ref={nextRef} className="swiper-button-next px-4">
-          <span>
-            <ArrowRightIcon className="h-10 w-10" />
-          </span>
+        <Button
+          type="box"
+          ref={nextRef}
+          className="swiper-button-prev px-5 py-1"
+        >
+          <Icon icon="pajamas:arrow-right" className="text-5xl" />
         </Button>
       </div>
     </div>

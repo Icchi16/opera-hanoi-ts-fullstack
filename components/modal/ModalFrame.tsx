@@ -39,11 +39,11 @@ const ModalFrame: React.FC<ModalFrameProps> = ({ isOpen, onClose }) => {
     setTimeout(() => {
       setSelectedModal(modal);
       setIsExiting(false);
-      setIsEntering(true);
     }, 150); // Animation duration
     setTimeout(() => {
-      setIsEntering(false);
+      setIsEntering(true);
     }, 150);
+    setIsEntering(false);
   };
 
   return (
@@ -53,10 +53,11 @@ const ModalFrame: React.FC<ModalFrameProps> = ({ isOpen, onClose }) => {
         ref={modalFrame}
         className={clsx(
           "fixed w-[414px] inset-y-0 right-0 bg-primary z-50 transform transition-transform text-secondary overflow-hidden",
-          isOpen ? "slide-in" : "hidden"
+          isOpen ? "slide-in" : "slide-out"
         )}
         tabIndex={-1}
       >
+        {/* close button */}
         <div className="absolute flex right-12 top-8">
           <Button type="icon" onClick={onClose} className="relative -top-2">
             <Icon
@@ -67,10 +68,11 @@ const ModalFrame: React.FC<ModalFrameProps> = ({ isOpen, onClose }) => {
           </Button>
         </div>
 
-        <div className="flex flex-col py-8 px-8 h-full text-secondary space-y-[30px]">
+        <div className="flex flex-col py-8 px-4 h-full text-secondary space-y-[30px]">
           {/*back and close*/}
           <div
             className={clsx(
+              "min-h-8 px-2",
               selectedModal !== "signUp" && "opacity-0 pointer-events-none"
             )}
           >
@@ -94,10 +96,9 @@ const ModalFrame: React.FC<ModalFrameProps> = ({ isOpen, onClose }) => {
           {/* main content */}
           <div
             className={clsx(
-              "opacity-100 translate-x-0",
-              isExiting && "modal-exit transition-all duration-150 opacity-0",
-              isEntering &&
-                "modal-enter transition-all duration-150 opacity-100"
+              "translate-x-0 transition-all duration-150 overflow-y-auto px-2",
+              isExiting && "modal-exit",
+              isEntering && "modal-enter"
             )}
           >
             <SignInModal
@@ -109,9 +110,9 @@ const ModalFrame: React.FC<ModalFrameProps> = ({ isOpen, onClose }) => {
               onSwitchModal={handleSwitchModal}
             />
             {/* <UserPanelModal
-              currentDisplay={selectedModal === "userPanel"}
-              onSwitchModal={handleSwitchModal}
-            /> */}
+                currentDisplay={selectedModal === "userPanel"}
+                onSwitchModal={handleSwitchModal}
+              /> */}
           </div>
         </div>
       </div>

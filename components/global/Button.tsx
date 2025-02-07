@@ -18,7 +18,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
               return (
                 <div
                   className={clsx(
-                    "waves waves-primary w-full btn btn-lg rounded-none h-fit",
+                    "waves waves-primary w-full btn btn-lg rounded-none h-fit border-[3px]",
                     className
                   )}
                   {...props}

@@ -104,6 +104,7 @@ iconify-icon {
   100% {
       transform: translateX(-10%);
       opacity: 0;
+
   }
 }
 
@@ -119,9 +120,9 @@ iconify-icon {
 }
 
 .modal-exit {
-  animation: modalExitToLeft 150ms forwards;
+  animation: modalExitToLeft 400ms forwards;
 }
 
 .modal-enter {
-  animation: modalEnterFromRight 150ms forwards;
+  animation: modalEnterFromRight 400ms forwards;
 }
