@@ -98,24 +98,23 @@ iconify-icon {
 
 @keyframes modalExitToLeft {
   0% {
-      transform: translateX(0);
-      opacity: 1;
+    transform: translateX(0);
+    opacity: 1;
   }
   100% {
-      transform: translateX(-10%);
-      opacity: 0;
-
+    transform: translateX(-10%);
+    opacity: 0;
   }
 }
 
 @keyframes modalEnterFromRight {
   0% {
-      transform: translateX(10%);
-      opacity: 0;
+    transform: translateX(10%);
+    opacity: 0;
   }
   100% {
-      transform: translateX(0);
-      opacity: 1;
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
@@ -125,4 +124,30 @@ iconify-icon {
 
 .modal-enter {
   animation: modalEnterFromRight 400ms forwards;
+}
+
+.edge-fade-right {
+  -webkit-mask-image: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 12%
+  );
+  mask-image: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 12%
+  );
+}
+
+.edge-fade-left {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 12%
+  );
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 12%
+  );
 }
