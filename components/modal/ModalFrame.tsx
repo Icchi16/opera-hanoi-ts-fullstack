@@ -116,10 +116,12 @@ const ModalFrame: React.FC<ModalFrameProps> = ({ isOpen, onClose }) => {
           </div>
         </div>
       </div>
+
+      {/* Modal backdrop */}
       <div
         id="backdrop"
         className={clsx(
-          "fixed inset-0 opacity-50 bg-bg1 z-30",
+          "fixed inset-0 opacity-50 bg-bg1 z-30 backdrop-blur-md",
           isOpen ? "block" : "hidden"
         )}
         onClick={onClose}
