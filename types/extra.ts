@@ -48,3 +48,13 @@ export interface FAQ {
   header: string;
   body: string | ReactElement;
 }
+
+export type Genre =
+  | "all"
+  | "orchestra"
+  | "ballet"
+  | "play"
+  | "music"
+  | "circus"
+  | "live-show"
+  | "event";

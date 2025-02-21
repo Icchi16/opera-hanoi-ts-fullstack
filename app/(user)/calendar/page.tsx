@@ -1,9 +1,15 @@
+"use client";
+
 import Title from "@/components/global/Title";
 import Image from "next/image";
 import MonthSelector from "./components/MonthSeletor";
 import Calendar from "./components/Calendar";
+import { useState } from "react";
+import { Dayjs } from "dayjs";
 
 const CalendarPage = () => {
+  const [selectedMonth, setSelectedMonth] = useState<null | Dayjs>(null);
+
   return (
     <div className="relative">
       <Image
@@ -17,8 +23,8 @@ const CalendarPage = () => {
           <div className="w-full text-center">
             <Title>Lịch Chương Trình</Title>
           </div>
-          <MonthSelector />
-          <Calendar />
+          <MonthSelector setSelectedMonth={setSelectedMonth} />
+          <Calendar selectedMonth={selectedMonth} />
         </div>
       </div>
     </div>

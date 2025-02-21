@@ -4,7 +4,7 @@ import dayjs, { Dayjs } from "dayjs";
 import { SwiperSlide, Swiper } from "swiper/react";
 import "dayjs/locale/vi";
 import Button from "@/components/global/Button";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Swiper as SwiperCore } from "swiper/types";
 import clsx from "clsx";
 import _ from "lodash";
@@ -14,6 +14,10 @@ interface Month {
   id: number;
   date: Dayjs;
   text: string;
+}
+
+interface MonthSelectorProps {
+  setSelectedMonth: (date: Dayjs) => void;
 }
 
 dayjs.locale("vi");
@@ -33,7 +37,7 @@ const monthNames = [
   "Tháng Mười Hai",
 ];
 
-const MonthSelector = () => {
+const MonthSelector: React.FC<MonthSelectorProps> = ({ setSelectedMonth }) => {
   const currentMonth = dayjs().month();
   const startMonth = currentMonth - 3;
 
@@ -81,6 +85,10 @@ const MonthSelector = () => {
     });
   };
 
+  useEffect(() => {
+    setSelectedMonth(monthsArr[activeMonthIndex].date);
+  }, [activeMonthIndex]);
+
   return (
     <div className="font-[family-name:var(--body)]">
       <div className="flex w-full justify-between items-center space-x-2">
@@ -116,8 +124,6 @@ const MonthSelector = () => {
                   setTimeout(() => {
                     swiper.slideTo(swiper.clickedIndex, 200);
                   }, 0);
-
-                  console.log(swiper.clickedIndex);
                 }
               });
             }}
@@ -147,6 +153,7 @@ const MonthSelector = () => {
                         ? "font-semibold"
                         : "font-light"
                     )}
+                    onClick={() => setSelectedMonth(month.date)}
                   >
                     {month.text}
                   </div>

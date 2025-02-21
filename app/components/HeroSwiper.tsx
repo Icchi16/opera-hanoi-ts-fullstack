@@ -17,7 +17,7 @@ interface HeroProps {
 const HeroSwiper: React.FC<HeroProps> = ({ heroShows }) => {
   return (
     <Swiper
-      direction={"vertical"}
+      // direction={"vertical"}
       preventClicksPropagation={true}
       className="mySwiper h-screen w-screen"
       loop={true}
@@ -25,7 +25,18 @@ const HeroSwiper: React.FC<HeroProps> = ({ heroShows }) => {
         delay: 2500,
         disableOnInteraction: false,
       }}
+      freeMode={{ 
+        momentum: true,
+        momentumRatio: 1.2, // Adjusts inertia strength
+        momentumVelocityRatio: 0.5, // Controls slowdown effect
+        minimumVelocity: 0.02, // Prevents abrupt stopping
+      }}
+      longSwipesRatio={0.3}
       modules={[Autoplay]}
+      style={{
+        transitionTimingFunction: "cubic-bezier(0.25, 1, 0.5, 1)",
+      }}
+      speed={1000}
     >
       {heroShows.map((hero) => (
         <SwiperSlide key={hero.id}>
