@@ -10,8 +10,8 @@ const shows: ShowMetadata[] = [
     cover: "/show1.jpg",
     title: "Hàm Lệ Minh Châu",
     date: {
-      startDate: new Date("2025-10-11"),
-      endDate: new Date("2025-10-21"),
+      startDate: new Date("2025-02-11"),
+      endDate: new Date("2025-03-10"),
     },
     time: 120,
     forUser: true,

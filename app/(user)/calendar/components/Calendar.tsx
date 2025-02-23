@@ -7,9 +7,12 @@ import { Genre } from "@/types/extra";
 import _ from "lodash";
 import "dayjs/locale/vi";
 import DayCard from "./calendarComponents/DayCard";
-import shows from '@/samples/shows';
+import shows from "@/samples/shows";
+import isBetween from "dayjs/plugin/isBetween";
 
-interface CalendarProps {
+dayjs.extend(isBetween);
+
+export interface CalendarProps {
   selectedMonth: null | Dayjs;
 }
 
@@ -32,7 +35,7 @@ const Calendar: React.FC<CalendarProps> = ({ selectedMonth }) => {
     if (!selectedMonth) return [];
 
     const startOfMonth = dayjs(selectedMonth).startOf("month");
-    const startDayOfWeek = startOfMonth.day() || 7;
+    const startDayOfWeek = (startOfMonth.day() + 6) % 7;
 
     const calendarDays = _.times(42, (index) => {
       const date = startOfMonth
@@ -75,22 +78,35 @@ const Calendar: React.FC<CalendarProps> = ({ selectedMonth }) => {
             </tr>
           </thead>
           <tbody>
-            {calendarDays.map((week, index) => (
-              <tr key={index}>
-                {week.map((day) => (
-                  <td
-                    key={day.id}
-                    className="border border-white border-opacity-35"
-                  >
-                    <div className="relative">
-                      <DayCard shows={_.filter(shows, )} date={day.date} />
+            {calendarDays.map((week, index) =>
+              _.some(week, (day) => day.isCurrentMonth) ? (
+                <tr key={index}>
+                  {week.map((day) => (
+                    <td
+                      key={day.id}
+                      className="border border-white border-opacity-35"
+                    >
+                      <div className="relative">
+                        <DayCard
+                          shows={_.filter(shows, (show) =>
+                            dayjs(day.date).isBetween(
+                              dayjs(show.date.startDate),
+                              dayjs(show.date.endDate),
+                              "day",
+                              "[]"
+                            )
+                          )}
+                          date={day.date}
+                          selectedMonth={selectedMonth}
+                        />
 
-                      {/* {dayjs(day.date).date()} */}
-                    </div>
-                  </td>
-                ))}
-              </tr>
-            ))}
+                        {/* {dayjs(day.date).date()} */}
+                      </div>
+                    </td>
+                  ))}
+                </tr>
+              ) : null
+            )}
           </tbody>
         </table>
       </div>

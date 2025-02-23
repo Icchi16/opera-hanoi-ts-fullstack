@@ -38,28 +38,33 @@ const monthNames = [
 ];
 
 const MonthSelector: React.FC<MonthSelectorProps> = ({ setSelectedMonth }) => {
+  // Create Current Month Array
   const currentMonth = dayjs().month();
   const startMonth = currentMonth - 3;
 
   const monthsArr: Month[] = Array.from({ length: 7 }, (_, i) => {
+    // Adjust length as needed
     const monthIndex = (startMonth + i + 12) % 12;
+    const currentYear = dayjs().year();
+    const defaultValue = dayjs()
+      .year(currentYear)
+      .month(monthIndex)
+      .startOf("month");
+
+    // Dynamically adjust year based on position relative to current month
+    const date =
+      monthIndex === 0 && startMonth < 0
+        ? defaultValue.year(currentYear + 1) // Force January to next year
+        : defaultValue.year(currentYear + Math.floor((startMonth + i) / 12));
+
     return {
       id: i,
-      date: (() => {
-        const defaultValue = dayjs().month(monthIndex).startOf("month");
-
-        if (startMonth < 4) {
-          return dayjs(defaultValue).subtract(1, "year");
-        } else if (startMonth > 9) {
-          return dayjs(defaultValue).add(1, "year");
-        } else {
-          return defaultValue;
-        }
-      })(),
+      date,
       text: monthNames[monthIndex],
     };
   });
 
+  // comp hooks
   const swiperRef = useRef<SwiperCore | null>(null);
   const [atEnd, setAtEnd] = useState(false);
   const [activeMonthIndex, setActiveMonthIndex] = useState<number>(3);
