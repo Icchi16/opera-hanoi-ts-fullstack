@@ -1,9 +1,8 @@
 // import React, { useEffect } from "react";
 // import Waves from "node-waves";
 import Title from "@/components/global/Title";
-import HeroSlick from "./components/HeroSwiper";
+import HeroSwiper from "./components/HeroSwiper";
 import { forYouShows, heroShows, highlightShows } from "@/samples/shows";
-import HighlightSlick from "./components/HighlightSwiper";
 import ForYou from "./components/ForYou";
 import Button from "@/components/global/Button";
 import ArrowRightIcon from "@/components/svgs/icons/ArrowRightIcon";
@@ -13,6 +12,7 @@ import news from "@/samples/news";
 import partners from "@/samples/partners";
 import Image from "next/image";
 import Link from "next/link";
+import HighlightSwiper from "./components/HighlightSwiper";
 
 export default function Home() {
   return (
@@ -20,14 +20,14 @@ export default function Home() {
       <main className="">
         {/* hero */}
         <section id="hero" className="h-screen">
-          <HeroSlick heroShows={heroShows} />
+          <HeroSwiper heroShows={heroShows} />
         </section>
 
         {/* Highlight */}
         <section id="highlight" className="bg-bg1 m-0 pb-24 pt-6">
           <div className="container">
             <Title>Nổi bật</Title>
-            <HighlightSlick highlightShows={highlightShows} />
+            <HighlightSwiper highlightShows={highlightShows} />
             <div className="flex justify-center mt-8">
               <Link href="/calendar">
                 <Button type="box" className="px-10 py-3 uppercase">
@@ -52,7 +52,7 @@ export default function Home() {
         </section>
 
         {/* AboutUs */}
-        <section id="aboutUs" className="bg-secondary pb-24 m-24 pt-6">
+        <section id="aboutUs" className="bg-bg1 pb-24 mt-24 pt-6">
           <div className="container">
             <div className="grid grid-cols-2 h-[700px] gap-32 mt-24">
               <AboutUsSwiper />
