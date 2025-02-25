@@ -38,23 +38,22 @@ const monthNames = [
 ];
 
 const MonthSelector: React.FC<MonthSelectorProps> = ({ setSelectedMonth }) => {
-  // Create Current Month Array
+  // month array
   const currentMonth = dayjs().month();
   const startMonth = currentMonth - 3;
 
   const monthsArr: Month[] = Array.from({ length: 7 }, (_, i) => {
-    // Adjust length as needed
     const monthIndex = (startMonth + i + 12) % 12;
     const currentYear = dayjs().year();
+    
     const defaultValue = dayjs()
       .year(currentYear)
       .month(monthIndex)
       .startOf("month");
 
-    // Dynamically adjust year based on position relative to current month
     const date =
       monthIndex === 0 && startMonth < 0
-        ? defaultValue.year(currentYear + 1) // Force January to next year
+        ? defaultValue.year(currentYear + 1)
         : defaultValue.year(currentYear + Math.floor((startMonth + i) / 12));
 
     return {

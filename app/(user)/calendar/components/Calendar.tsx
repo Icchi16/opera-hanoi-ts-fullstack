@@ -31,6 +31,7 @@ const Calendar: React.FC<CalendarProps> = ({ selectedMonth }) => {
     { id: 6, text: "Chủ nhật" },
   ];
 
+  // optimize days calculation
   const calendarDays = useMemo(() => {
     if (!selectedMonth) return [];
 
@@ -78,34 +79,34 @@ const Calendar: React.FC<CalendarProps> = ({ selectedMonth }) => {
             </tr>
           </thead>
           <tbody>
-            {calendarDays.map((week, index) =>
-              _.some(week, (day) => day.isCurrentMonth) ? (
+            {calendarDays.map(
+              (week, index) => (
+                // _.some(week, (day) => day.isCurrentMonth) ? (
                 <tr key={index}>
                   {week.map((day) => (
                     <td
                       key={day.id}
                       className="border border-white border-opacity-35"
                     >
-                      <div className="relative">
-                        <DayCard
-                          shows={_.filter(shows, (show) =>
-                            dayjs(day.date).isBetween(
-                              dayjs(show.date.startDate),
-                              dayjs(show.date.endDate),
-                              "day",
-                              "[]"
-                            )
-                          )}
-                          date={day.date}
-                          selectedMonth={selectedMonth}
-                        />
+                      <DayCard
+                        shows={_.filter(shows, (show) =>
+                          dayjs(day.date).isBetween(
+                            dayjs(show.date.startDate),
+                            dayjs(show.date.endDate),
+                            "day",
+                            "[]"
+                          )
+                        )}
+                        date={day.date}
+                        selectedMonth={selectedMonth}
+                      />
 
-                        {/* {dayjs(day.date).date()} */}
-                      </div>
+                      {/* {dayjs(day.date).date()} */}
                     </td>
                   ))}
                 </tr>
-              ) : null
+              )
+              // ) : null
             )}
           </tbody>
         </table>

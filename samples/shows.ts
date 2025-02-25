@@ -37,8 +37,8 @@ const shows: ShowMetadata[] = [
     cover: "/show2.jpg",
     title: "Les Misérables",
     date: {
-      startDate: new Date("2025-09-20"),
-      endDate: new Date("2025-09-30"),
+      startDate: new Date("2025-01-30"),
+      endDate: new Date("2025-02-12"),
     },
     time: 150,
     forUser: true,
@@ -82,8 +82,8 @@ const shows: ShowMetadata[] = [
     link: "anh-sang-vinh-cuu",
     title: "Ánh Sáng Vĩnh Cửu",
     date: {
-      startDate: new Date("2025-05-13"),
-      endDate: new Date("2025-05-27"),
+      startDate: new Date("2025-02-28"),
+      endDate: new Date("2025-03-01"),
     },
     time: 90,
     forUser: true,
@@ -100,8 +100,8 @@ const shows: ShowMetadata[] = [
     link: "duoi-anh-trang-mo",
     title: "Dưới Ánh Trăng Mờ",
     date: {
-      startDate: new Date("2025-03-19"),
-      endDate: new Date("2025-03-25"),
+      startDate: new Date("2025-02-28"),
+      endDate: new Date("2025-03-02"),
     },
     time: 120,
     forUser: true,
