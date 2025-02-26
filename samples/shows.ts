@@ -10,8 +10,8 @@ const shows: ShowMetadata[] = [
     cover: "/show1.jpg",
     title: "Hàm Lệ Minh Châu",
     date: {
-      startDate: new Date("2025-02-11"),
-      endDate: new Date("2025-03-10"),
+      startDate: new Date("2025-02-27"),
+      endDate: new Date("2025-03-05"),
     },
     time: 120,
     forUser: true,
@@ -27,6 +27,10 @@ const shows: ShowMetadata[] = [
         { id: 3, date: new Date("2025-10-13 18:00") },
         { id: 4, date: new Date("2025-10-14 17:00") },
       ],
+    },
+    genre: {
+      genreId: "play",
+      genreText: "Kịch",
     },
   },
   {
@@ -55,6 +59,10 @@ const shows: ShowMetadata[] = [
         { id: 4, date: new Date("2025-10-14 17:00") },
       ],
     },
+    genre: {
+      genreId: "play",
+      genreText: "Kịch",
+    },
   },
   {
     id: 2,
@@ -64,8 +72,8 @@ const shows: ShowMetadata[] = [
     link: "huong-sac-tinh-yeu",
     title: "Hương Sắc Tình Yêu",
     date: {
-      startDate: new Date("2025-01-21"),
-      endDate: new Date("2025-01-30"),
+      startDate: new Date("2025-04-12"),
+      endDate: new Date("2025-04-17"),
     },
     time: 175,
     forUser: true,
@@ -73,6 +81,10 @@ const shows: ShowMetadata[] = [
       { id: 0, pos: "Director", name: "Emeritus Artist Trần Ly Ly" },
       { id: 1, pos: "Artistic Director", name: "Phan Mạnh Đức" },
     ],
+    genre: {
+      genreId: "play",
+      genreText: "Kịch",
+    },
   },
   {
     id: 3,
@@ -82,8 +94,8 @@ const shows: ShowMetadata[] = [
     link: "anh-sang-vinh-cuu",
     title: "Ánh Sáng Vĩnh Cửu",
     date: {
-      startDate: new Date("2025-02-28"),
-      endDate: new Date("2025-03-01"),
+      startDate: new Date("2025-02-12"),
+      endDate: new Date("2025-02-28"),
     },
     time: 90,
     forUser: true,
@@ -91,6 +103,10 @@ const shows: ShowMetadata[] = [
       { id: 0, pos: "Director", name: "Emeritus Artist Trần Ly Ly" },
       { id: 1, pos: "Artistic Director", name: "Phan Mạnh Đức" },
     ],
+    genre: {
+      genreId: "play",
+      genreText: "Nhạc kịch",
+    },
   },
   {
     id: 4,
@@ -100,8 +116,8 @@ const shows: ShowMetadata[] = [
     link: "duoi-anh-trang-mo",
     title: "Dưới Ánh Trăng Mờ",
     date: {
-      startDate: new Date("2025-02-28"),
-      endDate: new Date("2025-03-02"),
+      startDate: new Date("2025-03-15"),
+      endDate: new Date("2025-03-08"),
     },
     time: 120,
     forUser: true,
@@ -109,6 +125,10 @@ const shows: ShowMetadata[] = [
       { id: 0, pos: "Director", name: "Emeritus Artist Trần Ly Ly" },
       { id: 1, pos: "Artistic Director", name: "Phan Mạnh Đức" },
     ],
+    genre: {
+      genreId: "play",
+      genreText: "Hoà nhạc",
+    },
   },
   {
     id: 5,
@@ -127,6 +147,10 @@ const shows: ShowMetadata[] = [
       { id: 0, pos: "Director", name: "Emeritus Artist Trần Ly Ly" },
       { id: 1, pos: "Artistic Director", name: "Phan Mạnh Đức" },
     ],
+    genre: {
+      genreId: "play",
+      genreText: "Kịch",
+    },
   },
   {
     id: 6,
@@ -145,6 +169,10 @@ const shows: ShowMetadata[] = [
       { id: 0, pos: "Director", name: "Emeritus Artist Trần Ly Ly" },
       { id: 1, pos: "Artistic Director", name: "Phan Mạnh Đức" },
     ],
+    genre: {
+      genreId: "play",
+      genreText: "Kịch",
+    },
   },
   {
     id: 7,
@@ -163,6 +191,10 @@ const shows: ShowMetadata[] = [
       { id: 0, pos: "Director", name: "Emeritus Artist Trần Ly Ly" },
       { id: 1, pos: "Artistic Director", name: "Phan Mạnh Đức" },
     ],
+    genre: {
+      genreId: "play",
+      genreText: "Kịch",
+    },
   },
 ];
 

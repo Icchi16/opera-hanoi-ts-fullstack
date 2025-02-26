@@ -42,7 +42,7 @@ const GenreFilter: React.FC<GenreFilterProps> = ({
             <div
               className={clsx(
                 "cursor-pointer duration-300 transition-all absolute inset-0 z-20 px-2 text-center",
-                genre.genre === activeGenre ? "opacity-100 font-medium" : "opacity-35"
+                genre.genre === activeGenre ? "opacity-100 font-medium" : "opacity-60"
               )}
               onClick={() => setActiveGenre(genre.genre)}
             >

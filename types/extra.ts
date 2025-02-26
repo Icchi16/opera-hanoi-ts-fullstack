@@ -16,6 +16,7 @@ export interface ShowMetadata {
   bookingData?: {
     date: { id: number; date: Date }[];
   };
+  genre: { genreId: Genre; genreText: string };
 }
 
 export interface AboutUsCover {
