@@ -20,6 +20,10 @@ const DayCard: React.FC<DayCardProps> = ({ date, shows, selectedMonth }) => {
   const router = useRouter();
 
   const MAX_STACKED_SHOWS = 3;
+  const today = dayjs().startOf("day");
+  const isPast = date.isBefore(today, "day");
+  const isOutOfMonth = !date.isSame(dayjs(selectedMonth), "month");
+  const isDisabled = isPast || isOutOfMonth;
 
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [isHovering, setIsHovering] = useState<boolean>(false);
@@ -35,73 +39,63 @@ const DayCard: React.FC<DayCardProps> = ({ date, shows, selectedMonth }) => {
         setIsHovering(false);
       }}
     >
-      {/* Main box data */}
+      {/* Main Box */}
       <div
         className={clsx(
-          "relative h-full",
-          (date.isBefore(dayjs()) ||
-            !date.isSame(dayjs(selectedMonth), "month")) &&
-            "opacity-35 cursor-not-allowed"
+          "relative h-full transition-opacity",
+          isDisabled && "opacity-35 cursor-not-allowed"
         )}
       >
-        {/* Date on top right corner */}
+        {/* Date on Top Right Corner */}
         <div
           className={clsx(
-            "absolute right-2 top-3 mix-blend-difference leading-none z-20 pointer-events-none transition-all duration-300",
+            "absolute right-2 top-3 mix-blend-difference leading-none z-20 pointer-events-none transition-opacity duration-300",
             hoveredIndex !== null && "opacity-0"
           )}
         >
-          {dayjs(date).format("DD")}
+          {date.format("DD")}
         </div>
 
         {/* Cover Images */}
-        {shows.length > 0 &&
-          visibleShows.map((show, index) => {
-            const isHovered = hoveredIndex === index;
-            return (
-              <div
-                key={show.id}
-                className="absolute h-full w-full transition-all duration-300"
-                style={{
-                  transform: isHovered
-                    ? "translateX(0)"
-                    : isHovering
-                    ? "translateX(-100%)"
-                    : `translateX(-${
-                        100 *
-                        ((visibleShows.length - index - 1) /
-                          visibleShows.length)
-                      }%)`,
-                  zIndex: visibleShows.length - index,
-                }}
-                onMouseEnter={() => setHoveredIndex(index)}
-              >
-                <Image
-                  fill
-                  className={clsx(
-                    "object-cover object-center shadow-black shadow-xl transition-all duration-100",
-                    !isHovered &&
-                      index + 1 !== visibleShows.length &&
-                      "rounded-r-2xl",
-                    isHovered && "brightness-[0.3]"
-                  )}
-                  src={show.cover}
-                  alt=""
-                />
-              </div>
-            );
-          })}
+        {visibleShows.map((show, index) => {
+          const isHovered = hoveredIndex === index;
+          const baseOffset = 100 * ((visibleShows.length - index - 1) / visibleShows.length);
+
+          return (
+            <div
+              key={show.id}
+              className="absolute h-full w-full transition-transform duration-300"
+              style={{
+                transform: isHovered
+                  ? "translateX(0)"
+                  : isHovering
+                  ? "translateX(-100%)"
+                  : `translateX(-${baseOffset}%)`,
+                zIndex: visibleShows.length - index,
+              }}
+              onMouseEnter={() => setHoveredIndex(index)}
+            >
+              <Image
+                fill
+                className={clsx(
+                  "object-cover object-center shadow-black shadow-xl transition-all duration-100",
+                  !isHovered && index + 1 !== visibleShows.length && "rounded-r-2xl",
+                  isHovered && "brightness-[0.3]"
+                )}
+                src={show.cover}
+                alt=""
+              />
+            </div>
+          );
+        })}
 
         {/* Hover Content */}
         {hoveredIndex !== null && (
-          <div className="p-2 absolute inset-0 z-10 transition-all duration-300 backdrop-blur-sm pointer-events-none">
+          <div className="p-2 absolute inset-0 z-10 transition-all duration-300 backdrop-blur-sm">
             <div
               className={clsx(
                 "h-full flex flex-col justify-between items-start",
-                date.isBefore(dayjs()) ||
-                  !date.isSame(dayjs(selectedMonth), "month")
-                  ? "pointer-events-none"
-                  : "pointer-events-auto"
+                isDisabled ? "pointer-events-none" : "pointer-events-auto"
               )}
             >
               {/* Title & Genre */}
@@ -113,24 +107,21 @@ const DayCard: React.FC<DayCardProps> = ({ date, shows, selectedMonth }) => {
                   {shows[hoveredIndex].genre.genreText}
                 </div>
 
-                {/* Show's Date */}
+                {/* Show Date */}
                 <div className="mt-2">
-                  <span>
-                    {dayjs(shows[hoveredIndex].date.startDate).format("DD/MM")}
-                  </span>
-                  <span>{" - "}</span>
-                  <span>
-                    {dayjs(shows[hoveredIndex].date.endDate).format("DD/MM")}
-                  </span>
+                  {dayjs(shows[hoveredIndex].date.startDate).format("DD/MM")} -{" "}
+                  {dayjs(shows[hoveredIndex].date.endDate).format("DD/MM")}
                 </div>
               </div>
+
               {/* CTA Button */}
               <Button
                 type="box"
                 className="border-[2px] text-primary"
-                onClick={() => {
-                  router.push(`/shows/booking/${shows[hoveredIndex].link}`);
-                }}
+                onClick={() =>
+                  router.push(`/shows/booking/${shows[hoveredIndex].link}`)
+                }
+                isDisabled={isDisabled}
               >
                 Đặt vé
               </Button>

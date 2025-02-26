@@ -6,12 +6,16 @@ interface ButtonProps extends React.HTMLAttributes<HTMLDivElement> {
   onClick?: () => void;
   className?: string;
   submit?: boolean;
+  isDisabled?: boolean;
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ type, children, className, onClick, submit, ...props }, ref) => {
+  (
+    { type, children, className, onClick, submit, isDisabled, ...props },
+    ref
+  ) => {
     return (
-      <button onClick={onClick} ref={ref} type={submit ? "submit" : "button"}>
+      <button onClick={onClick} ref={ref} type={submit ? "submit" : "button"} className={clsx(isDisabled && "btn-disabled")}>
         {(() => {
           switch (type) {
             case "box":
@@ -28,7 +32,10 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
               );
             case "arrow":
               return (
-                <div className={clsx("btn btn-lg btn-text", className)} {...props}>
+                <div
+                  className={clsx("btn btn-lg btn-text", className)}
+                  {...props}
+                >
                   {children}
                 </div>
               );
