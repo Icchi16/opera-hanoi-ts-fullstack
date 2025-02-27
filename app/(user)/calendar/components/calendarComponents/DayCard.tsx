@@ -9,6 +9,7 @@ import { useState } from "react";
 import _ from "lodash";
 import Button from "@/components/global/Button";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 interface DayCardProps {
   date: Dayjs;
@@ -59,7 +60,8 @@ const DayCard: React.FC<DayCardProps> = ({ date, shows, selectedMonth }) => {
         {/* Cover Images */}
         {visibleShows.map((show, index) => {
           const isHovered = hoveredIndex === index;
-          const baseOffset = 100 * ((visibleShows.length - index - 1) / visibleShows.length);
+          const baseOffset =
+            100 * ((visibleShows.length - index - 1) / visibleShows.length);
 
           return (
             <div
@@ -79,7 +81,9 @@ const DayCard: React.FC<DayCardProps> = ({ date, shows, selectedMonth }) => {
                 fill
                 className={clsx(
                   "object-cover object-center shadow-black shadow-xl transition-all duration-100",
-                  !isHovered && index + 1 !== visibleShows.length && "rounded-r-2xl",
+                  !isHovered &&
+                    index + 1 !== visibleShows.length &&
+                    "rounded-r-2xl",
                   isHovered && "brightness-[0.3]"
                 )}
                 src={show.cover}
@@ -90,8 +94,15 @@ const DayCard: React.FC<DayCardProps> = ({ date, shows, selectedMonth }) => {
         })}
 
         {/* Hover Content */}
-        {hoveredIndex !== null && (
-          <div className="p-2 absolute inset-0 z-10 transition-all duration-300 backdrop-blur-sm">
+        <div
+          className={clsx(
+            "p-2 absolute inset-0 z-10 transition-all duration-300 backdrop-blur-sm pointer-events-none delay-100",
+            hoveredIndex !== null
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-4"
+          )}
+        >
+          {hoveredIndex !== null && (
             <div
               className={clsx(
                 "h-full flex flex-col justify-between items-start",
@@ -99,35 +110,37 @@ const DayCard: React.FC<DayCardProps> = ({ date, shows, selectedMonth }) => {
               )}
             >
               {/* Title & Genre */}
-              <div>
-                <div className="font-[family-name:var(--title)] text-primary text-2xl font-semibold w-[80%] line-clamp-2">
-                  {shows[hoveredIndex].title}
+              <>
+                <div>
+                  <div className="font-[family-name:var(--title)] text-primary text-2xl font-semibold w-[80%] line-clamp-2">
+                    <Link href={`${shows[hoveredIndex].link}`}>
+                      {shows[hoveredIndex].title}
+                    </Link>
+                  </div>
+                  <div className="font-[family-name:var(--body)] text-md">
+                    {shows[hoveredIndex].genre.genreText}
+                  </div>
+                  {/* Show Date */}
+                  <div className="mt-2">
+                    {dayjs(shows[hoveredIndex].date.startDate).format("DD/MM")}{" "}
+                    - {dayjs(shows[hoveredIndex].date.endDate).format("DD/MM")}
+                  </div>
                 </div>
-                <div className="font-[family-name:var(--body)] text-md">
-                  {shows[hoveredIndex].genre.genreText}
-                </div>
-
-                {/* Show Date */}
-                <div className="mt-2">
-                  {dayjs(shows[hoveredIndex].date.startDate).format("DD/MM")} -{" "}
-                  {dayjs(shows[hoveredIndex].date.endDate).format("DD/MM")}
-                </div>
-              </div>
-
-              {/* CTA Button */}
-              <Button
-                type="box"
-                className="border-[2px] text-primary"
-                onClick={() =>
-                  router.push(`/shows/booking/${shows[hoveredIndex].link}`)
-                }
-                isDisabled={isDisabled}
-              >
-                Đặt vé
-              </Button>
+                {/* CTA Button */}
+                <Button
+                  type="box"
+                  className="border-[2px] text-primary"
+                  onClick={() =>
+                    router.push(`/shows/booking/${shows[hoveredIndex].link}`)
+                  }
+                  isDisabled={isDisabled}
+                >
+                  Đặt vé
+                </Button>
+              </>
             </div>
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </div>
   );
