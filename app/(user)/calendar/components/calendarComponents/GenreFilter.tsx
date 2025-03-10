@@ -4,15 +4,15 @@ import { Genre } from "@/types/extra";
 import clsx from "clsx";
 import { memo, useEffect } from "react";
 
-interface GenreFilterProps {
-  activeGenre: Genre;
-  setActiveGenre: (genre: Genre) => void;
+export interface Filter {
+  id: number;
+  text: Genre["text"] | "Tất cả";
+  genre: Genre["id"] | "all";
 }
 
-interface Filter {
-  id: number;
-  text: string;
-  genre: Genre;
+interface GenreFilterProps {
+  activeGenre: Filter["genre"];
+  setActiveGenre: (genre: Filter["genre"]) => void;
 }
 
 export const filterArr: Filter[] = [
@@ -41,14 +41,18 @@ const GenreFilter: React.FC<GenreFilterProps> = ({
           <div className="text-2xl font-[family-name:var(--title)] text-white relative">
             <div
               className={clsx(
-                "cursor-pointer duration-300 transition-all absolute inset-0 z-20 px-2 text-center",
-                genre.genre === activeGenre ? "opacity-100 font-medium" : "opacity-60"
+                "cursor-pointer duration-300 transition-all absolute inset-0 z-20 px-2 text-center select-none",
+                genre.genre === activeGenre
+                  ? "opacity-100 font-medium"
+                  : "opacity-60"
               )}
               onClick={() => setActiveGenre(genre.genre)}
             >
               {genre.text}
             </div>
-            <div className="relative opacity-0 font-medium -z-5 px-2 text-center">{genre.text}</div>
+            <div className="relative opacity-0 font-medium -z-5 px-2 text-center">
+              {genre.text}
+            </div>
           </div>
         </div>
       ))}

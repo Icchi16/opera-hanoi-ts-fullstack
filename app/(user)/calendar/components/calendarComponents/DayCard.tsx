@@ -6,7 +6,7 @@ import dayjs, { Dayjs } from "dayjs";
 import Image from "next/image";
 import { CalendarProps } from "../Calendar";
 import { useEffect, useRef, useState } from "react";
-import _, { escape } from "lodash";
+import _ from "lodash";
 import Button from "@/components/global/Button";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
@@ -59,7 +59,7 @@ const DayCard: React.FC<DayCardProps> = ({ date, shows, selectedMonth }) => {
       {/* Main Box */}
       <div
         className={clsx(
-          "relative h-full transition-opacity",
+          "relative h-full transition-opacity select-none",
           isDisabled
             ? "opacity-35 cursor-not-allowed pointer-events-none"
             : "cursor-pointer"
@@ -68,7 +68,7 @@ const DayCard: React.FC<DayCardProps> = ({ date, shows, selectedMonth }) => {
         {/* Date on Top Right Corner */}
         <div
           className={clsx(
-            "absolute right-2 top-3 mix-blend-difference leading-none z-20 pointer-events-none transition-opacity duration-300",
+            "absolute right-2 top-3 mix-blend-difference leading-none z-20 pointer-events-none transition-opacity duration-300 select-none",
             selectedIndex !== null && "opacity-0"
           )}
         >
@@ -193,7 +193,11 @@ const DayCard: React.FC<DayCardProps> = ({ date, shows, selectedMonth }) => {
                   >
                     Đặt vé
                   </Button>
-                  <Button className="px-3" type="box" onClick={() => setSelectedIndex(null)}>
+                  <Button
+                    className="px-3"
+                    type="box"
+                    onClick={() => setSelectedIndex(null)}
+                  >
                     <Icon icon="teenyicons:down-outline" />
                   </Button>
                 </div>

@@ -105,7 +105,7 @@ const shows: ShowMetadata[] = [
     ],
     genre: {
       genreId: "play",
-      genreText: "Nhạc kịch",
+      genreText: "Kịch",
     },
   },
   {
@@ -127,7 +127,7 @@ const shows: ShowMetadata[] = [
     ],
     genre: {
       genreId: "play",
-      genreText: "Hoà nhạc",
+      genreText: "Giao hưởng",
     },
   },
   {
@@ -192,8 +192,8 @@ const shows: ShowMetadata[] = [
       { id: 1, pos: "Artistic Director", name: "Phan Mạnh Đức" },
     ],
     genre: {
-      genreId: "play",
-      genreText: "Kịch",
+      genreId: "circus",
+      genreText: "Xiếc",
     },
   },
 ];

@@ -16,7 +16,7 @@ export interface ShowMetadata {
   bookingData?: {
     date: { id: number; date: Date }[];
   };
-  genre: { genreId: Genre; genreText: string };
+  genre: { genreId: Genre["id"]; genreText: Genre["text"] };
 }
 
 export interface AboutUsCover {
@@ -50,12 +50,21 @@ export interface FAQ {
   body: string | ReactElement;
 }
 
-export type Genre =
-  | "all"
-  | "orchestra"
-  | "ballet"
-  | "play"
-  | "music"
-  | "circus"
-  | "live-show"
-  | "event";
+export type Genre = {
+  id:
+    | "orchestra"
+    | "ballet"
+    | "play"
+    | "music"
+    | "circus"
+    | "live-show"
+    | "event";
+  text:
+    | "Giao hưởng"
+    | "Ballet"
+    | "Kịch"
+    | "Ca nhạc"
+    | "Xiếc"
+    | "Liveshow"
+    | "Sự kiện";
+};

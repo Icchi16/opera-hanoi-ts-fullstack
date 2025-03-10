@@ -1,9 +1,8 @@
 "use client";
 
 import dayjs, { Dayjs } from "dayjs";
-import { memo, useMemo, useState } from "react";
-import GenreFilter from "./calendarComponents/GenreFilter";
-import { Genre } from "@/types/extra";
+import { memo, useEffect, useMemo, useState } from "react";
+import GenreFilter, { Filter } from "./calendarComponents/GenreFilter";
 import _ from "lodash";
 import "dayjs/locale/vi";
 import DayCard from "./calendarComponents/DayCard";
@@ -19,7 +18,7 @@ export interface CalendarProps {
 const Calendar: React.FC<CalendarProps> = ({ selectedMonth }) => {
   dayjs.locale("vi");
 
-  const [activeGenre, setActiveGenre] = useState<Genre>("all");
+  const [activeGenre, setActiveGenre] = useState<Filter["genre"]>("all");
 
   const weekDays = [
     { id: 0, text: "Thứ hai" },
@@ -30,6 +29,18 @@ const Calendar: React.FC<CalendarProps> = ({ selectedMonth }) => {
     { id: 5, text: "Thứ bảy" },
     { id: 6, text: "Chủ nhật" },
   ];
+
+  const [filteredShows, setFilteredShows] = useState(shows);
+
+  useEffect(() => {
+    if (activeGenre === "all") {
+      setFilteredShows(shows);
+    } else {
+      setFilteredShows(
+        _.filter(shows, (show) => show.genre.genreId === activeGenre)
+      );
+    }
+  }, [activeGenre]);
 
   // optimize days calculation
   const calendarDays = useMemo(() => {
@@ -71,7 +82,7 @@ const Calendar: React.FC<CalendarProps> = ({ selectedMonth }) => {
               {weekDays.map((date) => (
                 <td
                   key={date.id}
-                  className="font-light text-[20px] text-right border border-white border-opacity-35 px-2 py-2"
+                  className="font-light text-[20px] text-right border border-white border-opacity-35 px-2 py-2 select-none"
                 >
                   {date.text}
                 </td>
@@ -79,35 +90,29 @@ const Calendar: React.FC<CalendarProps> = ({ selectedMonth }) => {
             </tr>
           </thead>
           <tbody>
-            {calendarDays.map(
-              (week, index) => (
-                // _.some(week, (day) => day.isCurrentMonth) ? (
-                <tr key={index}>
-                  {week.map((day) => (
-                    <td
-                      key={day.id}
-                      className="border border-white border-opacity-35"
-                    >
-                      <DayCard
-                        shows={_.filter(shows, (show) =>
-                          dayjs(day.date).isBetween(
-                            dayjs(show.date.startDate),
-                            dayjs(show.date.endDate),
-                            "day",
-                            "[]"
-                          )
-                        )}
-                        date={day.date}
-                        selectedMonth={selectedMonth}
-                      />
-
-                      {/* {dayjs(day.date).date()} */}
-                    </td>
-                  ))}
-                </tr>
-              )
-              // ) : null
-            )}
+            {calendarDays.map((week, index) => (
+              <tr key={index}>
+                {week.map((day) => (
+                  <td
+                    key={day.id}
+                    className="border border-white border-opacity-35"
+                  >
+                    <DayCard
+                      shows={_.filter(filteredShows, (show) =>
+                        dayjs(day.date).isBetween(
+                          dayjs(show.date.startDate),
+                          dayjs(show.date.endDate),
+                          "day",
+                          "[]"
+                        )
+                      )}
+                      date={day.date}
+                      selectedMonth={selectedMonth}
+                    />
+                  </td>
+                ))}
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
