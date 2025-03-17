@@ -18,7 +18,7 @@ const CalendarPage = () => {
         alt="calendar background"
         className="object-cover object-center opacity-20 blur-sm pointer-events-none -z-5"
       />
-      <div className="container py-32">
+      <div className="container pt-32 pb-20">
         <div className="px-8">
           <div className="w-full text-center">
             <Title>Lịch Chương Trình</Title>

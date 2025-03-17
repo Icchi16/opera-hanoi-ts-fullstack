@@ -8,6 +8,7 @@ import "dayjs/locale/vi";
 import DayCard from "./calendarComponents/DayCard";
 import shows from "@/samples/shows";
 import isBetween from "dayjs/plugin/isBetween";
+import Button from "@/components/global/Button";
 
 dayjs.extend(isBetween);
 
@@ -115,6 +116,21 @@ const Calendar: React.FC<CalendarProps> = ({ selectedMonth }) => {
             ))}
           </tbody>
         </table>
+
+        {/* Event Button*/}
+        <div className="flex w-full justify-center mt-16">
+          <div className="flex flex-col max-w-[945px] font-[family-name:var(--body)]">
+            <div className="text-center py-8 px-2 border-t-[1px] border-white border-opacity-35 text-white font-light tracking-wide">
+              Nếu bạn cần thông tin về một trong những vở kịch của chúng tôi,
+              hãy gọi thư ký nhà hát của chúng tôi, số điện thoại miễn phí,
+              821-891-4391. Dịch vụ khách hàng có sẵn từ 9:00 đến 17:00. Từ Thứ
+              Hai đến Thứ Sáu và 10:00 đến 18:00.
+            </div>
+            <Button type="box" className="max-w-fit px-20 py-3">
+              <div className="capitalize text-2xl font-medium">LIÊN HỆ NGAY</div>
+            </Button>
+          </div>
+        </div>
       </div>
     </>
   );
