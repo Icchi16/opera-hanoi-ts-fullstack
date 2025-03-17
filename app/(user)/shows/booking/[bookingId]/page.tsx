@@ -2,7 +2,6 @@ import shows from "@/samples/shows";
 import _ from "lodash";
 import Image from "next/image";
 import SeatMap from "./components/SeatMap";
-import SeatMapF1 from "@/resource/seatmaps/SeatMapF1";
 
 interface ShowBookingParams {
   bookingId: string;
@@ -59,7 +58,7 @@ const ShowBooking = async ({
           </div>
 
           {/* Test */}
-          <SeatMapF1 />
+          
           
         </div>
       </div>

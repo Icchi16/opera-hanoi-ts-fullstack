@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import SeatMapF1 from "@/resource/seatmaps/SeatMapF1";
 import React, { useState, useRef, MouseEvent } from "react";
 
 const SeatMap = () => {
@@ -59,12 +59,7 @@ const SeatMap = () => {
           onMouseLeave={handleMouseUp}
         >
           {/* Minimap image */}
-          <Image
-            src="/show1.jpg"
-            alt="Minimap"
-            fill
-            className="object-cover"
-          />
+            <SeatMapF1 />
           {/* Draggable selection frame */}
           <div
             className="absolute border-2 border-blue-500 cursor-move bg-white/20"
@@ -88,12 +83,7 @@ const SeatMap = () => {
             transformOrigin: "top left",
           }}
         >
-          <Image
-            src="/show1.jpg"
-            alt="Zoomed View"
-            fill
-            className="object-cover"
-          />
+          <SeatMapF1 />
         </div>
       </div>
     </div>

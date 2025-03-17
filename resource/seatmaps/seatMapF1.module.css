@@ -1,36 +1,136 @@
-.cls-1 {
-    fill: none;
-    stroke: #000;
-    stroke-miterlimit: 10;
-  }
-  
-  .cls-2 {
-    fill: #ea2b00;
-    opacity: 0.5;
-  }
-  
-  .cls-3 {
-    fill: #0038ff;
-    opacity: 0.5;
-  }
-  
-  .zone-C {
-    fill: #ffdfa7;
-    opacity: 0.5;
-  }
-  
-  .cls-5 {
-    fill: #640b93;
-    opacity: 0.5;
-  }
-  
-  .zone-E {
-    fill: #9f7ea7;
-    opacity: 0.5;
-  }
-  
-  .zone-D {
-    fill: #9fe2a7;
-    opacity: 0.5;
-  }
-  
+.circle {
+  fill: #000;
+  fill-opacity: 0;
+  stroke: #000;
+  stroke-miterlimit: 10;
+}
+
+.zone-F {
+  fill: #ea2b00;
+  opacity: 0.5;
+}
+
+.zone-G {
+  fill: #0038ff;
+  opacity: 0.5;
+}
+
+.zone-C {
+  fill: #ffdfa7;
+  opacity: 0.5;
+}
+
+.zone-AnB {
+  fill: #640b93;
+  opacity: 0.5;
+}
+
+.zone-E {
+  fill: #9f7ea7;
+  opacity: 0.5;
+}
+
+.zone-D {
+  fill: #9fe2a7;
+  opacity: 0.5;
+}
+
+.line {
+  stroke: #c9ac8c;
+  fill: #c9ac8c;
+}
+
+.general {
+  color: #c9ac8c;
+}
+
+.text,
+.text-stage,
+.text-zone,
+.seat-legend {
+  fill: #c9ac8c;
+}
+
+.text {
+  font-weight: 700;
+}
+
+.text-zone {
+  font-size: 9.24px;
+}
+
+.seat-legend {
+  font-size: 9.11px;
+}
+
+.text-stage {
+  font-size: 22.64px;
+  font-weight: 700;
+}
+/* Update */
+
+.cls-2 {
+  fill: #ea2b00;
+  opacity: 0.5;
+}
+
+.cls-3 {
+  fill: #0038ff;
+  opacity: 0.5;
+}
+
+.cls-4 {
+  fill: #ffdfa7;
+  opacity: 0.5;
+}
+
+.cls-5 {
+  fill: #640b93;
+  opacity: 0.5;
+}
+
+.cls-6 {
+  fill: #9f7ea7;
+  opacity: 0.5;
+}
+
+.cls-7 {
+  fill: #9fe2a7;
+  opacity: 0.5;
+}
+
+.cls-9 {
+  letter-spacing: 0em;
+}
+
+.cls-10 {
+  letter-spacing: -0.04em;
+}
+
+.cls-11,
+.cls-12,
+.cls-13,
+.cls-11,
+.cls-13 {
+  font-size: 9.11px;
+}
+
+.cls-12 {
+  font-size: 12px;
+}
+
+.cls-13 {
+  letter-spacing: 0.02em;
+}
+
+.cls-14 {
+  font-size: 9.24px;
+}
+
+.cls-15 {
+  letter-spacing: 0em;
+}
+
+.cls-16 {
+  letter-spacing: 0.01em;
+}
