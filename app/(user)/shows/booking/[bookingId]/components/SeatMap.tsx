@@ -54,7 +54,7 @@ const SeatMap = () => {
       <div className="col-span-1">
         <div
           ref={containerRef}
-          className="relative border border-gray-400 h-[600px] select-none"
+          className="relative border border-gray-400 h-[600px] select-none px-3"
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseUp}
         >
@@ -77,7 +77,7 @@ const SeatMap = () => {
       {/* Right Column: Zoomed View */}
       <div className="col-span-2 relative border border-gray-400 h-[600px] overflow-hidden">
         <div
-          className="absolute top-0 left-0 w-full h-full"
+          className="absolute top-0 left-0 w-full h-full px-6"
           style={{
             transform: `scale(${zoomScale}) translate(-${framePosition.x}px, -${framePosition.y}px)`,
             transformOrigin: "top left",

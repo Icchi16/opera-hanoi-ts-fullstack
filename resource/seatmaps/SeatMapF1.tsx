@@ -1,6 +1,100 @@
 "use client";
 import styles from "./seatMapF1.module.css";
 
+const zoneEntryArr = [
+  { id: 0, text: "L1A", cord: { x: 1.21, y: 204.92 }, rota: 90 },
+  { id: 1, text: "L1B", cord: { x: 1.21, y: 254.38 }, rota: 90 },
+  { id: 2, text: "L1C", cord: { x: 1.21, y: 303.02 }, rota: 90 },
+  { id: 3, text: "L1D", cord: { x: 2.16, y: 372.86 }, rota: 75.95 },
+  { id: 4, text: "L1E", cord: { x: 194.41, y: 429.17 }, rota: -90 },
+  { id: 5, text: "L1F", cord: { x: 233.79, y: 429.14 }, rota: -90 },
+  { id: 6, text: "L1G", cord: { x: 414.47, y: 380.61 }, rota: -75.95 },
+  { id: 7, text: "L1H", cord: { x: 419.89, y: 309.16 }, rota: -90 },
+  { id: 8, text: "L1I", cord: { x: 419.89, y: 260.19 }, rota: -90 },
+  { id: 9, text: "L1J", cord: { x: 419.89, y: 212.64 }, rota: -90 },
+];
+
+const zoneAnBLegendArr = [
+  {
+    id: 0,
+    text: "A",
+    cordL: { x: 1.21, y: 204.92 },
+    cordR: { x: 1.21, y: 204.92 },
+  },
+  {
+    id: 1,
+    text: "B",
+    cordL: { x: 1.21, y: 204.92 },
+    cordR: { x: 1.21, y: 204.92 },
+  },
+  {
+    id: 2,
+    text: "C",
+    cordL: { x: 1.21, y: 204.92 },
+    cordR: { x: 1.21, y: 204.92 },
+  },
+  {
+    id: 3,
+    text: "D",
+    cordL: { x: 1.21, y: 204.92 },
+    cordR: { x: 1.21, y: 204.92 },
+  },
+  {
+    id: 4,
+    text: "E",
+    cordL: { x: 1.21, y: 204.92 },
+    cordR: { x: 1.21, y: 204.92 },
+  },
+  {
+    id: 5,
+    text: "F",
+    cordL: { x: 1.21, y: 204.92 },
+    cordR: { x: 1.21, y: 204.92 },
+  },
+  {
+    id: 6,
+    text: "G",
+    cordL: { x: 1.21, y: 204.92 },
+    cordR: { x: 1.21, y: 204.92 },
+  },
+  {
+    id: 7,
+    text: "H",
+    cordL: { x: 1.21, y: 204.92 },
+    cordR: { x: 1.21, y: 204.92 },
+  },
+  {
+    id: 7,
+    text: "H",
+    cordL: { x: 1.21, y: 204.92 },
+    cordR: { x: 1.21, y: 204.92 },
+  },
+  {
+    id: 8,
+    text: "I",
+    cordL: { x: 1.21, y: 204.92 },
+    cordR: { x: 1.21, y: 204.92 },
+  },
+  {
+    id: 9,
+    text: "J",
+    cordL: { x: 1.21, y: 204.92 },
+    cordR: { x: 1.21, y: 204.92 },
+  },
+  {
+    id: 10,
+    text: "K",
+    cordL: { x: 1.21, y: 204.92 },
+    cordR: { x: 1.21, y: 204.92 },
+  },
+  {
+    id: 11,
+    text: "L",
+    cordL: { x: 1.21, y: 204.92 },
+    cordR: { x: 1.21, y: 204.92 },
+  },
+];
+
 const SeatMapF1 = () => {
   return (
     <div className="font-[family-name:var(--body)] text-primary">
@@ -62,6 +156,7 @@ const SeatMapF1 = () => {
           </g>
         </g>
 
+        {/* map border line */}
         <g className={styles["line"]}>
           <path d="M412.46,144.65c-2.84-1.05-6.36-2.85-8.55-4.76l1.54,4.26h-13.86v1h13.86l-1.54,4.25c2.18-1.9,5.71-3.7,8.55-4.75Z" />
           <path d="M293.71,129.02v-63l-.36-.56-.36-.74s-.05.03-.09.04l-13.82-21.53-.38.14c-.33.12-33.32,11.97-67.33,11.97s-67.67-11.85-67.99-11.97l-.36-.13-15.14,21.61v64.18l.33.12c.44.15,44.36,15.36,83.16,15.36s81.58-15.21,82.01-15.36l.33-.12ZM143.4,44.43c3.69,1.3,34.79,11.9,67.98,11.9s63.52-10.58,67.29-11.9l13.31,20.74c-6.24,2.78-40.62,17.19-81.18,16.32-40.53-.86-77.14-14.78-81.75-16.6l14.34-20.47ZM292.71,128.31c-4.02,1.42-43.89,15.19-81.33,15.19s-78.35-13.78-82.5-15.19v-62.41c5.33,2.09,41.69,15.74,81.91,16.6,1.18.02,2.35.04,3.52.04,39.49,0,72.48-13.94,78.22-16.51l.18.29v62Z" />
@@ -80,22 +175,7 @@ const SeatMapF1 = () => {
 
         {/* Seat */}
         <g className={styles["circle"]}>
-          <g>
-            <circle cx={56.75} cy={282.38} r={5.16} />
-            <circle cx={58.77} cy={293.49} r={5.16} />
-            <circle cx={60.8} cy={304.61} r={5.16} />
-            <circle cx={44.7} cy={293.72} r={5.16} />
-            <circle cx={47.24} cy={304.73} r={5.16} />
-            <circle cx={49.78} cy={315.74} r={5.16} />
-          </g>
-          <g>
-            <circle cx={55.91} cy={232.99} r={5.16} />
-            <circle cx={55.91} cy={244.29} r={5.16} />
-            <circle cx={55.91} cy={255.59} r={5.16} />
-            <circle cx={44.05} cy={244.29} r={5.16} />
-            <circle cx={44.05} cy={255.59} r={5.16} />
-            <circle cx={44.05} cy={266.89} r={5.16} />
-          </g>
+          {/* Seat Zone C */}
           <g>
             <circle cx={55.91} cy={177.8} r={5.16} />
             <circle cx={55.91} cy={189.1} r={5.16} />
@@ -104,6 +184,28 @@ const SeatMapF1 = () => {
             <circle cx={44.05} cy={205.55} r={5.16} />
             <circle cx={44.05} cy={216.85} r={5.16} />
           </g>
+
+          {/* Seat Zone D */}
+          <g>
+            <circle cx={55.91} cy={232.99} r={5.16} />
+            <circle cx={55.91} cy={244.29} r={5.16} />
+            <circle cx={55.91} cy={255.59} r={5.16} />
+            <circle cx={44.05} cy={244.29} r={5.16} />
+            <circle cx={44.05} cy={255.59} r={5.16} />
+            <circle cx={44.05} cy={266.89} r={5.16} />
+          </g>
+
+          {/* Seat Zone E */}
+          <g>
+            <circle cx={56.75} cy={282.38} r={5.16} />
+            <circle cx={58.77} cy={293.49} r={5.16} />
+            <circle cx={60.8} cy={304.61} r={5.16} />
+            <circle cx={44.7} cy={293.72} r={5.16} />
+            <circle cx={47.24} cy={304.73} r={5.16} />
+            <circle cx={49.78} cy={315.74} r={5.16} />
+          </g>
+
+          {/* Seat Zone F */}
           <g>
             <circle cx={65.22} cy={322.92} r={5.16} />
             <circle cx={71.52} cy={332.3} r={5.16} />
@@ -114,6 +216,56 @@ const SeatMapF1 = () => {
             <circle cx={50.44} cy={354.13} r={5.16} />
             <circle cx={56.75} cy={363.5} r={5.16} />
           </g>
+
+          {/* Seat Zone G */}
+          <g>
+            <circle cx={113.74} cy={380.08} r={5.16} />
+            <circle cx={117.79} cy={400.51} r={5.16} />
+            <circle cx={122.11} cy={387.56} r={5.16} />
+            <circle cx={131.48} cy={393.09} r={5.16} />
+            <circle cx={127.27} cy={406.02} r={5.16} />
+            <circle cx={141.12} cy={397.6} r={5.16} />
+            <circle cx={136.64} cy={410.83} r={5.16} />
+            <circle cx={151.71} cy={401.1} r={5.16} />
+            <circle cx={146.55} cy={414.76} r={5.16} />
+            <circle cx={162.43} cy={403.41} r={5.16} />
+            <circle cx={156.63} cy={417.93} r={5.16} />
+            <circle cx={173.38} cy={404.03} r={5.16} />
+            <circle cx={177.79} cy={420.61} r={5.16} />
+            <circle cx={167.18} cy={419.92} r={5.16} />
+          </g>
+
+          {/* Seat Zone H */}
+          <g>
+            <circle cx={308.34} cy={380.08} r={5.16} />
+            <circle cx={304.29} cy={400.51} r={5.16} />
+            <circle cx={299.98} cy={387.56} r={5.16} />
+            <circle cx={290.61} cy={393.09} r={5.16} />
+            <circle cx={294.82} cy={406.02} r={5.16} />
+            <circle cx={280.97} cy={397.6} r={5.16} />
+            <circle cx={285.45} cy={410.83} r={5.16} />
+            <circle cx={270.38} cy={401.1} r={5.16} />
+            <circle cx={275.54} cy={414.76} r={5.16} />
+            <circle cx={259.66} cy={403.41} r={5.16} />
+            <circle cx={265.46} cy={417.93} r={5.16} />
+            <circle cx={248.7} cy={404.03} r={5.16} />
+            <circle cx={244.3} cy={420.61} r={5.16} />
+            <circle cx={254.91} cy={419.92} r={5.16} />
+          </g>
+
+          {/* Seat Zone I */}
+          <g>
+            <circle cx={356.87} cy={322.92} r={5.16} />
+            <circle cx={350.57} cy={332.3} r={5.16} />
+            <circle cx={344.26} cy={341.67} r={5.16} />
+            <circle cx={366.49} cy={333.24} r={5.16} />
+            <circle cx={360.18} cy={342.62} r={5.16} />
+            <circle cx={353.88} cy={351.99} r={5.16} />
+            <circle cx={371.65} cy={354.13} r={5.16} />
+            <circle cx={365.34} cy={363.5} r={5.16} />
+          </g>
+
+          {/* Seat Zone B Left */}
           <g>
             <circle cx={91.88} cy={153.31} r={5.16} />
             <circle cx={102.62} cy={156.8} r={5.16} />
@@ -164,22 +316,8 @@ const SeatMapF1 = () => {
             <circle cx={90.58} cy={307.98} r={5.16} />
             <circle cx={101.29} cy={311.55} r={5.16} />
           </g>
-          <g>
-            <circle cx={113.74} cy={380.08} r={5.16} />
-            <circle cx={117.79} cy={400.51} r={5.16} />
-            <circle cx={122.11} cy={387.56} r={5.16} />
-            <circle cx={131.48} cy={393.09} r={5.16} />
-            <circle cx={127.27} cy={406.02} r={5.16} />
-            <circle cx={141.12} cy={397.6} r={5.16} />
-            <circle cx={136.64} cy={410.83} r={5.16} />
-            <circle cx={151.71} cy={401.1} r={5.16} />
-            <circle cx={146.55} cy={414.76} r={5.16} />
-            <circle cx={162.43} cy={403.41} r={5.16} />
-            <circle cx={156.63} cy={417.93} r={5.16} />
-            <circle cx={173.38} cy={404.03} r={5.16} />
-            <circle cx={177.79} cy={420.61} r={5.16} />
-            <circle cx={167.18} cy={419.92} r={5.16} />
-          </g>
+
+          {/* Seat Zone H  */}
           <g>
             <circle cx={365.34} cy={282.38} r={5.16} />
             <circle cx={363.32} cy={293.49} r={5.16} />
@@ -188,6 +326,8 @@ const SeatMapF1 = () => {
             <circle cx={374.85} cy={304.73} r={5.16} />
             <circle cx={372.31} cy={315.74} r={5.16} />
           </g>
+
+          {/* Seat Zone I */}
           <g>
             <circle cx={366.18} cy={232.99} r={5.16} />
             <circle cx={366.18} cy={244.29} r={5.16} />
@@ -196,6 +336,8 @@ const SeatMapF1 = () => {
             <circle cx={378.04} cy={255.59} r={5.16} />
             <circle cx={378.04} cy={266.89} r={5.16} />
           </g>
+
+          {/* Seat Zone J */}
           <g>
             <circle cx={366.18} cy={177.8} r={5.16} />
             <circle cx={366.18} cy={189.1} r={5.16} />
@@ -204,6 +346,9 @@ const SeatMapF1 = () => {
             <circle cx={378.04} cy={205.55} r={5.16} />
             <circle cx={378.04} cy={216.85} r={5.16} />
           </g>
+
+          {/* Seat Zone A */}
+
           <g>
             <circle cx={171.49} cy={177.51} r={5.16} />
             <circle cx={182.79} cy={177.85} r={5.16} />
@@ -372,16 +517,8 @@ const SeatMapF1 = () => {
             <circle cx={266.71} cy={357.01} r={5.16} />
             <circle cx={255.43} cy={357.81} r={5.16} />
           </g>
-          <g>
-            <circle cx={356.87} cy={322.92} r={5.16} />
-            <circle cx={350.57} cy={332.3} r={5.16} />
-            <circle cx={344.26} cy={341.67} r={5.16} />
-            <circle cx={366.49} cy={333.24} r={5.16} />
-            <circle cx={360.18} cy={342.62} r={5.16} />
-            <circle cx={353.88} cy={351.99} r={5.16} />
-            <circle cx={371.65} cy={354.13} r={5.16} />
-            <circle cx={365.34} cy={363.5} r={5.16} />
-          </g>
+
+          {/* Seat Zone B Right */}
           <g>
             <circle cx={331.21} cy={153.31} r={5.16} />
             <circle cx={320.47} cy={156.8} r={5.16} />
@@ -432,48 +569,36 @@ const SeatMapF1 = () => {
             <circle cx={332.51} cy={307.98} r={5.16} />
             <circle cx={321.8} cy={311.55} r={5.16} />
           </g>
-          <g>
-            <circle cx={308.34} cy={380.08} r={5.16} />
-            <circle cx={304.29} cy={400.51} r={5.16} />
-            <circle cx={299.98} cy={387.56} r={5.16} />
-            <circle cx={290.61} cy={393.09} r={5.16} />
-            <circle cx={294.82} cy={406.02} r={5.16} />
-            <circle cx={280.97} cy={397.6} r={5.16} />
-            <circle cx={285.45} cy={410.83} r={5.16} />
-            <circle cx={270.38} cy={401.1} r={5.16} />
-            <circle cx={275.54} cy={414.76} r={5.16} />
-            <circle cx={259.66} cy={403.41} r={5.16} />
-            <circle cx={265.46} cy={417.93} r={5.16} />
-            <circle cx={248.7} cy={404.03} r={5.16} />
-            <circle cx={244.3} cy={420.61} r={5.16} />
-            <circle cx={254.91} cy={419.92} r={5.16} />
-          </g>
         </g>
         <g>
           <g>
             <g className={styles["seat-legend"]}>
+              {zoneAnBLegendArr.flatMap((legend) =>
+                Array.from({ length: 2 }, (_, i) => (
+                  <text
+                    key={`${legend.id}+${i * legend.id}`}
+                    x={i === 1 ? legend.cordL.x : legend.cordR.x}
+                    y={i === 1 ? legend.cordL.y : legend.cordR.y}
+                  >
+                    {legend.text}
+                  </text>
+                ))
+              )}
+
               <text x={155.11} y={177.85}>
                 A
               </text>
-              <text transform="translate(151.01 193.25)">
-                <tspan x={0} y={0}>
-                  {"B"}
-                </tspan>
+              <text x={151.01} y={193.25}>
+                B
               </text>
-              <text transform="translate(145.14 208.68)">
-                <tspan x={0} y={0}>
-                  {"C"}
-                </tspan>
+              <text x={145.14} y={208.68}>
+                C
               </text>
-              <text transform="translate(140.26 224.81)">
-                <tspan x={0} y={0}>
-                  {"D"}
-                </tspan>
+              <text x={140.26} y={224.81}>
+                D
               </text>
-              <text transform="translate(135.52 240.31)">
-                <tspan x={0} y={0}>
-                  {"E"}
-                </tspan>
+              <text x={135.52} y={240.31}>
+                E
               </text>
               <text transform="translate(130.59 255.77)">
                 <tspan x={0} y={0}>
@@ -597,65 +722,26 @@ const SeatMapF1 = () => {
             <path d="M413.89,452.09l-.58,2.08h-1.89l2.47-8.08h2.4l2.51,8.08h-1.97l-.62-2.08h-2.32ZM414.22,444.32c.08.31.35.56.89.56s.8-.22.9-.56h.8c-.08.77-.66,1.48-1.73,1.48s-1.61-.65-1.69-1.48h.83ZM413.43,443.97c0-.76.36-1.27.97-1.27.31,0,.54.11.78.23.19.11.37.2.52.2.19,0,.28-.1.31-.48h.84c.04.97-.35,1.39-.98,1.39-.34,0-.56-.14-.82-.26-.22-.11-.32-.17-.47-.17-.17,0-.26.16-.29.36h-.86ZM415.94,450.72l-.5-1.71c-.14-.48-.29-1.08-.41-1.56h-.02c-.12.48-.24,1.09-.37,1.56l-.48,1.71h1.79Z" />
             <path d="M419.88,454.16v-8.08h2.13l1.68,2.96c.48.85.96,1.86,1.32,2.77h.04c-.12-1.07-.16-2.16-.16-3.37v-2.36h1.68v8.08h-1.92l-1.73-3.12c-.48-.86-1.01-1.91-1.4-2.85h-.04c.05,1.08.07,2.22.07,3.54v2.43h-1.68Z" />
           </g> */}
+
           <g className={styles["text-zone"]}>
-            <text transform="translate(194.41 429.17) rotate(-90)">
-              <tspan x={0} y={0}>
-                {"L1E"}
-              </tspan>
-            </text>
-            <text transform="translate(233.79 429.14) rotate(-90)">
-              <tspan x={0} y={0}>
-                {"L1F"}
-              </tspan>
-            </text>
-            <text transform="translate(2.31 196.92) rotate(90)">
-              <tspan x={0} y={0}>
-                {"L1A"}
-              </tspan>
-            </text>
-            <text transform="translate(419.89 212.64) rotate(-90)">
-              <tspan x={0} y={0}>
-                {"L1K"}
-              </tspan>
-            </text>
-            <text transform="translate(419.89 260.19) rotate(-90)">
-              <tspan x={0} y={0}>
-                {"L1I"}
-              </tspan>
-            </text>
-            <text transform="translate(419.89 309.16) rotate(-90)">
-              <tspan x={0} y={0}>
-                {"L1J"}
-              </tspan>
-            </text>
-            <text transform="translate(2.31 246.38) rotate(90)">
-              <tspan x={0} y={0}>
-                {"L1B"}
-              </tspan>
-            </text>
-            <text transform="translate(2.31 294.66) rotate(90)">
-              <tspan x={0} y={0}>
-                {"L1C"}
-              </tspan>
-            </text>
-            <text transform="translate(3.16 364.86) rotate(75.95)">
-              <tspan x={0} y={0}>
-                {"L1D"}
-              </tspan>
-            </text>
-            <text transform="translate(414.47 380.61) rotate(-72.29)">
-              <tspan x={0} y={0}>
-                {"L1G"}
-              </tspan>
-            </text>
-            <text transform="translate(233.79 429.14) rotate(-90)">
-              <tspan x={0} y={0}>
-                {"L1F"}
-              </tspan>
-            </text>
+            {zoneEntryArr.map((zone) => (
+              <text
+                key={zone.id}
+                x={zone.cord.x}
+                y={zone.cord.y}
+                transform={`rotate(${zone.rota} ${zone.cord.x} ${zone.cord.y})`}
+                textAnchor="middle"
+              >
+                {zone.text}
+              </text>
+            ))}
           </g>
-          <text className={styles["text-stage"]} transform="translate(161.57 115.05)">
-           Sân khấu
+
+          <text
+            className={styles["text-stage"]}
+            transform="translate(161.57 115.05)"
+          >
+            Sân khấu
           </text>
         </g>
       </svg>
