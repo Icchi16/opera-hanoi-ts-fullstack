@@ -1,106 +1,25 @@
 "use client";
+
+import React from "react";
+import {
+  SEAT_RADIUS,
+  seatZoneArr,
+  zoneAnBLegendArr,
+  zoneEntryArr,
+} from "./SeatMapData";
 import styles from "./seatMapF1.module.css";
+import clsx from "clsx";
 
-const zoneEntryArr = [
-  { id: 0, text: "L1A", cord: { x: 1.21, y: 204.92 }, rota: 90 },
-  { id: 1, text: "L1B", cord: { x: 1.21, y: 254.38 }, rota: 90 },
-  { id: 2, text: "L1C", cord: { x: 1.21, y: 303.02 }, rota: 90 },
-  { id: 3, text: "L1D", cord: { x: 2.16, y: 372.86 }, rota: 75.95 },
-  { id: 4, text: "L1E", cord: { x: 194.41, y: 429.17 }, rota: -90 },
-  { id: 5, text: "L1F", cord: { x: 233.79, y: 429.14 }, rota: -90 },
-  { id: 6, text: "L1G", cord: { x: 414.47, y: 380.61 }, rota: -75.95 },
-  { id: 7, text: "L1H", cord: { x: 419.89, y: 309.16 }, rota: -90 },
-  { id: 8, text: "L1I", cord: { x: 419.89, y: 260.19 }, rota: -90 },
-  { id: 9, text: "L1J", cord: { x: 419.89, y: 212.64 }, rota: -90 },
-];
+export interface SeatMapProps {
+  mode: "minimap" | "interactive";
+}
 
-const zoneAnBLegendArr = [
-  {
-    id: 0,
-    text: "A",
-    cordL: { x: 1.21, y: 204.92 },
-    cordR: { x: 1.21, y: 204.92 },
-  },
-  {
-    id: 1,
-    text: "B",
-    cordL: { x: 1.21, y: 204.92 },
-    cordR: { x: 1.21, y: 204.92 },
-  },
-  {
-    id: 2,
-    text: "C",
-    cordL: { x: 1.21, y: 204.92 },
-    cordR: { x: 1.21, y: 204.92 },
-  },
-  {
-    id: 3,
-    text: "D",
-    cordL: { x: 1.21, y: 204.92 },
-    cordR: { x: 1.21, y: 204.92 },
-  },
-  {
-    id: 4,
-    text: "E",
-    cordL: { x: 1.21, y: 204.92 },
-    cordR: { x: 1.21, y: 204.92 },
-  },
-  {
-    id: 5,
-    text: "F",
-    cordL: { x: 1.21, y: 204.92 },
-    cordR: { x: 1.21, y: 204.92 },
-  },
-  {
-    id: 6,
-    text: "G",
-    cordL: { x: 1.21, y: 204.92 },
-    cordR: { x: 1.21, y: 204.92 },
-  },
-  {
-    id: 7,
-    text: "H",
-    cordL: { x: 1.21, y: 204.92 },
-    cordR: { x: 1.21, y: 204.92 },
-  },
-  {
-    id: 7,
-    text: "H",
-    cordL: { x: 1.21, y: 204.92 },
-    cordR: { x: 1.21, y: 204.92 },
-  },
-  {
-    id: 8,
-    text: "I",
-    cordL: { x: 1.21, y: 204.92 },
-    cordR: { x: 1.21, y: 204.92 },
-  },
-  {
-    id: 9,
-    text: "J",
-    cordL: { x: 1.21, y: 204.92 },
-    cordR: { x: 1.21, y: 204.92 },
-  },
-  {
-    id: 10,
-    text: "K",
-    cordL: { x: 1.21, y: 204.92 },
-    cordR: { x: 1.21, y: 204.92 },
-  },
-  {
-    id: 11,
-    text: "L",
-    cordL: { x: 1.21, y: 204.92 },
-    cordR: { x: 1.21, y: 204.92 },
-  },
-];
-
-const SeatMapF1 = () => {
+const SeatMapF1: React.FC<SeatMapProps> = ({ mode }) => {
   return (
     <div className="font-[family-name:var(--body)] text-primary">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 427.36 534.34"
+        viewBox="0 0 420.36 532.34"
         className={styles["general"]}
       >
         {/* zone shape */}
@@ -174,409 +93,50 @@ const SeatMapF1 = () => {
         </g>
 
         {/* Seat */}
-        <g className={styles["circle"]}>
-          {/* Seat Zone C */}
-          <g>
-            <circle cx={55.91} cy={177.8} r={5.16} />
-            <circle cx={55.91} cy={189.1} r={5.16} />
-            <circle cx={55.91} cy={200.39} r={5.16} />
-            <circle cx={55.91} cy={211.69} r={5.16} />
-            <circle cx={44.05} cy={205.55} r={5.16} />
-            <circle cx={44.05} cy={216.85} r={5.16} />
-          </g>
-
-          {/* Seat Zone D */}
-          <g>
-            <circle cx={55.91} cy={232.99} r={5.16} />
-            <circle cx={55.91} cy={244.29} r={5.16} />
-            <circle cx={55.91} cy={255.59} r={5.16} />
-            <circle cx={44.05} cy={244.29} r={5.16} />
-            <circle cx={44.05} cy={255.59} r={5.16} />
-            <circle cx={44.05} cy={266.89} r={5.16} />
-          </g>
-
-          {/* Seat Zone E */}
-          <g>
-            <circle cx={56.75} cy={282.38} r={5.16} />
-            <circle cx={58.77} cy={293.49} r={5.16} />
-            <circle cx={60.8} cy={304.61} r={5.16} />
-            <circle cx={44.7} cy={293.72} r={5.16} />
-            <circle cx={47.24} cy={304.73} r={5.16} />
-            <circle cx={49.78} cy={315.74} r={5.16} />
-          </g>
-
-          {/* Seat Zone F */}
-          <g>
-            <circle cx={65.22} cy={322.92} r={5.16} />
-            <circle cx={71.52} cy={332.3} r={5.16} />
-            <circle cx={77.83} cy={341.67} r={5.16} />
-            <circle cx={55.6} cy={333.24} r={5.16} />
-            <circle cx={61.91} cy={342.62} r={5.16} />
-            <circle cx={68.21} cy={351.99} r={5.16} />
-            <circle cx={50.44} cy={354.13} r={5.16} />
-            <circle cx={56.75} cy={363.5} r={5.16} />
-          </g>
-
-          {/* Seat Zone G */}
-          <g>
-            <circle cx={113.74} cy={380.08} r={5.16} />
-            <circle cx={117.79} cy={400.51} r={5.16} />
-            <circle cx={122.11} cy={387.56} r={5.16} />
-            <circle cx={131.48} cy={393.09} r={5.16} />
-            <circle cx={127.27} cy={406.02} r={5.16} />
-            <circle cx={141.12} cy={397.6} r={5.16} />
-            <circle cx={136.64} cy={410.83} r={5.16} />
-            <circle cx={151.71} cy={401.1} r={5.16} />
-            <circle cx={146.55} cy={414.76} r={5.16} />
-            <circle cx={162.43} cy={403.41} r={5.16} />
-            <circle cx={156.63} cy={417.93} r={5.16} />
-            <circle cx={173.38} cy={404.03} r={5.16} />
-            <circle cx={177.79} cy={420.61} r={5.16} />
-            <circle cx={167.18} cy={419.92} r={5.16} />
-          </g>
-
-          {/* Seat Zone H */}
-          <g>
-            <circle cx={308.34} cy={380.08} r={5.16} />
-            <circle cx={304.29} cy={400.51} r={5.16} />
-            <circle cx={299.98} cy={387.56} r={5.16} />
-            <circle cx={290.61} cy={393.09} r={5.16} />
-            <circle cx={294.82} cy={406.02} r={5.16} />
-            <circle cx={280.97} cy={397.6} r={5.16} />
-            <circle cx={285.45} cy={410.83} r={5.16} />
-            <circle cx={270.38} cy={401.1} r={5.16} />
-            <circle cx={275.54} cy={414.76} r={5.16} />
-            <circle cx={259.66} cy={403.41} r={5.16} />
-            <circle cx={265.46} cy={417.93} r={5.16} />
-            <circle cx={248.7} cy={404.03} r={5.16} />
-            <circle cx={244.3} cy={420.61} r={5.16} />
-            <circle cx={254.91} cy={419.92} r={5.16} />
-          </g>
-
-          {/* Seat Zone I */}
-          <g>
-            <circle cx={356.87} cy={322.92} r={5.16} />
-            <circle cx={350.57} cy={332.3} r={5.16} />
-            <circle cx={344.26} cy={341.67} r={5.16} />
-            <circle cx={366.49} cy={333.24} r={5.16} />
-            <circle cx={360.18} cy={342.62} r={5.16} />
-            <circle cx={353.88} cy={351.99} r={5.16} />
-            <circle cx={371.65} cy={354.13} r={5.16} />
-            <circle cx={365.34} cy={363.5} r={5.16} />
-          </g>
-
-          {/* Seat Zone B Left */}
-          <g>
-            <circle cx={91.88} cy={153.31} r={5.16} />
-            <circle cx={102.62} cy={156.8} r={5.16} />
-            <circle cx={113.37} cy={160.28} r={5.16} />
-            <circle cx={124.14} cy={163.78} r={5.16} />
-            <circle cx={134.88} cy={167.27} r={5.16} />
-            <circle cx={145.63} cy={170.75} r={5.16} />
-            <circle cx={87.28} cy={169.52} r={5.16} />
-            <circle cx={98} cy={173.1} r={5.16} />
-            <circle cx={108.72} cy={176.67} r={5.16} />
-            <circle cx={119.46} cy={180.25} r={5.16} />
-            <circle cx={130.18} cy={183.82} r={5.16} />
-            <circle cx={140.89} cy={187.39} r={5.16} />
-            <circle cx={81.91} cy={185.65} r={5.16} />
-            <circle cx={92.63} cy={189.22} r={5.16} />
-            <circle cx={103.34} cy={192.8} r={5.16} />
-            <circle cx={114.09} cy={196.38} r={5.16} />
-            <circle cx={124.8} cy={199.95} r={5.16} />
-            <circle cx={135.52} cy={203.52} r={5.16} />
-            <circle cx={78.08} cy={201.78} r={5.16} />
-            <circle cx={88.79} cy={205.35} r={5.16} />
-            <circle cx={99.51} cy={208.92} r={5.16} />
-            <circle cx={110.25} cy={212.5} r={5.16} />
-            <circle cx={120.97} cy={216.08} r={5.16} />
-            <circle cx={131.69} cy={219.65} r={5.16} />
-            <circle cx={73.42} cy={216.65} r={5.16} />
-            <circle cx={84.14} cy={220.22} r={5.16} />
-            <circle cx={94.85} cy={223.8} r={5.16} />
-            <circle cx={105.59} cy={227.38} r={5.16} />
-            <circle cx={116.31} cy={230.95} r={5.16} />
-            <circle cx={127.03} cy={234.52} r={5.16} />
-            <circle cx={79.82} cy={236.31} r={5.16} />
-            <circle cx={90.54} cy={239.88} r={5.16} />
-            <circle cx={101.28} cy={243.47} r={5.16} />
-            <circle cx={112} cy={247.04} r={5.16} />
-            <circle cx={122.72} cy={250.61} r={5.16} />
-            <circle cx={84.98} cy={254.87} r={5.16} />
-            <circle cx={95.72} cy={258.45} r={5.16} />
-            <circle cx={106.44} cy={262.02} r={5.16} />
-            <circle cx={117.16} cy={265.59} r={5.16} />
-            <circle cx={80.03} cy={270.46} r={5.16} />
-            <circle cx={90.77} cy={274.04} r={5.16} />
-            <circle cx={101.49} cy={277.61} r={5.16} />
-            <circle cx={112.21} cy={281.19} r={5.16} />
-            <circle cx={85.61} cy={288.88} r={5.16} />
-            <circle cx={96.33} cy={292.46} r={5.16} />
-            <circle cx={107.05} cy={296.03} r={5.16} />
-            <circle cx={90.58} cy={307.98} r={5.16} />
-            <circle cx={101.29} cy={311.55} r={5.16} />
-          </g>
-
-          {/* Seat Zone H  */}
-          <g>
-            <circle cx={365.34} cy={282.38} r={5.16} />
-            <circle cx={363.32} cy={293.49} r={5.16} />
-            <circle cx={361.29} cy={304.61} r={5.16} />
-            <circle cx={377.39} cy={293.72} r={5.16} />
-            <circle cx={374.85} cy={304.73} r={5.16} />
-            <circle cx={372.31} cy={315.74} r={5.16} />
-          </g>
-
-          {/* Seat Zone I */}
-          <g>
-            <circle cx={366.18} cy={232.99} r={5.16} />
-            <circle cx={366.18} cy={244.29} r={5.16} />
-            <circle cx={366.18} cy={255.59} r={5.16} />
-            <circle cx={378.04} cy={244.29} r={5.16} />
-            <circle cx={378.04} cy={255.59} r={5.16} />
-            <circle cx={378.04} cy={266.89} r={5.16} />
-          </g>
-
-          {/* Seat Zone J */}
-          <g>
-            <circle cx={366.18} cy={177.8} r={5.16} />
-            <circle cx={366.18} cy={189.1} r={5.16} />
-            <circle cx={366.18} cy={200.39} r={5.16} />
-            <circle cx={366.18} cy={211.69} r={5.16} />
-            <circle cx={378.04} cy={205.55} r={5.16} />
-            <circle cx={378.04} cy={216.85} r={5.16} />
-          </g>
-
-          {/* Seat Zone A */}
-
-          <g>
-            <circle cx={171.49} cy={177.51} r={5.16} />
-            <circle cx={182.79} cy={177.85} r={5.16} />
-            <circle cx={194.09} cy={178.35} r={5.16} />
-            <circle cx={205.39} cy={178.67} r={5.16} />
-            <circle cx={165.84} cy={192.84} r={5.16} />
-            <circle cx={177.14} cy={193.73} r={5.16} />
-            <circle cx={188.44} cy={194.55} r={5.16} />
-            <circle cx={199.74} cy={194.55} r={5.16} />
-            <circle cx={210.96} cy={194.98} r={5.16} />
-            <circle cx={160.27} cy={208.35} r={5.16} />
-            <circle cx={171.56} cy={209.6} r={5.16} />
-            <circle cx={182.86} cy={210.49} r={5.16} />
-            <circle cx={194.16} cy={210.96} r={5.16} />
-            <circle cx={205.39} cy={211.29} r={5.16} />
-            <circle cx={211.04} cy={227.75} r={5.16} />
-            <circle cx={155.14} cy={223.86} r={5.16} />
-            <circle cx={166.44} cy={226.06} r={5.16} />
-            <circle cx={177.74} cy={226.95} r={5.16} />
-            <circle cx={189.04} cy={227.42} r={5.16} />
-            <circle cx={200.26} cy={227.75} r={5.16} />
-            <circle cx={205.39} cy={243.65} r={5.16} />
-            <circle cx={211.04} cy={259.87} r={5.16} />
-            <circle cx={149.48} cy={239.77} r={5.16} />
-            <circle cx={160.78} cy={241.96} r={5.16} />
-            <circle cx={172.08} cy={242.85} r={5.16} />
-            <circle cx={183.38} cy={243.33} r={5.16} />
-            <circle cx={194.6} cy={243.65} r={5.16} />
-            <circle cx={199.93} cy={259.65} r={5.16} />
-            <circle cx={144.32} cy={254.72} r={5.16} />
-            <circle cx={155.33} cy={256.66} r={5.16} />
-            <circle cx={166.63} cy={258.09} r={5.16} />
-            <circle cx={177.92} cy={259.33} r={5.16} />
-            <circle cx={189.15} cy={259.65} r={5.16} />
-            <circle cx={205.44} cy={277.3} r={5.16} />
-            <circle cx={194.23} cy={277.08} r={5.16} />
-            <circle cx={138.07} cy={271.62} r={5.16} />
-            <circle cx={149.08} cy={273.56} r={5.16} />
-            <circle cx={160.38} cy={275} r={5.16} />
-            <circle cx={171.68} cy={276.23} r={5.16} />
-            <circle cx={182.9} cy={276.55} r={5.16} />
-            <circle cx={200.2} cy={293.3} r={5.16} />
-            <circle cx={211.04} cy={293.61} r={5.16} />
-            <circle cx={188.99} cy={293.08} r={5.16} />
-            <circle cx={132.83} cy={287.62} r={5.16} />
-            <circle cx={143.84} cy={289.56} r={5.16} />
-            <circle cx={155.14} cy={291} r={5.16} />
-            <circle cx={166.44} cy={292.23} r={5.16} />
-            <circle cx={177.66} cy={293.08} r={5.16} />
-            <circle cx={194.7} cy={309.61} r={5.16} />
-            <circle cx={205.54} cy={309.91} r={5.16} />
-            <circle cx={211.14} cy={326.1} r={5.16} />
-            <circle cx={183.49} cy={309.39} r={5.16} />
-            <circle cx={128.11} cy={303.5} r={5.16} />
-            <circle cx={138.8} cy={305.59} r={5.16} />
-            <circle cx={149.83} cy={307.02} r={5.16} />
-            <circle cx={160.92} cy={308.09} r={5.16} />
-            <circle cx={172.21} cy={308.9} r={5.16} />
-            <circle cx={189.15} cy={325.74} r={5.16} />
-            <circle cx={199.99} cy={326.04} r={5.16} />
-            <circle cx={177.94} cy={325.51} r={5.16} />
-            <circle cx={122.56} cy={319.62} r={5.16} />
-            <circle cx={133.25} cy={321.72} r={5.16} />
-            <circle cx={144.29} cy={323.15} r={5.16} />
-            <circle cx={155.37} cy={324.22} r={5.16} />
-            <circle cx={166.66} cy={325.02} r={5.16} />
-            <circle cx={205.39} cy={342.09} r={5.16} />
-            <circle cx={183.39} cy={341.73} r={5.16} />
-            <circle cx={194.24} cy={342.04} r={5.16} />
-            <circle cx={172.18} cy={341.51} r={5.16} />
-            <circle cx={116.8} cy={335.62} r={5.16} />
-            <circle cx={127.5} cy={337.72} r={5.16} />
-            <circle cx={138.53} cy={339.14} r={5.16} />
-            <circle cx={149.62} cy={340.22} r={5.16} />
-            <circle cx={160.9} cy={341.02} r={5.16} />
-            <circle cx={211.14} cy={358.89} r={5.16} />
-            <circle cx={189.15} cy={358.53} r={5.16} />
-            <circle cx={199.99} cy={358.83} r={5.16} />
-            <circle cx={177.94} cy={358.3} r={5.16} />
-            <circle cx={122.56} cy={352.41} r={5.16} />
-            <circle cx={133.25} cy={354.51} r={5.16} />
-            <circle cx={144.29} cy={355.94} r={5.16} />
-            <circle cx={155.37} cy={357.01} r={5.16} />
-            <circle cx={166.66} cy={357.81} r={5.16} />
-            <circle cx={250.6} cy={177.51} r={5.16} />
-            <circle cx={239.3} cy={177.85} r={5.16} />
-            <circle cx={228} cy={178.35} r={5.16} />
-            <circle cx={216.7} cy={178.67} r={5.16} />
-            <circle cx={256.25} cy={192.84} r={5.16} />
-            <circle cx={244.95} cy={193.73} r={5.16} />
-            <circle cx={233.65} cy={194.55} r={5.16} />
-            <circle cx={222.35} cy={194.55} r={5.16} />
-            <circle cx={211.13} cy={194.98} r={5.16} />
-            <circle cx={261.82} cy={208.35} r={5.16} />
-            <circle cx={250.53} cy={209.6} r={5.16} />
-            <circle cx={239.23} cy={210.49} r={5.16} />
-            <circle cx={227.93} cy={210.96} r={5.16} />
-            <circle cx={216.7} cy={211.29} r={5.16} />
-            <circle cx={211.04} cy={227.75} r={5.16} />
-            <circle cx={266.95} cy={223.86} r={5.16} />
-            <circle cx={255.65} cy={226.06} r={5.16} />
-            <circle cx={244.35} cy={226.95} r={5.16} />
-            <circle cx={233.05} cy={227.42} r={5.16} />
-            <circle cx={221.83} cy={227.75} r={5.16} />
-            <circle cx={216.7} cy={243.65} r={5.16} />
-            <circle cx={211.04} cy={259.87} r={5.16} />
-            <circle cx={272.61} cy={239.77} r={5.16} />
-            <circle cx={261.31} cy={241.96} r={5.16} />
-            <circle cx={250.01} cy={242.85} r={5.16} />
-            <circle cx={238.71} cy={243.33} r={5.16} />
-            <circle cx={227.49} cy={243.65} r={5.16} />
-            <circle cx={222.16} cy={259.65} r={5.16} />
-            <circle cx={277.77} cy={254.72} r={5.16} />
-            <circle cx={266.76} cy={256.66} r={5.16} />
-            <circle cx={255.46} cy={258.09} r={5.16} />
-            <circle cx={244.16} cy={259.33} r={5.16} />
-            <circle cx={232.94} cy={259.65} r={5.16} />
-            <circle cx={216.65} cy={277.3} r={5.16} />
-            <circle cx={227.86} cy={277.08} r={5.16} />
-            <circle cx={284.01} cy={271.62} r={5.16} />
-            <circle cx={273.01} cy={273.56} r={5.16} />
-            <circle cx={261.71} cy={275} r={5.16} />
-            <circle cx={250.41} cy={276.23} r={5.16} />
-            <circle cx={239.19} cy={276.55} r={5.16} />
-            <circle cx={221.89} cy={293.3} r={5.16} />
-            <circle cx={211.04} cy={293.61} r={5.16} />
-            <circle cx={233.1} cy={293.08} r={5.16} />
-            <circle cx={289.25} cy={287.62} r={5.16} />
-            <circle cx={278.25} cy={289.56} r={5.16} />
-            <circle cx={266.95} cy={291} r={5.16} />
-            <circle cx={255.65} cy={292.23} r={5.16} />
-            <circle cx={244.43} cy={293.08} r={5.16} />
-            <circle cx={227.39} cy={309.61} r={5.16} />
-            <circle cx={216.55} cy={309.91} r={5.16} />
-            <circle cx={210.95} cy={326.1} r={5.16} />
-            <circle cx={238.6} cy={309.39} r={5.16} />
-            <circle cx={293.98} cy={303.5} r={5.16} />
-            <circle cx={283.29} cy={305.59} r={5.16} />
-            <circle cx={272.25} cy={307.02} r={5.16} />
-            <circle cx={261.17} cy={308.09} r={5.16} />
-            <circle cx={249.88} cy={308.9} r={5.16} />
-            <circle cx={232.94} cy={325.74} r={5.16} />
-            <circle cx={222.1} cy={326.04} r={5.16} />
-            <circle cx={244.15} cy={325.51} r={5.16} />
-            <circle cx={299.53} cy={319.62} r={5.16} />
-            <circle cx={288.83} cy={321.72} r={5.16} />
-            <circle cx={277.8} cy={323.15} r={5.16} />
-            <circle cx={266.71} cy={324.22} r={5.16} />
-            <circle cx={255.43} cy={325.02} r={5.16} />
-            <circle cx={216.7} cy={342.09} r={5.16} />
-            <circle cx={238.7} cy={341.73} r={5.16} />
-            <circle cx={227.85} cy={342.04} r={5.16} />
-            <circle cx={249.91} cy={341.51} r={5.16} />
-            <circle cx={305.29} cy={335.62} r={5.16} />
-            <circle cx={294.59} cy={337.72} r={5.16} />
-            <circle cx={283.56} cy={339.14} r={5.16} />
-            <circle cx={272.47} cy={340.22} r={5.16} />
-            <circle cx={261.18} cy={341.02} r={5.16} />
-            <circle cx={210.95} cy={358.89} r={5.16} />
-            <circle cx={232.94} cy={358.53} r={5.16} />
-            <circle cx={222.1} cy={358.83} r={5.16} />
-            <circle cx={244.15} cy={358.3} r={5.16} />
-            <circle cx={299.53} cy={352.41} r={5.16} />
-            <circle cx={288.83} cy={354.51} r={5.16} />
-            <circle cx={277.8} cy={355.94} r={5.16} />
-            <circle cx={266.71} cy={357.01} r={5.16} />
-            <circle cx={255.43} cy={357.81} r={5.16} />
-          </g>
-
-          {/* Seat Zone B Right */}
-          <g>
-            <circle cx={331.21} cy={153.31} r={5.16} />
-            <circle cx={320.47} cy={156.8} r={5.16} />
-            <circle cx={309.72} cy={160.28} r={5.16} />
-            <circle cx={298.95} cy={163.78} r={5.16} />
-            <circle cx={288.2} cy={167.27} r={5.16} />
-            <circle cx={277.46} cy={170.75} r={5.16} />
-            <circle cx={335.81} cy={169.52} r={5.16} />
-            <circle cx={325.09} cy={173.1} r={5.16} />
-            <circle cx={314.37} cy={176.67} r={5.16} />
-            <circle cx={303.63} cy={180.25} r={5.16} />
-            <circle cx={292.91} cy={183.82} r={5.16} />
-            <circle cx={282.2} cy={187.39} r={5.16} />
-            <circle cx={341.18} cy={185.65} r={5.16} />
-            <circle cx={330.46} cy={189.22} r={5.16} />
-            <circle cx={319.74} cy={192.8} r={5.16} />
-            <circle cx={309} cy={196.38} r={5.16} />
-            <circle cx={298.28} cy={199.95} r={5.16} />
-            <circle cx={287.57} cy={203.52} r={5.16} />
-            <circle cx={345.01} cy={201.78} r={5.16} />
-            <circle cx={334.29} cy={205.35} r={5.16} />
-            <circle cx={323.58} cy={208.92} r={5.16} />
-            <circle cx={312.83} cy={212.5} r={5.16} />
-            <circle cx={302.12} cy={216.08} r={5.16} />
-            <circle cx={291.4} cy={219.65} r={5.16} />
-            <circle cx={349.67} cy={216.65} r={5.16} />
-            <circle cx={338.95} cy={220.22} r={5.16} />
-            <circle cx={328.24} cy={223.8} r={5.16} />
-            <circle cx={317.49} cy={227.38} r={5.16} />
-            <circle cx={306.78} cy={230.95} r={5.16} />
-            <circle cx={296.06} cy={234.52} r={5.16} />
-            <circle cx={343.27} cy={236.31} r={5.16} />
-            <circle cx={332.55} cy={239.88} r={5.16} />
-            <circle cx={321.81} cy={243.47} r={5.16} />
-            <circle cx={311.09} cy={247.04} r={5.16} />
-            <circle cx={300.37} cy={250.61} r={5.16} />
-            <circle cx={338.11} cy={254.87} r={5.16} />
-            <circle cx={327.36} cy={258.45} r={5.16} />
-            <circle cx={316.65} cy={262.02} r={5.16} />
-            <circle cx={305.93} cy={265.59} r={5.16} />
-            <circle cx={343.06} cy={270.46} r={5.16} />
-            <circle cx={332.31} cy={274.04} r={5.16} />
-            <circle cx={321.6} cy={277.61} r={5.16} />
-            <circle cx={310.88} cy={281.19} r={5.16} />
-            <circle cx={337.48} cy={288.88} r={5.16} />
-            <circle cx={326.76} cy={292.46} r={5.16} />
-            <circle cx={316.04} cy={296.03} r={5.16} />
-            <circle cx={332.51} cy={307.98} r={5.16} />
-            <circle cx={321.8} cy={311.55} r={5.16} />
-          </g>
+        <g
+          className={clsx(
+            mode === "minimap" && "pointer-events-none opacity-50"
+          )}
+        >
+          {seatZoneArr.map((seatZone, i) => (
+            <g key={i} id={seatZone.id}>
+              {seatZone.seatArr.map((seat) => (
+                <g key={seat.seatId}>
+                  <circle
+                    cx={seat.cord.x}
+                    cy={seat.cord.y}
+                    r={SEAT_RADIUS}
+                    className={clsx("fill-current")}
+                  />
+                  <text
+                    x={seat.cord.x}
+                    y={seat.cord.y}
+                    textAnchor="middle"
+                    dominantBaseline="middle"
+                    dy="0.1em"
+                    className={styles["seat-number"]}
+                  >
+                    {seat.seatNo}
+                  </text>
+                </g>
+              ))}
+            </g>
+          ))}
         </g>
+
         <g>
           <g>
+            {/* zone seat legend */}
             <g className={styles["seat-legend"]}>
               {zoneAnBLegendArr.flatMap((legend) =>
                 Array.from({ length: 2 }, (_, i) => (
                   <text
-                    key={`${legend.id}+${i * legend.id}`}
+                    className={clsx(mode === "minimap" && "hidden")}
+                    key={
+                      i === 1
+                        ? legend.id + zoneAnBLegendArr.length * i
+                        : legend.id
+                    }
                     x={i === 1 ? legend.cordL.x : legend.cordR.x}
                     y={i === 1 ? legend.cordL.y : legend.cordR.y}
                   >
@@ -584,144 +144,41 @@ const SeatMapF1 = () => {
                   </text>
                 ))
               )}
-
-              <text x={155.11} y={177.85}>
-                A
-              </text>
-              <text x={151.01} y={193.25}>
-                B
-              </text>
-              <text x={145.14} y={208.68}>
-                C
-              </text>
-              <text x={140.26} y={224.81}>
-                D
-              </text>
-              <text x={135.52} y={240.31}>
-                E
-              </text>
-              <text transform="translate(130.59 255.77)">
-                <tspan x={0} y={0}>
-                  {"F"}
-                </tspan>
-              </text>
-              <text transform="translate(124.27 272.14)">
-                <tspan x={0} y={0}>
-                  {"G"}
-                </tspan>
-              </text>
-              <text transform="translate(119.18 288.14)">
-                <tspan x={0} y={0}>
-                  {"H"}
-                </tspan>
-              </text>
-              <text transform="translate(115.8 302.82)">
-                <tspan x={0} y={0}>
-                  {"I"}
-                </tspan>
-              </text>
-              <text transform="translate(109.97 319.06)">
-                <tspan x={0} y={0}>
-                  {"J"}
-                </tspan>
-              </text>
-              <text transform="translate(103.74 336.57)">
-                <tspan x={0} y={0}>
-                  {"K"}
-                </tspan>
-              </text>
-              <text transform="translate(108.85 353.37)">
-                <tspan x={0} y={0}>
-                  {"L"}
-                </tspan>
-              </text>
-              <text transform="translate(262 177.85)">
-                <tspan x={0} y={0}>
-                  {"A"}
-                </tspan>
-              </text>
-              <text transform="translate(266.84 193.25)">
-                <tspan x={0} y={0}>
-                  {"B"}
-                </tspan>
-              </text>
-              <text transform="translate(271.71 208.68)">
-                <tspan x={0} y={0}>
-                  {"C"}
-                </tspan>
-              </text>
-              <text className="cls-13" transform="translate(277.01 224.81)">
-                <tspan x={0} y={0}>
-                  {"D"}
-                </tspan>
-              </text>
-              <text transform="translate(282.66 240.31)">
-                <tspan x={0} y={0}>
-                  {"E"}
-                </tspan>
-              </text>
-              <text transform="translate(287.86 255.77)">
-                <tspan x={0} y={0}>
-                  {"F"}
-                </tspan>
-              </text>
-              <text transform="translate(292.47 272.14)">
-                <tspan x={0} y={0}>
-                  {"G"}
-                </tspan>
-              </text>
-              <text transform="translate(297.48 288.14)">
-                <tspan x={0} y={0}>
-                  {"H"}
-                </tspan>
-              </text>
-              <text transform="translate(304.3 302.82)">
-                <tspan x={0} y={0}>
-                  {"I"}
-                </tspan>
-              </text>
-              <text transform="translate(309.47 319.06)">
-                <tspan x={0} y={0}>
-                  {"J"}
-                </tspan>
-              </text>
-              <text transform="translate(313.45 336.57)">
-                <tspan x={0} y={0}>
-                  {"K"}
-                </tspan>
-              </text>
-              <text transform="translate(311.4 353.37)">
-                <tspan x={0} y={0}>
-                  {"L"}
-                </tspan>
-              </text>
             </g>
           </g>
+
           <text className={styles["text"]} x="161.31" y="531.34">
             LỐI ĐI CHUNG
           </text>
-          {/* <g>
-            <path d="M12.65,431.68h1.81v3.57h.04c.18-.31.37-.6.55-.89l1.83-2.69h2.24l-2.67,3.44,2.82,4.64h-2.13l-1.98-3.49-.7.85v2.64h-1.81v-8.08Z" />
-            <path d="M21.86,431.68v3.11h3.01v-3.11h1.82v8.08h-1.82v-3.38h-3.01v3.38h-1.83v-8.08h1.83Z" />
-            <path d="M30.11,431.68v4.65c0,1.39.53,2.1,1.46,2.1s1.49-.67,1.49-2.1v-4.65h1.82v4.53c0,2.49-1.26,3.68-3.37,3.68s-3.24-1.13-3.24-3.71v-4.51h1.83Z" />
-            <path d="M12.4,453.79c-.56.19-1.63.46-2.7.46-1.48,0-2.54-.37-3.29-1.09-.74-.7-1.15-1.75-1.14-2.94.01-2.69,1.97-4.22,4.62-4.22,1.04,0,1.85.2,2.24.4l-.38,1.46c-.44-.19-1-.35-1.88-.35-1.52,0-2.67.86-2.67,2.61s1.04,2.65,2.54,2.65c.42,0,.76-.05.9-.12v-1.69h-1.25v-1.43h3.01v4.26Z" />
-            <path d="M15.67,446.08v3.11h3.01v-3.11h1.82v8.08h-1.82v-3.38h-3.01v3.38h-1.83v-8.08h1.83Z" />
-            <path d="M26.91,450.74h-2.97v1.92h3.32v1.5h-5.16v-8.08h4.99v1.5h-3.15v1.68h2.97v1.49ZM25.27,444.17l1.09,1.47h-1.19l-.53-.75h-.02l-.53.75h-1.16l1.07-1.47h1.27ZM28.23,443.19l-1.61,1.37h-.88l.91-1.37h1.57Z" />
-            <path d="M30.93,446.08h1.83v6.55h3.21v1.54h-5.05v-8.08Z" />
-            <path d="M41.88,450.74h-2.97v1.92h3.32v1.5h-5.16v-8.08h4.99v1.5h-3.15v1.68h2.97v1.49ZM39.25,445.51c.18-.54.59-.64.59-1.03,0-.22-.16-.36-.35-.36-.23,0-.43.24-.54.41l-.58-.35c.28-.55.73-.95,1.46-.95.65,0,1.16.47,1.16,1.02,0,.71-.59.84-.91,1.44l-.84-.18Z" />
-          </g> */}
-          {/* <g>
-            <path d="M387.82,431.68h1.81v3.57h.04c.18-.31.37-.6.55-.89l1.83-2.69h2.24l-2.67,3.44,2.82,4.64h-2.13l-1.98-3.49-.7.85v2.64h-1.81v-8.08Z" />
-            <path d="M397.03,431.68v3.11h3.01v-3.11h1.82v8.08h-1.82v-3.38h-3.01v3.38h-1.83v-8.08h1.83Z" />
-            <path d="M405.28,431.68v4.65c0,1.39.53,2.1,1.46,2.1s1.49-.67,1.49-2.1v-4.65h1.82v4.53c0,2.49-1.26,3.68-3.37,3.68s-3.24-1.13-3.24-3.71v-4.51h1.83Z" />
-            <path d="M378.06,453.79c-.56.19-1.63.46-2.7.46-1.47,0-2.54-.37-3.29-1.09-.74-.7-1.15-1.75-1.14-2.94.01-2.69,1.97-4.22,4.62-4.22,1.04,0,1.85.2,2.24.4l-.38,1.46c-.44-.19-1-.35-1.88-.35-1.52,0-2.67.86-2.67,2.61s1.04,2.65,2.54,2.65c.42,0,.76-.05.9-.12v-1.69h-1.25v-1.43h3.01v4.26Z" />
-            <path d="M381.33,446.08v3.11h3.01v-3.11h1.82v8.08h-1.82v-3.38h-3.01v3.38h-1.83v-8.08h1.83Z" />
-            <path d="M392.57,450.74h-2.97v1.92h3.32v1.5h-5.16v-8.08h4.99v1.5h-3.15v1.68h2.97v1.49ZM390.93,444.17l1.09,1.47h-1.19l-.53-.75h-.02l-.53.75h-1.16l1.07-1.47h1.27ZM393.89,443.19l-1.61,1.37h-.88l.91-1.37h1.57Z" />
-            <path d="M402.53,453.93c-.34.17-1.09.35-2.08.35-2.79,0-4.23-1.74-4.23-4.04,0-2.76,1.97-4.29,4.41-4.29.95,0,1.67.19,1.99.36l-.37,1.45c-.37-.16-.89-.3-1.54-.3-1.45,0-2.58.88-2.58,2.67,0,1.62.96,2.64,2.59,2.64.55,0,1.16-.12,1.52-.26l.28,1.43Z" />
-            <path d="M405.57,446.08v3.11h3.01v-3.11h1.82v8.08h-1.82v-3.38h-3.01v3.38h-1.83v-8.08h1.83Z" />
-            <path d="M413.89,452.09l-.58,2.08h-1.89l2.47-8.08h2.4l2.51,8.08h-1.97l-.62-2.08h-2.32ZM414.22,444.32c.08.31.35.56.89.56s.8-.22.9-.56h.8c-.08.77-.66,1.48-1.73,1.48s-1.61-.65-1.69-1.48h.83ZM413.43,443.97c0-.76.36-1.27.97-1.27.31,0,.54.11.78.23.19.11.37.2.52.2.19,0,.28-.1.31-.48h.84c.04.97-.35,1.39-.98,1.39-.34,0-.56-.14-.82-.26-.22-.11-.32-.17-.47-.17-.17,0-.26.16-.29.36h-.86ZM415.94,450.72l-.5-1.71c-.14-.48-.29-1.08-.41-1.56h-.02c-.12.48-.24,1.09-.37,1.56l-.48,1.71h1.79Z" />
-            <path d="M419.88,454.16v-8.08h2.13l1.68,2.96c.48.85.96,1.86,1.32,2.77h.04c-.12-1.07-.16-2.16-.16-3.37v-2.36h1.68v8.08h-1.92l-1.73-3.12c-.48-.86-1.01-1.91-1.4-2.85h-.04c.05,1.08.07,2.22.07,3.54v2.43h-1.68Z" />
-          </g> */}
+
+          <g>
+            <text
+              className={styles["text-side"]}
+              y="447.34"
+              textAnchor="middle"
+            >
+              <tspan x="34.31" dy="0">
+                LỐI KHU
+              </tspan>
+              <tspan x="34.31" dy="1.4em">
+                GHẾ LẺ
+              </tspan>
+            </text>
+          </g>
+          <g>
+            <text
+              className={styles["text-side"]}
+              y="447.34"
+              textAnchor="middle"
+            >
+              <tspan x="389.31" dy="0">
+                LỐI KHU
+              </tspan>
+              <tspan x="389.31" dy="1.4em">
+                GHẾ CHẴN
+              </tspan>
+            </text>
+          </g>
 
           <g className={styles["text-zone"]}>
             {zoneEntryArr.map((zone) => (

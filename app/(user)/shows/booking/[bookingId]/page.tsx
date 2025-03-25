@@ -1,7 +1,7 @@
 import shows from "@/samples/shows";
 import _ from "lodash";
 import Image from "next/image";
-import SeatMap from "./components/SeatMap";
+import SeatMap from "./components/SeatMap.tsx";
 
 interface ShowBookingParams {
   bookingId: string;
@@ -15,7 +15,6 @@ const ShowBooking = async ({
   const { bookingId } = await params;
   const show = _.find(shows, { link: bookingId });
 
-  console.log(bookingId);
   return (
     <div className="bg-bg1">
       <div className="container font-[family-name:var(--body)] pb-12">
@@ -50,16 +49,15 @@ const ShowBooking = async ({
           </div>
 
           {/* Seat select */}
-          <div className="mt-8 mb-12">
+          <div className="mt-8">
             <div className="font-[family-name:var(--title)] text-3xl font-semibold">
               Tôi muốn chọn ghế ...
             </div>
-            <SeatMap />
           </div>
 
-          {/* Test */}
-          
-          
+          <div className="">
+            <SeatMap />
+          </div>
         </div>
       </div>
     </div>
