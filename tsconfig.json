@@ -32,7 +32,6 @@
     "./types/iconify.d.ts",
     "./components/**/*.tsx",
     "./components/**/*.ts",
-    "app/(user)/shows/booking/[bookingId]/components/SeatMap.tsx.bak"
   ],
   "exclude": ["node_modules"]
 }
