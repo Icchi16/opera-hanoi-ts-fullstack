@@ -68,3 +68,7 @@ export type Genre = {
     | "Liveshow"
     | "Sự kiện";
 };
+
+export interface Seat {
+  seatId: number;
+}

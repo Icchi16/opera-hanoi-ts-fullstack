@@ -4,17 +4,46 @@ import React from "react";
 import {
   SEAT_RADIUS,
   seatZoneArr,
-  zoneAnBLegendArr,
+  zoneALegendArr,
   zoneEntryArr,
+  zoneArr,
 } from "./SeatMapData";
 import styles from "./seatMapF1.module.css";
 import clsx from "clsx";
+import _ from "lodash";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "@/store/store";
+import { pickSeat, removeSeat } from "@/store/slices/seatSlice";
 
 export interface SeatMapProps {
   mode: "minimap" | "interactive";
+  zoomToZone?: (zoonId: string) => void;
 }
 
-const SeatMapF1: React.FC<SeatMapProps> = ({ mode }) => {
+const SeatMapF1: React.FC<SeatMapProps> = ({ mode, zoomToZone }) => {
+  // Setting State
+  const pickedSeats = useSelector(
+    (state: RootState) => state.seats.pickedSeats
+  );
+  const dispatch = useDispatch();
+
+  // Handle Seat Click
+  const onClickSeat = (id: number) => {
+    // Check if the seat is already selected by matching seatId
+    const seatExists = _.some(pickedSeats, (item) => item.seatId === id);
+
+    // Remove or add the seat based on its existence
+
+    if (seatExists) {
+      // Remove seat if it exists
+      // removeSeat(prevSeats.filter((item) => item.seatId !== id));
+      dispatch(removeSeat(id));
+    } else {
+      // Add seat if it doesn't exist
+      dispatch(pickSeat(id));
+    }
+  };
+
   return (
     <div className="font-[family-name:var(--body)] text-primary">
       <svg
@@ -22,59 +51,6 @@ const SeatMapF1: React.FC<SeatMapProps> = ({ mode }) => {
         viewBox="0 0 420.36 532.34"
         className={styles["general"]}
       >
-        {/* zone shape */}
-        <g>
-          {/* zone C */}
-          <g className={styles["zone-C"]}>
-            {/* zone C right */}
-            <polygon points="384.87 165.84 357.18 165.84 357.18 213.2 384.93 228.53 384.87 165.84" />
-            {/* zone C left */}
-            <polygon points="38.22 165.84 65.9 165.84 65.9 213.2 38.16 228.53 38.22 165.84" />
-          </g>
-
-          {/* zone D */}
-          <g className={styles["zone-D"]}>
-            {/* zone D right */}
-            <polygon points="384.97 229.96 357.11 214.4 357.12 259.83 384.95 277.87 384.97 229.96" />
-            {/* zone D left */}
-            <polygon points="38.12 229.96 65.98 214.4 65.97 259.83 38.14 277.87 38.12 229.96" />
-          </g>
-
-          {/* zone E */}
-          <g className={styles["zone-E"]}>
-            {/* zone E right */}
-            <path d="M384.87,279.31l-27.72-17.99c.05,9.6.46,20.96-1.25,29.35-1.76,8.62-4.36,15.73-4.36,15.73l32.79,28.28s.36-6.94.43-9.6c.06-2.17.19-7.89.19-7.89l-.09-37.88Z" />
-            {/* zone E left */}
-            <path d="M38.22,279.31l27.72-17.99c-.05,9.6-.46,20.96,1.25,29.35s4.36,15.73,4.36,15.73l-32.79,28.28s-.36-6.94-.43-9.6c-.06-2.17-.19-7.89-.19-7.89l.09-37.88Z" />
-          </g>
-
-          {/* zone F */}
-          <g className={styles["zone-F"]}>
-            {/* zone F right */}
-            <path d="M351.08,307.7c-2.22,6.74-5.19,13.54-7.27,17.7-2.39,4.79-5.4,10.37-8.8,15.27l38.37,38.12c2.41-5.11,4.76-10.96,5.12-12.76.77-3.82,3.78-15.39,3.78-15.39l1.83-14.51-33.05-28.42Z" />
-            {/* zone F left */}
-            <path d="M72.01,307.7c2.22,6.74,5.19,13.54,7.27,17.7,2.39,4.79,5.4,10.37,8.8,15.27l-38.37,38.12c-2.41-5.11-4.76-10.96-5.12-12.76-.77-3.82-3.78-15.39-3.78-15.39l-1.83-14.51,33.05-28.42Z" />
-          </g>
-
-          {/* zone G */}
-          <g className={styles["zone-G"]}>
-            {/* zone G right */}
-            <path d="M311,367.16c-8.08,6.6-18.9,13.81-31.12,18.88-10.06,4.17-24.11,7.39-35.28,7.26.11,1.13.1,4-2.32,6.42-2.65,2.64-5.58,2.45-6.47,2.48v41.88c17.25-.66,37-7.59,56.79-22.08,16.2-11.86,29.1-27.85,34.52-38.82l-16.12-16.01Z" />
-            {/* zone G left */}
-            <path d="M112.09,367.16c8.08,6.6,18.9,13.81,31.12,18.88,10.06,4.17,24.11,7.39,35.28,7.26-.11,1.13-.1,4,2.32,6.42,2.65,2.64,5.58,2.45,6.47,2.48v41.88c-17.25-.66-37-7.59-56.79-22.08-16.2-11.86-29.1-27.85-34.52-38.82l16.12-16.01Z" />
-          </g>
-
-          {/* zone A + B*/}
-          <g className={styles["zone-AnB"]}>
-            {/* zone B left*/}
-            <polygon points="332.65 142.25 265.46 164.53 318.02 323.22 346.56 313.29 354.03 269.02 355.37 211.64 332.65 142.25" />
-            {/* zone A*/}
-            <polygon points="314.87 341.81 258.46 169.47 164.63 169.47 119.76 306.55 108.22 341.81 120.67 361.18 121.06 361.79 184.58 371.18 238.51 371.18 302.03 361.79 314.87 341.81" />
-            {/* zone B right*/}
-            <polygon points="90.56 142.22 157.73 164.59 104.94 323.21 76.41 313.24 69.01 268.95 67.75 211.58 90.56 142.22" />
-          </g>
-        </g>
-
         {/* map border line */}
         <g className={styles["line"]}>
           <path d="M412.46,144.65c-2.84-1.05-6.36-2.85-8.55-4.76l1.54,4.26h-13.86v1h13.86l-1.54,4.25c2.18-1.9,5.71-3.7,8.55-4.75Z" />
@@ -92,34 +68,77 @@ const SeatMapF1: React.FC<SeatMapProps> = ({ mode }) => {
           <path d="M236.43,506.31h-1v-23.23l.46-.04c.31-.02,31.2-2.54,58.41-17.73,33.69-18.82,48.11-38.12,48.25-38.31l.31-.42,17.58,13.88-.62.78-16.78-13.25c-2.28,2.91-17.08,20.77-48.25,38.19-25.58,14.29-54.39,17.44-58.36,17.82v22.32Z" />
         </g>
 
+        {/* zone  */}
+        <g>
+          {zoneArr.map((zone, index) => {
+            const Tag = zone.shapes.type as React.ElementType;
+            return (
+              <g key={index} id={zone.id}>
+                <Tag
+                  {...zone.shapes.props}
+                  className={clsx(
+                    styles[zone.className],
+                    mode === "minimap"
+                      ? styles["zone-minimap"]
+                      : styles["zone-interactive"]
+                  )}
+                  id={`${zone.id}${mode === "minimap" ? "" : "-i"}`}
+                  onClick={() => {
+                    zoomToZone?.(zone.id);
+                  }}
+                />
+              </g>
+            );
+          })}
+        </g>
+
         {/* Seat */}
-        <g
-          className={clsx(
-            mode === "minimap" && "pointer-events-none opacity-50"
-          )}
-        >
+        <g className={clsx(mode === "minimap" && "pointer-events-none")}>
           {seatZoneArr.map((seatZone, i) => (
             <g key={i} id={seatZone.id}>
-              {seatZone.seatArr.map((seat) => (
-                <g key={seat.seatId}>
-                  <circle
-                    cx={seat.cord.x}
-                    cy={seat.cord.y}
-                    r={SEAT_RADIUS}
-                    className={clsx("fill-current")}
-                  />
-                  <text
-                    x={seat.cord.x}
-                    y={seat.cord.y}
-                    textAnchor="middle"
-                    dominantBaseline="middle"
-                    dy="0.1em"
-                    className={styles["seat-number"]}
+              {seatZone.seatArr.map((seat) => {
+                const isPicked = _.some(pickedSeats, { seatId: seat.seatId });
+
+                return (
+                  <g
+                    key={seat.seatId}
+                    className={clsx(
+                      mode === "interactive" && styles["seat-group"]
+                    )}
                   >
-                    {seat.seatNo}
-                  </text>
-                </g>
-              ))}
+                    {/* Seat Circle */}
+                    <circle
+                      cx={seat.cord.x}
+                      cy={seat.cord.y}
+                      r={SEAT_RADIUS}
+                      className={clsx(
+                        mode === "minimap"
+                          ? styles["seat-minimap"]
+                          : styles["seat-interactive"],
+                        isPicked && styles["seat-circle-picked"]
+                      )}
+                      onClick={() => onClickSeat(seat.seatId)}
+                    />
+
+                    {/* Seat No */}
+                    {mode !== "minimap" && (
+                      <text
+                        x={seat.cord.x}
+                        y={seat.cord.y}
+                        textAnchor="middle"
+                        dominantBaseline="middle"
+                        dy="0.1em"
+                        className={clsx(
+                          styles["seat-number"],
+                          isPicked && styles["seat-number-picked"]
+                        )}
+                      >
+                        {seat.seatNo}
+                      </text>
+                    )}
+                  </g>
+                );
+              })}
             </g>
           ))}
         </g>
@@ -128,13 +147,13 @@ const SeatMapF1: React.FC<SeatMapProps> = ({ mode }) => {
           <g>
             {/* zone seat legend */}
             <g className={styles["seat-legend"]}>
-              {zoneAnBLegendArr.flatMap((legend) =>
+              {zoneALegendArr.flatMap((legend) =>
                 Array.from({ length: 2 }, (_, i) => (
                   <text
                     className={clsx(mode === "minimap" && "hidden")}
                     key={
                       i === 1
-                        ? legend.id + zoneAnBLegendArr.length * i
+                        ? legend.id + zoneALegendArr.length * i
                         : legend.id
                     }
                     x={i === 1 ? legend.cordL.x : legend.cordR.x}

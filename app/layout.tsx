@@ -11,6 +11,7 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import FlyonuiScript from "@/components/FlyonuiScript";
+import { ReduxProvider } from "@/providers/ReduxProvider";
 
 const playfair = Playfair_Display({
   variable: "--title",
@@ -44,10 +45,12 @@ export default function RootLayout({
       <body
         className={`${playfair.variable} ${playfair_sc.variable} ${jakarta.variable} antialiased`}
       >
-        <Header />
-        <>{children}</>
-        <Footer />
-        <FlyonuiScript />
+        <ReduxProvider>
+          <Header />
+          {children}
+          <Footer />
+          <FlyonuiScript />
+        </ReduxProvider>
       </body>
     </html>
   );

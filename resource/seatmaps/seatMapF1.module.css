@@ -1,38 +1,91 @@
-/* .circle {
-  fill: #000;
-  fill-opacity: 0;
-  stroke: #000;
-  stroke-miterlimit: 10;
-} */
+/* Seat styling */
 
+.seat-interactive {
+  stroke: #c9ac8c;
+}
+
+.seat-minimap {
+  opacity: 0.2;
+  stroke: #000;
+}
+
+.seat-minimap,
+.seat-interactive {
+  fill: #c9ac8c;
+  fill-opacity: 0;
+  stroke-miterlimit: 10;
+  z-index: 10;
+}
+
+.seat-number {
+  fill: #c9ac8c;
+  font-size: 6px;
+  fill-opacity: 100;
+  -webkit-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+.seat-group {
+  cursor: pointer;
+}
+
+.seat-number-picked {
+  fill: #000;
+}
+
+.seat-circle-picked {
+  fill-opacity: 1;
+}
+
+/* zone styling */
+.zone-minimap {
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
+}
+
+.zone-minimap:hover {
+  opacity: 0.8;
+}
+
+.zone-interactive {
+  opacity: 0.2 !important;
+  pointer-events: none;
+}
+
+.zone-A,
+.zone-B,
+.zone-C,
+.zone-D,
+.zone-E,
 .zone-F {
-  fill: #ea2b00;
   opacity: 0.5;
 }
 
-.zone-G {
-  fill: #0038ff;
-  opacity: 0.5;
+.zone-A {
+  fill: #9851be;
+}
+
+.zone-B {
+  fill: #ffdfa7;
 }
 
 .zone-C {
-  fill: #ffdfa7;
-  opacity: 0.5;
-}
-
-.zone-AnB {
-  fill: #640b93;
-  opacity: 0.5;
-}
-
-.zone-E {
-  fill: #9f7ea7;
-  opacity: 0.5;
+  fill: #9fe2a7;
 }
 
 .zone-D {
-  fill: #9fe2a7;
-  opacity: 0.5;
+  fill: #9f7ea7;
+}
+
+.zone-E {
+  fill: #4867d4;
+}
+
+.zone-F {
+  fill: #dd5b3e;
 }
 
 .line {
@@ -74,12 +127,4 @@
 .text-stage {
   font-size: 22.64px;
   font-weight: 700;
-}
-
-.seat-number {
-  fill: #000;
-  font-size: 6px;
-  fill-opacity: 100;
-  -webkit-user-select: none;
-  user-select: none;
 }

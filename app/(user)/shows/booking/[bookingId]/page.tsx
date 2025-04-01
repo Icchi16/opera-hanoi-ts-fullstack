@@ -1,7 +1,8 @@
 import shows from "@/samples/shows";
 import _ from "lodash";
 import Image from "next/image";
-import SeatMap from "./components/SeatMap.tsx";
+import SeatMap from "./components/SeatMap";
+import TicketInfo from "./components/TicketInfo";
 
 interface ShowBookingParams {
   bookingId: string;
@@ -55,8 +56,16 @@ const ShowBooking = async ({
             </div>
           </div>
 
-          <div className="">
+          <div className="mt-8">
             <SeatMap />
+          </div>
+
+          {/* Selected Tickets Info */}
+          <div className="mt-16 mb-8">
+            <div className="font-[family-name:var(--title)] text-3xl font-semibold">
+              Các ghế tôi đã chọn ...
+            </div>
+            <TicketInfo />
           </div>
         </div>
       </div>

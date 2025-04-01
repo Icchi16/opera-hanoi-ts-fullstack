@@ -17,6 +17,7 @@ import HighlightSwiper from "./components/HighlightSwiper";
 export default function Home() {
   return (
     <div className="font-[family-name:var(--body)] text-main ">
+      
       <main className="">
         {/* hero */}
         <section id="hero" className="h-screen">
