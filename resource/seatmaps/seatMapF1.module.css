@@ -5,7 +5,7 @@
 }
 
 .seat-minimap {
-  opacity: 0.2;
+  opacity: 0.3;
   stroke: #000;
 }
 
@@ -36,6 +36,15 @@
 
 .seat-circle-picked {
   fill-opacity: 1;
+}
+
+.seat-circle-booked {
+  fill-opacity: 1;
+  fill: #979797;
+}
+
+.seat-number-booked {
+  fill: #4b4b4b;
 }
 
 /* zone styling */

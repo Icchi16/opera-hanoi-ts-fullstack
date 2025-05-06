@@ -6,13 +6,16 @@ import _ from "lodash";
 import { useSelector } from "react-redux";
 
 const TicketInfo = () => {
-  const seatSlice = useSelector((state: RootState) => state.seats.pickedSeats);
+  const pickedSeatSlice = useSelector(
+    (state: RootState) => state.pickedSeats.pickedSeats
+  );
 
-  const seatIds = _.map(seatSlice, "seatId");
+  const seatIds = _.map(pickedSeatSlice, "seatId");
 
   const pickedSeats = _.filter(combinedSeats, (seat) =>
     _.includes(seatIds, seat.seatId)
   );
+
 
   return (
     <div>

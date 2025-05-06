@@ -13,17 +13,22 @@ import clsx from "clsx";
 import _ from "lodash";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/store/store";
-import { pickSeat, removeSeat } from "@/store/slices/seatSlice";
+import { pickSeat, removeSeat } from "@/store/slices/pickedSeatsSlice";
 
 export interface SeatMapProps {
   mode: "minimap" | "interactive";
   zoomToZone?: (zoonId: string) => void;
+  bookedSeats: number[];
 }
 
-const SeatMapF1: React.FC<SeatMapProps> = ({ mode, zoomToZone }) => {
+const SeatMapF1: React.FC<SeatMapProps> = ({
+  mode,
+  zoomToZone,
+  bookedSeats,
+}) => {
   // Setting State
   const pickedSeats = useSelector(
-    (state: RootState) => state.seats.pickedSeats
+    (state: RootState) => state.pickedSeats.pickedSeats
   );
   const dispatch = useDispatch();
 
@@ -98,12 +103,19 @@ const SeatMapF1: React.FC<SeatMapProps> = ({ mode, zoomToZone }) => {
             <g key={i} id={seatZone.id}>
               {seatZone.seatArr.map((seat) => {
                 const isPicked = _.some(pickedSeats, { seatId: seat.seatId });
+                const isBooked = _.some(
+                  bookedSeats,
+                  (id) => id === seat.seatId
+                );
 
                 return (
                   <g
                     key={seat.seatId}
                     className={clsx(
-                      mode === "interactive" && styles["seat-group"]
+                      mode === "interactive" && styles["seat-group"],
+                      isBooked &&
+                        mode === "interactive" &&
+                        "pointer-events-none cursor-default opacity-60"
                     )}
                   >
                     {/* Seat Circle */}
@@ -115,11 +127,12 @@ const SeatMapF1: React.FC<SeatMapProps> = ({ mode, zoomToZone }) => {
                         mode === "minimap"
                           ? styles["seat-minimap"]
                           : styles["seat-interactive"],
-                        isPicked && styles["seat-circle-picked"]
+                        isPicked && styles["seat-circle-picked"],
+                        isBooked && styles["seat-circle-booked"]
                       )}
                       onClick={() => onClickSeat(seat.seatId)}
                     />
-
+                    {isBooked ? "t" : "f"}
                     {/* Seat No */}
                     {mode !== "minimap" && (
                       <text
@@ -130,7 +143,8 @@ const SeatMapF1: React.FC<SeatMapProps> = ({ mode, zoomToZone }) => {
                         dy="0.1em"
                         className={clsx(
                           styles["seat-number"],
-                          isPicked && styles["seat-number-picked"]
+                          isPicked && styles["seat-number-picked"],
+                          isBooked && styles["seat-number-booked"]
                         )}
                       >
                         {seat.seatNo}

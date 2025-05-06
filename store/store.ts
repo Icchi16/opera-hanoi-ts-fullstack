@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
-import seatReducer from "./slices/seatSlice";
+import pickedSeatReducer from "./slices/pickedSeatsSlice";
+import bookedSeatReducer from "./slices/bookedSeatsSlice";
 
 export const makeStore = () =>
   configureStore({
     reducer: {
-      seats: seatReducer,
+      pickedSeats: pickedSeatReducer,
+      bookedSeats: bookedSeatReducer,
     },
   });
 

@@ -10,8 +10,8 @@ const initialState: SeatState = {
   pickedSeats: [],
 };
 
-const seatSlice = createSlice({
-  name: "seats",
+const pickedSeatSlice = createSlice({
+  name: "pickedSeats",
   initialState,
   reducers: {
     pickSeat: (state, action: PayloadAction<number>) => {
@@ -29,5 +29,5 @@ const seatSlice = createSlice({
   },
 });
 
-export const { pickSeat, removeSeat, clearSeats } = seatSlice.actions;
-export default seatSlice.reducer;
+export const { pickSeat, removeSeat, clearSeats } = pickedSeatSlice.actions;
+export default pickedSeatSlice.reducer;

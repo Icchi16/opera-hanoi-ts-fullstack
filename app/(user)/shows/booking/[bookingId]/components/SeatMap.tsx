@@ -3,12 +3,21 @@
 import SeatMapF1 from "@/resource/seatmaps/SeatMapF1";
 import SeatMapF2 from "@/resource/seatmaps/SeatMapF2";
 import SeatMapF3 from "@/resource/seatmaps/SeatMapF3";
+import { getBookedSeats } from "@/store/slices/bookedSeatsSlice";
+import { RootState } from "@/store/store";
 import clsx from "clsx";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 
 const SeatMap = () => {
   const [activeFloor, setActiveFloor] = useState(1);
+  const bookedSeats = useSelector((state: RootState) => state.bookedSeats);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getBookedSeats());
+  }, [dispatch]);
 
   return (
     <TransformWrapper initialScale={0.6} centerOnInit={true} minScale={0.6}>
@@ -64,7 +73,11 @@ const SeatMap = () => {
 
                 {/* Minimap */}
                 <div className="w-full px-4 justify-center">
-                  <Floor mode="minimap" zoomToZone={zoomToZone} />
+                  <Floor
+                    mode="minimap"
+                    zoomToZone={zoomToZone}
+                    bookedSeats={bookedSeats}
+                  />
                 </div>
               </div>
 
@@ -75,7 +88,7 @@ const SeatMap = () => {
                   contentClass="!w-full"
                 >
                   <div className="w-full cursor-grab">
-                    <Floor mode="interactive" />
+                    <Floor mode="interactive" bookedSeats={bookedSeats} />
                   </div>
                 </TransformComponent>
               </div>
