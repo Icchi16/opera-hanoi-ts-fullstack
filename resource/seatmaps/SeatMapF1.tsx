@@ -7,7 +7,7 @@ import {
   zoneALegendArr,
   zoneEntryArr,
   zoneArr,
-} from "./SeatMapData";
+} from "./SeatMapF1Data";
 import styles from "./seatMapF1.module.css";
 import clsx from "clsx";
 import _ from "lodash";

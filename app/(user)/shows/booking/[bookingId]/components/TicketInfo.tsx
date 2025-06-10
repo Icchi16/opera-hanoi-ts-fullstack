@@ -1,6 +1,6 @@
 "use client";
 
-import { combinedSeats } from "@/resource/seatmaps/SeatMapData";
+import { combinedSeats } from "@/resource/seatmaps/SeatMapF1Data";
 import { RootState } from "@/store/store";
 import _ from "lodash";
 import { useSelector } from "react-redux";
@@ -15,7 +15,6 @@ const TicketInfo = () => {
   const pickedSeats = _.filter(combinedSeats, (seat) =>
     _.includes(seatIds, seat.seatId)
   );
-
 
   return (
     <div>
