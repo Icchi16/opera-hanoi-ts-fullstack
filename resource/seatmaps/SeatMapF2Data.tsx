@@ -376,125 +376,210 @@ export const zoneALegendArr = [
   },
 ];
 
-export const seatZoneMc = [
+// Center zone
+export const seatZoneF2A = [
   { id: 0, seatId: 259, cord: { x: 128.91, y: 346.89 }, seatNo: 1 },
   { id: 1, seatId: 260, cord: { x: 126.46, y: 365.97 }, seatNo: 31 },
   { id: 2, seatId: 261, cord: { x: 136.78, y: 353.94 }, seatNo: 3 },
   { id: 3, seatId: 262, cord: { x: 135.16, y: 373.93 }, seatNo: 33 },
   { id: 4, seatId: 263, cord: { x: 144.12, y: 361.15 }, seatNo: 5 },
   { id: 5, seatId: 264, cord: { x: 144.12, y: 380.55 }, seatNo: 35 },
-  { id: 6, seatId: 264, cord: { x: 152.35, y: 366.8 }, seatNo: 7 },
-  { id: 7, seatId: 264, cord: { x: 153.7, y: 385.71 }, seatNo: 37 },
-  { id: 8, seatId: 264, cord: { x: 161.07, y: 371.96 }, seatNo: 9 },
-  { id: 9, seatId: 264, cord: { x: 164.02, y: 390.22 }, seatNo: 39 },
-  { id: 10, seatId: 264, cord: { x: 170.64, y: 376.68 }, seatNo: 11 },
-  { id: 11, seatId: 264, cord: { x: 174.34, y: 393.52 }, seatNo: 41 },
-  { id: 13, seatId: 264, cord: { x: 180.96, y: 379.9 }, seatNo: 13 },
-  { id: 14, seatId: 264, cord: { x: 185.5, y: 396.62 }, seatNo: 43 },
-  { id: 15, seatId: 264, cord: { x: 191.71, y: 382.28 }, seatNo: 15 },
-  { id: 17, seatId: 264, cord: { x: 196.34, y: 397.81 }, seatNo: 45 },
-  { id: 18, seatId: 264, cord: { x: 202.03, y: 383.2 }, seatNo: 17 },
-  { id: 16, seatId: 264, cord: { x: 207.19, y: 398.68 }, seatNo: 47 },
-  { id: 19, seatId: 264, cord: { x: 212.8, y: 383.7 }, seatNo: 19 },
-  { id: 20, seatId: 264, cord: { x: 296.93, y: 346.89 }, seatNo: 2 },
-  { id: 21, seatId: 264, cord: { x: 299.14, y: 365.97 }, seatNo: 32 },
-  { id: 22, seatId: 264, cord: { x: 288.82, y: 353.94 }, seatNo: 4 },
-  { id: 23, seatId: 264, cord: { x: 290.44, y: 373.93 }, seatNo: 34 },
-  { id: 24, seatId: 264, cord: { x: 281.48, y: 361.15 }, seatNo: 6 },
-  { id: 25, seatId: 264, cord: { x: 281.48, y: 380.55 }, seatNo: 36 },
-  { id: 26, seatId: 264, cord: { x: 273.25, y: 366.8 }, seatNo: 8 },
-  { id: 27, seatId: 264, cord: { x: 271.9, y: 385.71 }, seatNo: 38 },
-  { id: 28, seatId: 264, cord: { x: 264.53, y: 371.96 }, seatNo: 10 },
-  { id: 29, seatId: 264, cord: { x: 261.58, y: 390.22 }, seatNo: 40 },
-  { id: 30, seatId: 264, cord: { x: 254.95, y: 376.68 }, seatNo: 12 },
-  { id: 31, seatId: 264, cord: { x: 251.26, y: 393.52 }, seatNo: 42 },
-  { id: 32, seatId: 264, cord: { x: 244.63, y: 379.9 }, seatNo: 14 },
-  { id: 33, seatId: 264, cord: { x: 240.1, y: 396.62 }, seatNo: 44 },
-  { id: 34, seatId: 264, cord: { x: 233.89, y: 382.28 }, seatNo: 16 },
-  { id: 35, seatId: 264, cord: { x: 218.41, y: 398.68 }, seatNo: 48 },
-  { id: 35, seatId: 264, cord: { x: 229.25, y: 397.81 }, seatNo: 46 },
-  { id: 35, seatId: 264, cord: { x: 223.57, y: 383.2 }, seatNo: 18 },
-];
-export const seatZoneK = [
-  { id: 0, seatId: 333, cord: { x: 366.18, y: 177.8 }, seatNo: 1 },
-  { id: 1, seatId: 334, cord: { x: 366.18, y: 189.1 }, seatNo: 2 },
-  { id: 2, seatId: 335, cord: { x: 366.18, y: 200.39 }, seatNo: 3 },
-  { id: 3, seatId: 336, cord: { x: 366.18, y: 211.69 }, seatNo: 4 },
-  { id: 4, seatId: 337, cord: { x: 378.04, y: 205.55 }, seatNo: 5 },
-  { id: 5, seatId: 338, cord: { x: 378.04, y: 216.85 }, seatNo: 6 },
+  { id: 6, seatId: 265, cord: { x: 152.35, y: 366.8 }, seatNo: 7 },
+  { id: 7, seatId: 266, cord: { x: 153.7, y: 385.71 }, seatNo: 37 },
+  { id: 8, seatId: 267, cord: { x: 161.07, y: 371.96 }, seatNo: 9 },
+  { id: 9, seatId: 268, cord: { x: 164.02, y: 390.22 }, seatNo: 39 },
+  { id: 10, seatId: 269, cord: { x: 170.64, y: 376.68 }, seatNo: 11 },
+  { id: 11, seatId: 270, cord: { x: 174.34, y: 393.52 }, seatNo: 41 },
+  { id: 13, seatId: 271, cord: { x: 180.96, y: 379.9 }, seatNo: 13 },
+  { id: 14, seatId: 272, cord: { x: 185.5, y: 396.62 }, seatNo: 43 },
+  { id: 15, seatId: 273, cord: { x: 191.71, y: 382.28 }, seatNo: 15 },
+  { id: 17, seatId: 274, cord: { x: 196.34, y: 397.81 }, seatNo: 45 },
+  { id: 18, seatId: 275, cord: { x: 202.03, y: 383.2 }, seatNo: 17 },
+  { id: 16, seatId: 276, cord: { x: 207.19, y: 398.68 }, seatNo: 47 },
+  { id: 19, seatId: 277, cord: { x: 212.8, y: 383.7 }, seatNo: 19 },
+  { id: 20, seatId: 278, cord: { x: 296.93, y: 346.89 }, seatNo: 2 },
+  { id: 21, seatId: 279, cord: { x: 299.14, y: 365.97 }, seatNo: 32 },
+  { id: 22, seatId: 280, cord: { x: 288.82, y: 353.94 }, seatNo: 4 },
+  { id: 23, seatId: 281, cord: { x: 290.44, y: 373.93 }, seatNo: 34 },
+  { id: 24, seatId: 282, cord: { x: 281.48, y: 361.15 }, seatNo: 6 },
+  { id: 25, seatId: 283, cord: { x: 281.48, y: 380.55 }, seatNo: 36 },
+  { id: 26, seatId: 284, cord: { x: 273.25, y: 366.8 }, seatNo: 8 },
+  { id: 27, seatId: 285, cord: { x: 271.9, y: 385.71 }, seatNo: 38 },
+  { id: 28, seatId: 286, cord: { x: 264.53, y: 371.96 }, seatNo: 10 },
+  { id: 29, seatId: 287, cord: { x: 261.58, y: 390.22 }, seatNo: 40 },
+  { id: 30, seatId: 288, cord: { x: 254.95, y: 376.68 }, seatNo: 12 },
+  { id: 31, seatId: 289, cord: { x: 251.26, y: 393.52 }, seatNo: 42 },
+  { id: 32, seatId: 290, cord: { x: 244.63, y: 379.9 }, seatNo: 14 },
+  { id: 33, seatId: 291, cord: { x: 240.1, y: 396.62 }, seatNo: 44 },
+  { id: 34, seatId: 292, cord: { x: 233.89, y: 382.28 }, seatNo: 16 },
+  { id: 35, seatId: 293, cord: { x: 218.41, y: 398.68 }, seatNo: 48 },
+  { id: 36, seatId: 294, cord: { x: 229.25, y: 397.81 }, seatNo: 46 },
+  { id: 37, seatId: 295, cord: { x: 223.57, y: 383.2 }, seatNo: 18 },
 ];
 
-export const seatZoneC = [
-  { id: 0, seatId: 265, cord: { x: 55.91, y: 232.99 }, seatNo: 1 },
-  { id: 1, seatId: 266, cord: { x: 55.91, y: 244.29 }, seatNo: 2 },
-  { id: 2, seatId: 267, cord: { x: 55.91, y: 255.59 }, seatNo: 3 },
-  { id: 3, seatId: 268, cord: { x: 44.05, y: 244.29 }, seatNo: 4 },
-  { id: 4, seatId: 269, cord: { x: 44.05, y: 255.59 }, seatNo: 5 },
-  { id: 5, seatId: 270, cord: { x: 44.05, y: 266.89 }, seatNo: 6 },
-];
-export const seatZoneJ = [
-  { id: 0, seatId: 327, cord: { x: 366.18, y: 232.99 }, seatNo: 1 },
-  { id: 1, seatId: 328, cord: { x: 366.18, y: 244.29 }, seatNo: 2 },
-  { id: 2, seatId: 329, cord: { x: 366.18, y: 255.59 }, seatNo: 3 },
-  { id: 3, seatId: 330, cord: { x: 378.04, y: 244.29 }, seatNo: 4 },
-  { id: 4, seatId: 331, cord: { x: 378.04, y: 255.59 }, seatNo: 5 },
-  { id: 5, seatId: 332, cord: { x: 378.04, y: 266.89 }, seatNo: 6 },
+export const seatZoneMc = [
+  { id: 0, seatId: 296, cord: { x: 206.66, y: 416.6 }, seatNo: 1 },
+  { id: 1, seatId: 297, cord: { x: 218.93, y: 416.6 }, seatNo: 2 },
+  { id: 2, seatId: 298, cord: { x: 201.5, y: 434.91 }, seatNo: 3 },
+  { id: 3, seatId: 299, cord: { x: 212.85, y: 436.43 }, seatNo: 4 },
+  { id: 4, seatId: 300, cord: { x: 224.09, y: 434.91 }, seatNo: 5 },
+  { id: 5, seatId: 301, cord: { x: 200.98, y: 454.06 }, seatNo: 6 },
+  { id: 6, seatId: 302, cord: { x: 212.85, y: 454.68 }, seatNo: 7 },
+  { id: 7, seatId: 303, cord: { x: 224.62, y: 454.06 }, seatNo: 8 },
 ];
 
-export const seatZoneD = [
-  { id: 0, seatId: 271, cord: { x: 56.75, y: 282.38 }, seatNo: 1 },
-  { id: 1, seatId: 272, cord: { x: 58.77, y: 293.49 }, seatNo: 2 },
-  { id: 2, seatId: 273, cord: { x: 60.8, y: 304.61 }, seatNo: 3 },
-  { id: 3, seatId: 274, cord: { x: 44.7, y: 293.72 }, seatNo: 4 },
-  { id: 4, seatId: 275, cord: { x: 47.24, y: 304.73 }, seatNo: 5 },
-  { id: 5, seatId: 276, cord: { x: 49.78, y: 315.74 }, seatNo: 6 },
-];
-export const seatZoneI = [
-  { id: 0, seatId: 321, cord: { x: 365.34, y: 282.38 }, seatNo: 1 },
-  { id: 1, seatId: 322, cord: { x: 363.32, y: 293.49 }, seatNo: 2 },
-  { id: 2, seatId: 323, cord: { x: 361.29, y: 304.61 }, seatNo: 3 },
-  { id: 3, seatId: 324, cord: { x: 377.39, y: 293.72 }, seatNo: 4 },
-  { id: 4, seatId: 325, cord: { x: 374.85, y: 304.73 }, seatNo: 5 },
-  { id: 5, seatId: 326, cord: { x: 372.31, y: 315.74 }, seatNo: 6 },
+export const seatZoneMl = [
+  { id: 0, seatId: 304, cord: { x: 178.99, y: 414.16 }, seatNo: 1 },
+  { id: 1, seatId: 305, cord: { x: 190.66, y: 415.36 }, seatNo: 2 },
+  { id: 2, seatId: 306, cord: { x: 177.43, y: 430.81 }, seatNo: 3 },
+  { id: 3, seatId: 307, cord: { x: 188.27, y: 432.91 }, seatNo: 4 },
+  { id: 4, seatId: 308, cord: { x: 174.34, y: 450.79 }, seatNo: 5 },
+  { id: 5, seatId: 309, cord: { x: 185.5, y: 452.55 }, seatNo: 6 },
 ];
 
-export const seatZoneE = [
-  { id: 0, seatId: 277, cord: { x: 65.22, y: 322.92 }, seatNo: 1 },
-  { id: 1, seatId: 278, cord: { x: 71.52, y: 332.3 }, seatNo: 2 },
-  { id: 2, seatId: 279, cord: { x: 77.83, y: 341.67 }, seatNo: 3 },
-  { id: 3, seatId: 280, cord: { x: 55.6, y: 333.24 }, seatNo: 4 },
-  { id: 4, seatId: 281, cord: { x: 61.91, y: 342.62 }, seatNo: 5 },
-  { id: 5, seatId: 282, cord: { x: 68.21, y: 351.99 }, seatNo: 6 },
-  { id: 6, seatId: 283, cord: { x: 50.44, y: 354.13 }, seatNo: 7 },
-  { id: 7, seatId: 284, cord: { x: 56.75, y: 363.5 }, seatNo: 8 },
-];
-export const seatZoneH = [
-  { id: 0, seatId: 313, cord: { x: 356.87, y: 322.92 }, seatNo: 1 },
-  { id: 1, seatId: 314, cord: { x: 350.57, y: 332.3 }, seatNo: 2 },
-  { id: 2, seatId: 315, cord: { x: 344.26, y: 341.67 }, seatNo: 3 },
-  { id: 3, seatId: 316, cord: { x: 366.49, y: 333.24 }, seatNo: 4 },
-  { id: 4, seatId: 317, cord: { x: 360.18, y: 342.62 }, seatNo: 5 },
-  { id: 5, seatId: 318, cord: { x: 353.88, y: 351.99 }, seatNo: 6 },
-  { id: 6, seatId: 319, cord: { x: 371.65, y: 354.13 }, seatNo: 7 },
-  { id: 7, seatId: 320, cord: { x: 365.34, y: 363.5 }, seatNo: 8 },
+export const seatZoneMr = [
+  { id: 0, seatId: 310, cord: { x: 234.94, y: 415.36 }, seatNo: 1 },
+  { id: 1, seatId: 311, cord: { x: 246.61, y: 414.16 }, seatNo: 2 },
+  { id: 2, seatId: 312, cord: { x: 237.32, y: 432.91 }, seatNo: 3 },
+  { id: 3, seatId: 313, cord: { x: 248.16, y: 430.81 }, seatNo: 4 },
+  { id: 4, seatId: 314, cord: { x: 240.1, y: 452.55 }, seatNo: 5 },
+  { id: 5, seatId: 315, cord: { x: 251.26, y: 450.79 }, seatNo: 6 },
 ];
 
-export const seatZoneF = [
-  { id: 0, seatId: 285, cord: { x: 113.74, y: 380.08 }, seatNo: 1 },
-  { id: 1, seatId: 286, cord: { x: 122.11, y: 387.56 }, seatNo: 3 },
-  { id: 2, seatId: 287, cord: { x: 131.48, y: 393.09 }, seatNo: 5 },
-  { id: 3, seatId: 288, cord: { x: 141.12, y: 397.6 }, seatNo: 7 },
-  { id: 4, seatId: 289, cord: { x: 151.71, y: 401.1 }, seatNo: 9 },
-  { id: 5, seatId: 290, cord: { x: 162.43, y: 403.41 }, seatNo: 11 },
-  { id: 6, seatId: 291, cord: { x: 173.38, y: 404.03 }, seatNo: 13 },
-  { id: 7, seatId: 292, cord: { x: 117.79, y: 400.51 }, seatNo: 15 },
-  { id: 8, seatId: 293, cord: { x: 127.27, y: 406.02 }, seatNo: 17 },
-  { id: 9, seatId: 294, cord: { x: 136.64, y: 410.83 }, seatNo: 19 },
-  { id: 10, seatId: 295, cord: { x: 146.55, y: 414.76 }, seatNo: 21 },
-  { id: 11, seatId: 296, cord: { x: 156.63, y: 417.93 }, seatNo: 23 },
-  { id: 12, seatId: 297, cord: { x: 167.18, y: 419.92 }, seatNo: 25 },
-  { id: 13, seatId: 298, cord: { x: 177.79, y: 420.61 }, seatNo: 27 },
+export const seatZoneLl = [
+  { id: 0, seatId: 316, cord: { x: 156.8, y: 409 }, seatNo: 1 },
+  { id: 1, seatId: 317, cord: { x: 167.12, y: 412.59 }, seatNo: 2 },
+  { id: 2, seatId: 318, cord: { x: 153, y: 422.81 }, seatNo: 3 },
+  { id: 3, seatId: 319, cord: { x: 163.7, y: 426.62 }, seatNo: 4 },
 ];
+
+export const seatZoneLr = [
+  { id: 0, seatId: 320, cord: { x: 258.48, y: 412.59 }, seatNo: 1 },
+  { id: 1, seatId: 321, cord: { x: 268.8, y: 409 }, seatNo: 2 },
+  { id: 2, seatId: 322, cord: { x: 261.9, y: 426.62 }, seatNo: 3 },
+  { id: 3, seatId: 323, cord: { x: 272.59, y: 422.81 }, seatNo: 4 },
+];
+
+export const seatZoneKl = [
+  { id: 0, seatId: 324, cord: { x: 136.16, y: 395.98 }, seatNo: 1 },
+  { id: 1, seatId: 325, cord: { x: 146.48, y: 402.38 }, seatNo: 2 },
+  { id: 2, seatId: 326, cord: { x: 128.32, y: 410.2 }, seatNo: 3 },
+  { id: 3, seatId: 327, cord: { x: 138.64, y: 416.6 }, seatNo: 4 },
+];
+
+export const seatZoneKr = [
+  { id: 0, seatId: 328, cord: { x: 279.12, y: 402.38 }, seatNo: 1 },
+  { id: 1, seatId: 329, cord: { x: 289.44, y: 395.98 }, seatNo: 2 },
+  { id: 2, seatId: 330, cord: { x: 286.96, y: 416.6 }, seatNo: 3 },
+  { id: 3, seatId: 331, cord: { x: 297.28, y: 410.2 }, seatNo: 4 },
+];
+
+export const seatZoneJl = [
+  { id: 0, seatId: 232, cord: { x: 124.17, y: 387.44 }, seatNo: 1 },
+  { id: 1, seatId: 333, cord: { x: 114.62, y: 399.18 }, seatNo: 2 },
+];
+
+export const seatZoneJr = [
+  { id: 0, seatId: 334, cord: { x: 310.98, y: 399.18 }, seatNo: 1 },
+  { id: 1, seatId: 335, cord: { x: 301.43, y: 387.44 }, seatNo: 2 },
+];
+
+// Left Zones
+
+export const seatZoneCl = [
+  { id: 0, seatId: 336, cord: { x: 84.94, y: 182.63 }, seatNo: 1 },
+  { id: 1, seatId: 337, cord: { x: 71.13, y: 191.35 }, seatNo: 2 },
+];
+
+export const seatZoneDl = [
+  { id: 0, seatId: 338, cord: { x: 85.58, y: 207.8 }, seatNo: 1 },
+  { id: 1, seatId: 339, cord: { x: 71.76, y: 216.52 }, seatNo: 2 },
+];
+
+export const seatZoneEl = [
+  { id: 0, seatId: 340, cord: { x: 86.05, y: 235.68 }, seatNo: 1 },
+  { id: 1, seatId: 341, cord: { x: 71.13, y: 247.88 }, seatNo: 2 },
+];
+
+export const seatZoneFl = [
+  { id: 0, seatId: 342, cord: { x: 86.05, y: 263.07 }, seatNo: 1 },
+  { id: 1, seatId: 343, cord: { x: 71.13, y: 275.28 }, seatNo: 2 },
+];
+
+export const seatZoneGl = [
+  { id: 0, seatId: 344, cord: { x: 86.05, y: 288.76 }, seatNo: 1 },
+  { id: 1, seatId: 345, cord: { x: 71.13, y: 302.67 }, seatNo: 2 },
+];
+
+export const seatZoneHl = [
+  { id: 0, seatId: 346, cord: { x: 90.79, y: 308.78 }, seatNo: 1 },
+  { id: 1, seatId: 347, cord: { x: 75.87, y: 322.7 }, seatNo: 2 },
+];
+
+export const seatZoneIl = [
+  { id: 0, seatId: 348, cord: { x: 97.96, y: 328.36 }, seatNo: 1 },
+  { id: 1, seatId: 349, cord: { x: 81.45, y: 342.93 }, seatNo: 2 },
+];
+
+export const seatZoneBl = [
+  { id: 0, seatId: 350, cord: { x: 97.55, y: 159.76 }, seatNo: 1 },
+  { id: 1, seatId: 351, cord: { x: 99.35, y: 170.08 }, seatNo: 3 },
+  { id: 2, seatId: 352, cord: { x: 101.31, y: 180.4 }, seatNo: 5 },
+  { id: 3, seatId: 353, cord: { x: 101.7, y: 190.72 }, seatNo: 7 },
+  { id: 4, seatId: 354, cord: { x: 101.7, y: 201.04 }, seatNo: 9 },
+  { id: 5, seatId: 355, cord: { x: 101.7, y: 211.36 }, seatNo: 11 },
+  { id: 6, seatId: 356, cord: { x: 101.7, y: 221.68 }, seatNo: 13 },
+  { id: 7, seatId: 357, cord: { x: 101.7, y: 232 }, seatNo: 15 },
+  { id: 8, seatId: 358, cord: { x: 101.7, y: 242.32 }, seatNo: 17 },
+  { id: 9, seatId: 359, cord: { x: 101.7, y: 252.64 }, seatNo: 19 },
+  { id: 10, seatId: 360, cord: { x: 101.7, y: 262.96 }, seatNo: 21 },
+  { id: 11, seatId: 361, cord: { x: 102.4, y: 273.28 }, seatNo: 23 },
+  { id: 12, seatId: 362, cord: { x: 103.88, y: 283.6 }, seatNo: 25 },
+  { id: 13, seatId: 363, cord: { x: 106.05, y: 293.63 }, seatNo: 27 },
+  { id: 14, seatId: 364, cord: { x: 108.69, y: 303.62 }, seatNo: 29 },
+  { id: 15, seatId: 365, cord: { x: 111.21, y: 313.43 }, seatNo: 31 },
+  { id: 16, seatId: 366, cord: { x: 114.49, y: 323.2 }, seatNo: 33 },
+  { id: 17, seatId: 367, cord: { x: 119.5, y: 332.47 }, seatNo: 35 },
+];
+
+// Right Zones
+
+// <circle className="cls-5" cx={340.65} cy={182.63} r={5.16} />
+//             <circle className="cls-5" cx={354.47} cy={191.35} r={5.16} />
+//             <circle className="cls-5" cx={340.02} cy={207.8} r={5.16} />
+//             <circle className="cls-5" cx={353.83} cy={216.52} r={5.16} />
+//             <circle className="cls-5" cx={339.55} cy={235.68} r={5.16} />
+//             <circle className="cls-5" cx={354.47} cy={247.88} r={5.16} />
+//             <circle className="cls-5" cx={339.55} cy={263.07} r={5.16} />
+//             <circle className="cls-5" cx={339.55} cy={288.76} r={5.16} />
+//             <circle className="cls-5" cx={354.47} cy={302.67} r={5.16} />
+//             <circle className="cls-5" cx={334.8} cy={308.78} r={5.16} />
+//             <circle className="cls-5" cx={327.64} cy={328.36} r={5.16} />
+//             <circle className="cls-5" cx={344.15} cy={342.93} r={5.16} />
+//             <circle className="cls-5" cx={349.72} cy={322.7} r={5.16} />
+//             <circle className="cls-5" cx={354.47} cy={275.28} r={5.16} />
+
+// <circle className="cls-5" cx={328.04} cy={159.76} r={5.16} />
+//               <circle className="cls-5" cx={326.25} cy={170.08} r={5.16} />
+//               <circle className="cls-5" cx={324.28} cy={180.4} r={5.16} />
+//               <circle className="cls-5" cx={306.25} cy={332.35} r={5.16} />
+//               <circle className="cls-5" cx={323.89} cy={190.72} r={5.16} />
+//               <circle className="cls-5" cx={323.89} cy={201.04} r={5.16} />
+//               <circle className="cls-5" cx={323.89} cy={211.36} r={5.16} />
+//               <circle className="cls-5" cx={323.89} cy={221.68} r={5.16} />
+//               <circle className="cls-5" cx={323.89} cy={232} r={5.16} />
+//               <circle className="cls-5" cx={323.89} cy={242.32} r={5.16} />
+//               <circle className="cls-5" cx={323.89} cy={252.64} r={5.16} />
+//               <circle className="cls-5" cx={323.89} cy={262.96} r={5.16} />
+//               <circle className="cls-5" cx={323.2} cy={273.28} r={5.16} />
+//               <circle className="cls-5" cx={321.71} cy={283.6} r={5.16} />
+//               <circle className="cls-5" cx={319.55} cy={293.63} r={5.16} />
+//               <circle className="cls-5" cx={316.91} cy={303.62} r={5.16} />
+//               <circle className="cls-5" cx={314.39} cy={313.43} r={5.16} />
+//               <circle className="cls-5" cx={311.61} cy={323.39} r={5.16} />
+
+export const seatZoneTesting = [];
+
 export const seatZoneG = [
   { id: 0, seatId: 299, cord: { x: 308.34, y: 380.08 }, seatNo: 2 },
   { id: 1, seatId: 300, cord: { x: 299.98, y: 387.56 }, seatNo: 4 },
@@ -807,63 +892,65 @@ export const seatZoneACenter = [
 ];
 
 export const seatZoneArr = [
-  // { id: "seat-zone-A", seatArr: seatZoneA },
-  // { id: "seat-zone-B-left", seatArr: seatZoneBl },
+  { id: "seat-zone-A", seatArr: seatZoneF2A },
+  { id: "seat-zone-B-left", seatArr: seatZoneBl },
   // { id: "seat-zone-B-right", seatArr: seatZoneBr },
-  // { id: "seat-zone-C-left", seatArr: seatZoneCl },
+  { id: "seat-zone-C-left", seatArr: seatZoneCl },
   // { id: "seat-zone-C-right", seatArr: seatZoneCr },
-  // { id: "seat-zone-D-left", seatArr: seatZoneDl },
+  { id: "seat-zone-D-left", seatArr: seatZoneDl },
   // { id: "seat-zone-D-right", seatArr: seatZoneDr },
-  // { id: "seat-zone-E-left", seatArr: seatZoneEl },
+  { id: "seat-zone-E-left", seatArr: seatZoneEl },
   // { id: "seat-zone-E-right", seatArr: seatZoneEr },
-  // { id: "seat-zone-F-left", seatArr: seatZoneFl },
+  { id: "seat-zone-F-left", seatArr: seatZoneFl },
   // { id: "seat-zone-F-right", seatArr: seatZoneFr },
-  // { id: "seat-zone-G-left", seatArr: seatZoneGl },
+  { id: "seat-zone-G-left", seatArr: seatZoneGl },
   // { id: "seat-zone-G-right", seatArr: seatZoneGr },
-  // { id: "seat-zone-H-left", seatArr: seatZoneHl },
+  { id: "seat-zone-H-left", seatArr: seatZoneHl },
   // { id: "seat-zone-H-right", seatArr: seatZoneHr },
-  // { id: "seat-zone-I-left", seatArr: seatZoneIl },
+  { id: "seat-zone-I-left", seatArr: seatZoneIl },
   // { id: "seat-zone-I-right", seatArr: seatZoneIr },
-  // { id: "seat-zone-J-left", seatArr: seatZoneJl },
-  // { id: "seat-zone-J-right", seatArr: seatZoneJr },
-  // { id: "seat-zone-K-left", seatArr: seatZoneKl },
-  // { id: "seat-zone-K-right", seatArr: seatZoneKr },
-  // { id: "seat-zone-L-left", seatArr: seatZoneLl },
-  // { id: "seat-zone-L-right", seatArr: seatZoneLr },
-  // { id: "seat-zone-M-left", seatArr: seatZoneMl },
-  // { id: "seat-zone-M-right", seatArr: seatZoneMr },
+  { id: "seat-zone-J-left", seatArr: seatZoneJl },
+  { id: "seat-zone-J-right", seatArr: seatZoneJr },
+  { id: "seat-zone-K-left", seatArr: seatZoneKl },
+  { id: "seat-zone-K-right", seatArr: seatZoneKr },
+  { id: "seat-zone-L-left", seatArr: seatZoneLl },
+  { id: "seat-zone-L-right", seatArr: seatZoneLr },
+  { id: "seat-zone-M-left", seatArr: seatZoneMl },
+  { id: "seat-zone-M-right", seatArr: seatZoneMr },
   { id: "seat-zone-M-center", seatArr: seatZoneMc },
+  { id: "seat-zone-testing", seatArr: seatZoneTesting },
 ];
 
 export const combinedSeats = _.sortBy(
   _.map(
     _.concat(
-      // seatZoneA,
-      // seatZoneBl,
+      seatZoneF2A,
+      seatZoneBl,
       // seatZoneBr,
-      // seatZoneCl,
+      seatZoneCl,
       // seatZoneCr,
-      // seatZoneDl,
+      seatZoneDl,
       // seatZoneDr,
-      // seatZoneEl,
+      seatZoneEl,
       // seatZoneEr,
-      // seatZoneFl,
+      seatZoneFl,
       // seatZoneFr,
-      // seatZoneGl,
+      seatZoneGl,
       // seatZoneGr,
-      // seatZoneHl,
+      seatZoneHl,
       // seatZoneHr,
-      // seatZoneIl,
+      seatZoneIl,
       // seatZoneIr,
-      // seatZoneJl,
-      // seatZoneJr,
-      // seatZoneKl,
-      // seatZoneKr,
-      // seatZoneLl,
-      // seatZoneLr,
-      // seatZoneMl,
-      // seatZoneMr,
-      seatZoneMc
+      seatZoneJl,
+      seatZoneJr,
+      seatZoneKl,
+      seatZoneKr,
+      seatZoneLl,
+      seatZoneLr,
+      seatZoneMl,
+      seatZoneMr,
+      seatZoneMc,
+      seatZoneTesting
     ),
     ({ id, ...rest }) => rest
   ),
