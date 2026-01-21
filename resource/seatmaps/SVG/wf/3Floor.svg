@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Floor1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 456.41 542.49">
+  <g id="Base">
+    <path d="M227.69.5H32.5v24.05h103.24v6.91l-.28.36c-.35-.09-.73-.14-1.11-.14-2.61,0-4.73,2.11-4.73,4.72,0,.76.18,1.48.5,2.11l-5.28,6.63c-2.81,3.64-7.6,4.54-7.6,4.54v71.71h-54.4l-10.05,10.05h-28.64" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <path d="M205.16,432.39v16.45s-24,1.27-57.58-21c-25.04-16.62-39.12-43.27-39.12-43.27l18.86-19.52" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <path d="M24.15,159.11h29.28v7.85h25.04s.92,2.35,2.23,3.73,3.25,1.75,3.25,1.75v93.06c.14,5.47-2.87,46.1,26.21,82.08,38.31,46.46,85.28,45.54,85.28,45.54,0,0,1.53,3.4,4.12,5.6s5.6,3.17,5.6,3.17v13.66" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <polyline points="53.43 166.96 53.43 191.27 24.15 191.27" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <polyline points="24.15 220.88 53.43 220.88 53.43 240.11 24.15 240.11" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="83.95" y1="213.57" x2="53.43" y2="230.5" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <polyline points="24.15 269.07 53.43 269.07 53.43 288.57 24.15 288.57" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <path d="M24.15,318.46h29.28s.44,15.91.65,18.96c.28,4.11,1.65,14.73,1.65,14.73l-30.23,6.52" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <path d="M66.7,452.42l28.5-23.54s13.62,19.5,46.97,37.65c34.19,18.6,61.03,18.89,61.03,18.89v44.77" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="65.73" y1="381.35" x2="105.7" y2="341.53" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <path d="M32.5,387.65l31.51-10.08,9.38,20.62-.09.17c-2.15.89-3.66,3.01-3.66,5.48,0,.45.05.89.15,1.31l-.18.35-25.6,14.07" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="120.85" y1="63.57" x2="120.85" y2="102.34" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="141.7" y1="63.57" x2="141.7" y2="102.34" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="121.16" y1="65.97" x2="141.7" y2="65.97" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="121.16" y1="71.47" x2="141.7" y2="71.47" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="121.16" y1="98.96" x2="141.7" y2="98.96" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="121.16" y1="93.46" x2="141.7" y2="93.46" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="121.16" y1="87.96" x2="141.7" y2="87.96" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="121.16" y1="82.46" x2="141.7" y2="82.46" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="121.16" y1="76.97" x2="141.7" y2="76.97" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="131.85" y1="102.04" x2="131.85" y2="72.66" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <polygon points="134.7 73.5 131.85 68.57 129.01 73.5 134.7 73.5"/>
+    <path d="M128.68,414.44l.58.59.77.76c.52.51,1.09,1.04,1.64,1.56,1.13,1.04,2.29,2.09,3.48,3.11,2.38,2.04,4.84,4.04,7.38,5.92,5.06,3.78,10.35,7.21,15.8,10.17,5.49,2.95,11.28,5.61,17.27,7.85,2.98,1.14,6.02,2.19,9.06,3.13,1.52.47,3.04.92,4.56,1.34l2.24.59,1.08.27.87.2" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: .95px;"/>
+    <path d="M105.12,436.45l1.27,1.3,1.11,1.1c.74.73,1.46,1.4,2.19,2.09,1.46,1.35,2.92,2.66,4.4,3.94,2.97,2.55,5.98,5,9.11,7.32,6.23,4.65,12.8,8.93,19.75,12.7,6.93,3.72,13.99,6.95,21.21,9.66,3.6,1.37,7.24,2.63,10.93,3.77,1.84.57,3.71,1.12,5.59,1.64l2.87.76,1.49.37,1.7.39" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: .95px;"/>
+    <line x1="129.1" y1="414.88" x2="106.15" y2="437.52" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: .95px;"/>
+    <line x1="133.76" y1="419.26" x2="112.36" y2="443.36" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: .95px;"/>
+    <line x1="137.99" y1="422.85" x2="117.61" y2="447.84" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: .95px;"/>
+    <line x1="142.38" y1="426.28" x2="123.03" y2="452.07" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: .95px;"/>
+    <line x1="146.44" y1="429.21" x2="128.04" y2="455.68" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: .95px;"/>
+    <line x1="150.58" y1="431.98" x2="133.19" y2="459.12" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: .95px;"/>
+    <line x1="155.02" y1="434.2" x2="138.71" y2="462.01" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: .95px;"/>
+    <line x1="159.32" y1="436.59" x2="144.15" y2="465.04" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: .95px;"/>
+    <line x1="163.73" y1="438.84" x2="149.66" y2="467.84" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: .95px;"/>
+    <line x1="168.26" y1="440.95" x2="155.24" y2="470.44" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: .95px;"/>
+    <line x1="172.9" y1="442.89" x2="160.88" y2="472.81" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: .95px;"/>
+    <line x1="177.47" y1="445.12" x2="166.42" y2="475.4" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: .95px;"/>
+    <line x1="182.26" y1="446.78" x2="172.19" y2="477.4" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: .95px;"/>
+    <line x1="187.08" y1="448.28" x2="178.04" y2="479.22" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: .95px;"/>
+    <line x1="191.84" y1="449.57" x2="184.07" y2="480.86" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: .95px;"/>
+    <path d="M190.06,465.71c-5.67-1.31-11.25-3.01-16.74-4.96-5.48-1.95-10.88-4.16-16.13-6.68-10.52-5.01-20.36-11.38-29.39-18.72" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: .95px;"/>
+    <path d="M128.15,435.63c1.53-.05,3.18-1.25,4.05-2.29-2.35.48-4.95.43-7.42-.52,1.33,2.28,1.8,4.84,2.06,7.29.8-1.23,1.56-2.88,1.31-4.48Z"/>
+    <line x1="70.1" y1="121.39" x2="70.1" y2="166.96" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="64.25" y1="121.39" x2="64.25" y2="166.96" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="58.96" y1="125.27" x2="58.96" y2="166.96" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="53.43" y1="131.05" x2="53.43" y2="159.18" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="53.43" y1="191.27" x2="53.43" y2="220.88" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="48.77" y1="191.27" x2="48.77" y2="220.88" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="44.63" y1="191.27" x2="44.63" y2="220.88" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="53.43" y1="240.11" x2="53.43" y2="269.07" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="48.77" y1="240.11" x2="48.77" y2="269.07" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="44.7" y1="240.11" x2="44.7" y2="269.07" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="53.43" y1="288.57" x2="53.43" y2="318.46" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="48.83" y1="288.51" x2="48.83" y2="318.4" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="44.8" y1="288.95" x2="44.8" y2="318.83" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="64.11" y1="377.78" x2="55.74" y2="352.15" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="49.95" y1="353.4" x2="58.42" y2="379.36" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="44.71" y1="354.53" x2="53.37" y2="381.08" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="65.73" y1="407.63" x2="86.11" y2="436.39" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="52.01" y1="147.12" x2="67.57" y2="147.12" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <polygon points="66.7 150.11 71.88 147.12 66.7 144.12 66.7 150.11"/>
+    <line x1="32.14" y1="206.07" x2="47.7" y2="206.07" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <polygon points="46.83 209.07 52.01 206.07 46.83 203.08 46.83 209.07"/>
+    <line x1="32.14" y1="254.59" x2="47.7" y2="254.59" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <polygon points="46.83 257.58 52.01 254.59 46.83 251.6 46.83 257.58"/>
+    <line x1="37.64" y1="370.77" x2="52.52" y2="366.19" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <polygon points="52.56 369.31 56.64 364.93 50.8 363.59 52.56 369.31"/>
+    <line x1="70.34" y1="425.41" x2="82.93" y2="416.26" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <polygon points="83.98 419.2 86.42 413.73 80.47 414.36 83.98 419.2"/>
+    <line x1="89.32" y1="307.9" x2="54.13" y2="337.95" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="83.95" y1="260.74" x2="53.43" y2="279.42" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <g>
+      <path d="M199.01,97.47c.5.26,1.27.51,2.07.51.86,0,1.31-.36,1.31-.89s-.39-.81-1.38-1.16c-1.37-.48-2.27-1.24-2.27-2.44,0-1.41,1.18-2.49,3.12-2.49.93,0,1.62.2,2.11.42l-.42,1.51c-.33-.16-.92-.39-1.73-.39s-1.2.37-1.2.8c0,.53.47.76,1.53,1.16,1.46.54,2.14,1.3,2.14,2.46,0,1.38-1.07,2.56-3.33,2.56-.94,0-1.88-.25-2.34-.5l.38-1.54Z"/>
+      <path d="M207.49,97.27l-.59,2.12h-1.94l2.52-8.26h2.45l2.56,8.26h-2.01l-.64-2.12h-2.36ZM209.48,89.19l1.24,1.51h-1.31l-.61-.76h-.02l-.61.76h-1.3l1.23-1.51h1.4ZM209.59,95.88l-.51-1.75c-.15-.49-.29-1.1-.42-1.59h-.02c-.12.49-.25,1.11-.38,1.59l-.49,1.75h1.83Z"/>
+      <path d="M213.61,99.39v-8.26h2.18l1.72,3.03c.49.87.98,1.9,1.35,2.83h.04c-.12-1.09-.16-2.21-.16-3.44v-2.41h1.72v8.26h-1.96l-1.76-3.19c-.49-.88-1.03-1.95-1.43-2.92h-.04c.05,1.1.07,2.27.07,3.61v2.49h-1.72Z"/>
+      <path d="M224.54,91.13h1.85v3.65h.04c.18-.32.38-.61.56-.91l1.87-2.74h2.29l-2.73,3.52,2.88,4.74h-2.18l-2.02-3.57-.71.87v2.7h-1.85v-8.26Z"/>
+      <path d="M233.95,91.13v3.17h3.08v-3.17h1.86v8.26h-1.86v-3.46h-3.08v3.46h-1.88v-8.26h1.88Z"/>
+      <path d="M242.44,97.27l-.59,2.12h-1.94l2.52-8.26h2.45l2.56,8.26h-2.01l-.64-2.12h-2.36ZM244.39,89.19l1.1,1.51h-1.2l-.54-.77h-.02l-.55.77h-1.19l1.1-1.51h1.3ZM244.54,95.88l-.51-1.75c-.15-.49-.29-1.1-.42-1.59h-.02c-.12.49-.25,1.11-.38,1.59l-.49,1.75h1.83ZM247.4,88.18l-1.64,1.4h-.89l.93-1.4h1.6Z"/>
+      <path d="M249.99,91.13v4.75c0,1.42.54,2.14,1.5,2.14s1.52-.69,1.52-2.14v-4.75h1.86v4.63c0,2.55-1.29,3.76-3.44,3.76s-3.31-1.15-3.31-3.79v-4.61h1.87Z"/>
+      <path d="M208.95,103.8c-.7,1.13-1.24,2.77-1.24,4.96s.55,3.79,1.24,4.93h-1.3c-.66-.94-1.4-2.57-1.4-4.94.01-2.38.73-3.99,1.4-4.95h1.3Z"/>
+      <path d="M210.23,110.34c.5.26,1.27.51,2.07.51.86,0,1.31-.36,1.31-.89s-.39-.81-1.38-1.16c-1.37-.48-2.27-1.24-2.27-2.44,0-1.41,1.18-2.49,3.12-2.49.93,0,1.62.2,2.11.42l-.42,1.51c-.33-.16-.92-.39-1.73-.39s-1.2.37-1.2.8c0,.53.47.76,1.53,1.16,1.46.54,2.14,1.3,2.14,2.46,0,1.38-1.07,2.56-3.33,2.56-.94,0-1.88-.25-2.34-.5l.38-1.54Z"/>
+      <path d="M218.38,105.58h-2.22v-1.57h6.35v1.57h-2.25v6.69h-1.88v-6.69Z"/>
+      <path d="M224.55,110.15l-.59,2.12h-1.94l2.52-8.26h2.45l2.56,8.26h-2.01l-.64-2.12h-2.36ZM226.65,108.75l-.51-1.75c-.15-.49-.29-1.1-.42-1.59h-.02c-.12.49-.25,1.11-.38,1.59l-.49,1.75h1.83Z"/>
+      <path d="M237.26,111.89c-.58.2-1.67.47-2.76.47-1.51,0-2.6-.38-3.36-1.12-.76-.71-1.18-1.79-1.16-3,.01-2.74,2.01-4.31,4.72-4.31,1.07,0,1.89.21,2.29.4l-.39,1.5c-.45-.2-1.02-.36-1.92-.36-1.56,0-2.73.88-2.73,2.67s1.07,2.71,2.6,2.71c.43,0,.77-.05.92-.12v-1.73h-1.27v-1.46h3.08v4.35Z"/>
+      <path d="M243.63,108.78h-3.04v1.96h3.39v1.53h-5.27v-8.26h5.1v1.53h-3.22v1.72h3.04v1.52Z"/>
+      <path d="M244.89,113.69c.67-1.13,1.24-2.78,1.24-4.95s-.55-3.8-1.24-4.94h1.3c.65.94,1.4,2.55,1.4,4.94-.01,2.39-.75,3.99-1.4,4.95h-1.3Z"/>
+    </g>
+    <path d="M228.94,144.24c34.34,0,82.07-15.36,82.07-15.36v-63.26l-13.94-21.6s-30.08,12-68.13,12c-.25,0-.5,0-.75,0h.01c-.25,0-.5,0-.75,0-38.05,0-68.13-12-68.13-12l-13.94,21.6v63.26s47.73,15.36,82.07,15.36h1.48Z" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <path d="M228.72.5h195.19v24.05h-103.24v6.91l.28.36c.35-.09.73-.14,1.11-.14,2.61,0,4.73,2.11,4.73,4.72,0,.76-.18,1.48-.5,2.11l5.28,6.63c2.81,3.64,7.6,4.54,7.6,4.54v71.71h54.4l10.05,10.05h28.64" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <path d="M251.24,432.39v16.45s24,1.27,57.58-21c25.04-16.62,39.12-43.27,39.12-43.27l-18.86-19.52" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <path d="M432.25,159.11h-29.28v7.85h-25.04s-.92,2.35-2.23,3.73-3.25,1.75-3.25,1.75v93.06c-.14,5.47,2.87,46.1-26.21,82.08-38.31,46.46-85.28,45.54-85.28,45.54,0,0-1.53,3.4-4.12,5.6s-5.6,3.17-5.6,3.17v13.66" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <polyline points="402.98 166.96 402.98 191.27 432.25 191.27" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <polyline points="432.25 220.88 402.98 220.88 402.98 240.11 432.25 240.11" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="372.46" y1="213.57" x2="402.98" y2="230.5" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <polyline points="432.25 269.07 402.98 269.07 402.98 288.57 432.25 288.57" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <path d="M432.25,318.46h-29.28s-.44,15.91-.65,18.96c-.28,4.11-1.65,14.73-1.65,14.73l30.23,6.52" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <path d="M389.71,452.42l-28.5-23.54s-13.62,19.5-46.97,37.65c-34.19,18.6-61.03,18.89-61.03,18.89v44.77" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="390.68" y1="381.35" x2="350.71" y2="341.53" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <path d="M423.91,387.65l-31.51-10.08-9.38,20.62.09.17c2.15.89,3.66,3.01,3.66,5.48,0,.45-.05.89-.15,1.31l.18.35,25.6,14.07" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="335.55" y1="63.57" x2="335.55" y2="102.34" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="314.71" y1="63.57" x2="314.71" y2="102.34" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="335.24" y1="65.97" x2="314.71" y2="65.97" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="335.24" y1="71.47" x2="314.71" y2="71.47" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="335.24" y1="98.96" x2="314.71" y2="98.96" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="335.24" y1="93.46" x2="314.71" y2="93.46" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="335.24" y1="87.96" x2="314.71" y2="87.96" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="335.24" y1="82.46" x2="314.71" y2="82.46" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="335.24" y1="76.97" x2="314.71" y2="76.97" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="324.55" y1="102.04" x2="324.55" y2="72.66" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <polygon points="321.71 73.5 324.55 68.57 327.39 73.5 321.71 73.5"/>
+    <path d="M327.73,414.44l-.58.59-.77.76c-.52.51-1.09,1.04-1.64,1.56-1.13,1.04-2.29,2.09-3.48,3.11-2.38,2.04-4.84,4.04-7.38,5.92-5.06,3.78-10.35,7.21-15.8,10.17-5.49,2.95-11.28,5.61-17.27,7.85-2.98,1.14-6.02,2.19-9.06,3.13-1.52.47-3.04.92-4.56,1.34l-2.24.59-1.08.27-.87.2" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: .95px;"/>
+    <path d="M351.29,436.45l-1.27,1.3-1.11,1.1c-.74.73-1.46,1.4-2.19,2.09-1.46,1.35-2.92,2.66-4.4,3.94-2.97,2.55-5.98,5-9.11,7.32-6.23,4.65-12.8,8.93-19.75,12.7-6.93,3.72-13.99,6.95-21.21,9.66-3.6,1.37-7.24,2.63-10.93,3.77-1.84.57-3.71,1.12-5.59,1.64l-2.87.76-1.49.37-1.7.39" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: .95px;"/>
+    <line x1="327.3" y1="414.88" x2="350.25" y2="437.52" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: .95px;"/>
+    <line x1="322.64" y1="419.26" x2="344.05" y2="443.36" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: .95px;"/>
+    <line x1="318.42" y1="422.85" x2="338.79" y2="447.84" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: .95px;"/>
+    <line x1="314.03" y1="426.28" x2="333.38" y2="452.07" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: .95px;"/>
+    <line x1="309.97" y1="429.21" x2="328.37" y2="455.68" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: .95px;"/>
+    <line x1="305.83" y1="431.98" x2="323.22" y2="459.12" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: .95px;"/>
+    <line x1="301.39" y1="434.2" x2="317.7" y2="462.01" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: .95px;"/>
+    <line x1="297.09" y1="436.59" x2="312.26" y2="465.04" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: .95px;"/>
+    <line x1="292.67" y1="438.84" x2="306.74" y2="467.84" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: .95px;"/>
+    <line x1="288.14" y1="440.95" x2="301.17" y2="470.44" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: .95px;"/>
+    <line x1="283.5" y1="442.89" x2="295.53" y2="472.81" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: .95px;"/>
+    <line x1="278.94" y1="445.12" x2="289.98" y2="475.4" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: .95px;"/>
+    <line x1="274.15" y1="446.78" x2="284.21" y2="477.4" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: .95px;"/>
+    <line x1="269.32" y1="448.28" x2="278.36" y2="479.22" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: .95px;"/>
+    <line x1="264.56" y1="449.57" x2="272.34" y2="480.86" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: .95px;"/>
+    <path d="M266.35,465.71c5.67-1.31,11.25-3.01,16.74-4.96,5.48-1.95,10.88-4.16,16.13-6.68,10.52-5.01,20.36-11.38,29.39-18.72" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: .95px;"/>
+    <path d="M328.26,435.63c-1.53-.05-3.18-1.25-4.05-2.29,2.35.48,4.95.43,7.42-.52-1.33,2.28-1.8,4.84-2.06,7.29-.8-1.23-1.56-2.88-1.31-4.48Z"/>
+    <line x1="386.3" y1="121.39" x2="386.3" y2="166.96" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="392.16" y1="121.39" x2="392.16" y2="166.96" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="397.45" y1="125.27" x2="397.45" y2="166.96" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="402.98" y1="131.05" x2="402.98" y2="159.18" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="402.98" y1="191.27" x2="402.98" y2="220.88" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="407.64" y1="191.27" x2="407.64" y2="220.88" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="411.78" y1="191.27" x2="411.78" y2="220.88" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="402.98" y1="240.11" x2="402.98" y2="269.07" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="407.64" y1="240.11" x2="407.64" y2="269.07" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="411.71" y1="240.11" x2="411.71" y2="269.07" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="402.98" y1="288.57" x2="402.98" y2="318.46" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="407.58" y1="288.51" x2="407.58" y2="318.4" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="411.61" y1="288.95" x2="411.61" y2="318.83" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="392.3" y1="377.78" x2="400.67" y2="352.15" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="406.46" y1="353.4" x2="397.99" y2="379.36" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="411.7" y1="354.53" x2="403.03" y2="381.08" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="390.68" y1="407.63" x2="370.3" y2="436.39" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="404.4" y1="147.12" x2="388.83" y2="147.12" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <polygon points="389.71 150.11 384.53 147.12 389.71 144.12 389.71 150.11"/>
+    <line x1="424.27" y1="206.07" x2="408.71" y2="206.07" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <polygon points="409.58 209.07 404.4 206.07 409.58 203.08 409.58 209.07"/>
+    <line x1="424.27" y1="254.59" x2="408.71" y2="254.59" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <polygon points="409.58 257.58 404.4 254.59 409.58 251.6 409.58 257.58"/>
+    <line x1="418.77" y1="370.77" x2="403.89" y2="366.19" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <polygon points="403.84 369.31 399.77 364.93 405.6 363.59 403.84 369.31"/>
+    <line x1="386.07" y1="425.41" x2="373.47" y2="416.26" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <polygon points="372.42 419.2 369.99 413.73 375.94 414.36 372.42 419.2"/>
+    <polyline points="253.21 496.36 228.21 496.36 228.2 496.36 203.2 496.36" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="253.21" y1="502.41" x2="203.2" y2="502.41" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="367.09" y1="307.9" x2="402.28" y2="337.95" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+    <line x1="372.46" y1="260.74" x2="402.98" y2="279.42" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+  </g>
+  <g id="Seat_Zones" data-name="Seat Zones">
+    <g>
+      <g>
+        <g>
+          <path d="M53.69,167.09h24.55s.38,1.85,2.24,3.63,3.2,1.79,3.34,1.79.02,40.86.02,40.86l-30.16,16.7v-62.98Z" style="fill: #ffdeb7; opacity: .3;"/>
+          <polygon points="53.69 230.65 83.69 214.03 83.69 260.59 53.69 279.1 53.69 230.65" style="fill: #ffdeb7; opacity: .3;"/>
+          <path d="M53.69,279.66l29.89-18.34c.37,23.4,1.21,31.5,5.54,46.58l-34.75,29.48c-1.14-26.89-.77-41.14-.68-57.72Z" style="fill: #cae0ff; opacity: .3;"/>
+          <path d="M54.39,337.95l34.93-29.58c3.95,12.78,9.32,23.76,15.95,33.16l-39.38,39.55-1.54-3.38-8.42-25.59-1.53-14.16Z" style="fill: #cae0ff; opacity: .3;"/>
+        </g>
+        <g>
+          <path d="M402.72,167.09h-24.55s-.38,1.85-2.24,3.63-3.2,1.79-3.34,1.79-.02,40.86-.02,40.86l30.16,16.7v-62.98Z" style="fill: #ffdeb7; opacity: .3;"/>
+          <polygon points="402.72 230.65 372.72 214.03 372.72 260.59 402.72 279.1 402.72 230.65" style="fill: #ffdeb7; opacity: .3;"/>
+          <path d="M402.72,279.66l-29.89-18.34c-.37,23.4-1.21,31.5-5.54,46.58l34.75,29.48c1.14-26.89.77-41.14.68-57.72Z" style="fill: #cae0ff; opacity: .3;"/>
+          <path d="M402.01,337.95l-34.93-29.58c-3.95,12.78-9.32,23.76-15.95,33.16l39.38,39.55,1.54-3.38,8.42-25.59,1.53-14.16Z" style="fill: #cae0ff; opacity: .3;"/>
+        </g>
+      </g>
+      <g>
+        <path d="M127.35,365.41c20.24,16.33,42.57,26.41,67.81,27.94,2.21,4.26,5.33,7.34,9.74,8.78v46.46c-44.73-2.78-80.74-35.23-96.02-63.91l18.47-19.28Z" style="fill: #eb7400; opacity: .3;"/>
+        <path d="M329.05,365.41c-20.24,16.33-42.57,26.41-67.81,27.94-2.21,4.26-5.33,7.34-9.74,8.78v46.46c44.73-2.78,80.74-35.23,96.02-63.91l-18.47-19.28Z" style="fill: #eb7400; opacity: .3;"/>
+      </g>
+    </g>
+    <g>
+      <path d="M106.65,145.11l-21.51,67.85c.18,37.42,4.93,73.7,13.98,100.23l20.51,6.18,50.88-151.49c-21.21-6.57-42.5-14.24-63.85-22.78Z" style="fill: #eb7400; opacity: .3;"/>
+      <path d="M349.76,145.11l21.51,67.85c-.18,37.42-4.93,73.7-13.98,100.23l-20.51,6.18-50.88-151.49c21.21-6.57,42.5-14.24,63.85-22.78Z" style="fill: #eb7400; opacity: .3;"/>
+      <polygon points="326.78 338.56 318.37 358.91 228.2 367.47 138.03 358.91 129.62 338.56 186.39 168.84 270.01 168.84 326.78 338.56" style="fill: #b0efff; opacity: .3;"/>
+    </g>
+  </g>
+  <g id="Seats">
+    <g>
+      <g>
+        <circle cx="130.08" cy="162.36" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="120.47" cy="158.18" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="111.1" cy="153.48" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="139.95" cy="165.95" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="150.04" cy="168.92" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="160.3" cy="172.13" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="124.92" cy="178.18" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="115.31" cy="174" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="105.94" cy="169.29" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="134.79" cy="181.77" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="144.88" cy="184.73" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="155.14" cy="187.08" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="120.44" cy="194.2" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="110.83" cy="190.02" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="101.45" cy="185.32" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="130.3" cy="197.79" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="140.39" cy="200.75" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="150.65" cy="203.1" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="111.75" cy="224.7" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="102.08" cy="220.59" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="92.76" cy="215.78" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="121.65" cy="228.2" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="131.72" cy="231.14" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="141.96" cy="233.56" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="116.19" cy="209.23" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="106.58" cy="205.04" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="97.2" cy="200.34" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="126.05" cy="212.82" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="136.14" cy="215.78" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="146.4" cy="218.12" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="116.46" cy="243.89" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="106.65" cy="240.26" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="97.2" cy="235.91" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="126.49" cy="246.79" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="136.68" cy="249.15" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="120.15" cy="262.58" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="110.39" cy="259.26" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="100.88" cy="255.44" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="130.09" cy="265.14" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="115.62" cy="277.83" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="105.65" cy="274.55" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="96.18" cy="270.07" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="125.85" cy="280.18" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="120.62" cy="295.7" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="110.43" cy="293.18" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="100.71" cy="289.25" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="115.85" cy="310.92" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="105.53" cy="308.14" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+      </g>
+      <g>
+        <circle cx="326.32" cy="162.36" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="335.93" cy="158.18" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="345.31" cy="153.48" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="316.46" cy="165.95" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="306.37" cy="168.92" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="296.11" cy="172.13" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="331.48" cy="178.18" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="341.09" cy="174" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="350.47" cy="169.29" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="321.62" cy="181.77" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="311.53" cy="184.73" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="301.27" cy="187.08" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="335.97" cy="194.2" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="345.58" cy="190.02" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="354.96" cy="185.32" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="326.11" cy="197.79" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="316.01" cy="200.75" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="305.76" cy="203.1" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="344.66" cy="224.7" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="354.33" cy="220.59" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="363.65" cy="215.78" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="334.75" cy="228.2" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="324.69" cy="231.14" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="314.45" cy="233.56" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="340.22" cy="209.23" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="349.83" cy="205.04" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="359.21" cy="200.34" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="330.36" cy="212.82" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="320.26" cy="215.78" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="310.01" cy="218.12" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="339.95" cy="243.89" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="349.76" cy="240.26" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="359.21" cy="235.91" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="329.92" cy="246.79" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="319.73" cy="249.15" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="336.26" cy="262.58" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="346.02" cy="259.26" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="355.52" cy="255.44" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="326.32" cy="265.14" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="340.79" cy="277.83" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="350.76" cy="274.55" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="360.23" cy="270.07" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="330.55" cy="280.18" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="335.78" cy="295.7" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="345.98" cy="293.18" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="355.7" cy="289.25" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="340.56" cy="310.92" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="350.88" cy="308.14" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+      </g>
+      <g>
+        <circle cx="228.2" cy="195.93" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="228.2" cy="228.09" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="228.2" cy="261.15" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="228.2" cy="293.41" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="228.2" cy="326.6" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="228.2" cy="359.06" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="222.81" cy="212.52" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="191.36" cy="176.68" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="201.82" cy="177.75" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="212.31" cy="178.51" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="222.81" cy="178.93" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="185.62" cy="193.46" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="196.08" cy="194.53" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="206.56" cy="195.29" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="217.07" cy="195.71" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="181.09" cy="209.07" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="191.55" cy="210.38" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="202.03" cy="211.35" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="212.29" cy="212.07" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="217.56" cy="227.83" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="175.85" cy="224.38" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="186.31" cy="225.69" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="196.79" cy="226.66" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="207.05" cy="227.38" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="222.97" cy="244.36" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="212.33" cy="244.09" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="170.61" cy="240.65" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="181.07" cy="241.96" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="191.56" cy="242.93" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="201.82" cy="243.64" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="217.56" cy="260.91" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="206.92" cy="260.45" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="165.21" cy="256.55" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="175.67" cy="258.22" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="186.15" cy="259.26" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="196.41" cy="259.87" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="222.92" cy="277.16" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="212.28" cy="276.93" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="201.64" cy="276.46" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="170.38" cy="274.23" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="180.87" cy="275.27" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="217.64" cy="293.33" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="207" cy="293.09" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="196.36" cy="292.62" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="165.1" cy="289.78" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="175.59" cy="291.23" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="185.85" cy="292.04" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="222.91" cy="310.01" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="212.35" cy="309.56" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="201.71" cy="309.23" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="191.07" cy="308.77" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="170.3" cy="306.95" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="180.56" cy="308.18" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="217.53" cy="326.63" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="206.96" cy="326.15" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="196.6" cy="325.65" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="185.68" cy="324.91" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="143.97" cy="319.09" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="154.42" cy="321.47" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="164.91" cy="323.09" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="175.17" cy="324.33" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="222.97" cy="342.83" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="212.3" cy="342.41" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="201.73" cy="341.96" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="191.37" cy="341.49" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="180.45" cy="340.74" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="138.74" cy="334.62" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="149.26" cy="337.01" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="159.68" cy="338.38" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="169.94" cy="339.86" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="217.8" cy="359.15" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="207.24" cy="358.71" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="196.87" cy="358.23" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="185.96" cy="357.49" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="144.24" cy="351.36" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="154.76" cy="353.75" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="165.19" cy="355.13" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="175.44" cy="356.6" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="191.13" cy="275.88" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="159.93" cy="272.56" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="154.65" cy="288.17" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="149.36" cy="302.94" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="159.81" cy="305.33" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="228.2" cy="195.93" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="228.2" cy="228.09" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="228.2" cy="261.15" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="228.2" cy="293.41" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="228.2" cy="326.6" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="228.2" cy="359.06" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="233.6" cy="212.52" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="265.04" cy="176.68" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="254.59" cy="177.75" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="244.1" cy="178.51" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="233.6" cy="178.93" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="270.78" cy="193.46" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="260.33" cy="194.53" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="249.84" cy="195.29" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="239.34" cy="195.71" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="275.31" cy="209.07" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="264.86" cy="210.38" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="254.37" cy="211.35" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="244.11" cy="212.07" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="238.84" cy="227.83" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="280.56" cy="224.38" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="270.1" cy="225.69" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="259.62" cy="226.66" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="249.36" cy="227.38" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="233.44" cy="244.36" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="244.08" cy="244.09" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="285.79" cy="240.65" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="275.34" cy="241.96" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="264.85" cy="242.93" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="254.59" cy="243.64" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="238.84" cy="260.91" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="249.48" cy="260.45" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="291.2" cy="256.55" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="280.74" cy="258.22" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="270.26" cy="259.26" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="260" cy="259.87" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="233.48" cy="277.16" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="244.13" cy="276.93" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="254.76" cy="276.46" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="286.02" cy="274.23" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="275.54" cy="275.27" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="238.77" cy="293.33" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="249.41" cy="293.09" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="260.05" cy="292.62" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="291.31" cy="289.78" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="280.82" cy="291.23" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="270.56" cy="292.04" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="233.49" cy="310.01" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="244.06" cy="309.56" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="254.7" cy="309.23" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="265.34" cy="308.77" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="286.11" cy="306.95" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="275.85" cy="308.18" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="238.88" cy="326.63" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="249.45" cy="326.15" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="259.81" cy="325.65" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="270.72" cy="324.91" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="312.44" cy="319.09" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="301.98" cy="321.47" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="291.5" cy="323.09" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="281.24" cy="324.33" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="233.43" cy="342.83" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="244.11" cy="342.41" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="254.67" cy="341.96" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="265.04" cy="341.49" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="275.95" cy="340.74" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="317.67" cy="334.62" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="307.15" cy="337.01" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="296.73" cy="338.38" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="286.47" cy="339.86" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="238.61" cy="359.15" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="249.17" cy="358.71" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="259.53" cy="358.23" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="270.45" cy="357.49" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="312.16" cy="351.36" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="301.65" cy="353.75" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="291.22" cy="355.13" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="280.96" cy="356.6" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="265.28" cy="275.88" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="296.48" cy="272.56" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="301.76" cy="288.17" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="307.05" cy="302.94" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <circle cx="296.59" cy="305.33" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+      </g>
+    </g>
+    <g>
+      <g>
+        <g>
+          <circle cx="130.19" cy="381.42" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+          <circle cx="138.94" cy="387.28" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+          <circle cx="148.42" cy="391.97" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+          <circle cx="168.26" cy="399.33" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+          <circle cx="158.24" cy="395.92" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+          <circle cx="178.47" cy="402.13" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+          <circle cx="188.86" cy="403.84" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+          <circle cx="135.1" cy="401.08" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+          <circle cx="144.02" cy="406.24" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+          <circle cx="153.5" cy="410.4" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+          <circle cx="173.26" cy="416.65" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+          <circle cx="163.31" cy="413.83" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+          <circle cx="183.35" cy="418.91" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+          <circle cx="193.56" cy="420.4" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        </g>
+        <g>
+          <circle cx="326.22" cy="381.42" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+          <circle cx="317.46" cy="387.28" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+          <circle cx="307.98" cy="391.97" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+          <circle cx="288.14" cy="399.33" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+          <circle cx="298.16" cy="395.92" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+          <circle cx="277.94" cy="402.13" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+          <circle cx="267.55" cy="403.84" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+          <circle cx="321.31" cy="401.08" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+          <circle cx="312.39" cy="406.24" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+          <circle cx="302.91" cy="410.4" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+          <circle cx="283.15" cy="416.65" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+          <circle cx="293.1" cy="413.83" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+          <circle cx="273.05" cy="418.91" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+          <circle cx="262.85" cy="420.4" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        </g>
+      </g>
+      <g>
+        <g>
+          <g>
+            <circle cx="383.25" cy="233.33" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+            <circle cx="382.38" cy="244.1" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+            <circle cx="381.65" cy="254.73" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+            <circle cx="396.46" cy="245.17" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+            <circle cx="395.74" cy="255.58" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+            <circle cx="395.29" cy="266.31" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+          </g>
+          <g>
+            <circle cx="372.68" cy="324.54" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+            <circle cx="367.52" cy="333.8" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+            <circle cx="362.36" cy="342.78" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+            <circle cx="382.2" cy="335.26" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+            <circle cx="377.04" cy="344.53" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+            <circle cx="388.8" cy="354.84" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+            <circle cx="371.88" cy="353.51" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+            <circle cx="382.49" cy="363.57" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+          </g>
+          <g>
+            <circle cx="383.59" cy="282.75" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+            <circle cx="395.23" cy="295.28" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+            <circle cx="392.36" cy="305.59" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+            <circle cx="389.74" cy="315.91" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+            <circle cx="382.33" cy="293.46" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+            <circle cx="380.24" cy="303.89" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+          </g>
+          <g>
+            <circle cx="383.79" cy="179.11" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+            <circle cx="396.14" cy="205.82" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+            <circle cx="382.78" cy="190.39" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+            <circle cx="382.32" cy="201.27" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+            <circle cx="382.27" cy="211.99" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+            <circle cx="395.38" cy="216.95" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+          </g>
+        </g>
+        <g>
+          <g>
+            <circle cx="73.15" cy="233.33" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+            <circle cx="74.03" cy="244.1" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+            <circle cx="74.75" cy="254.73" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+            <circle cx="59.94" cy="245.17" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+            <circle cx="60.67" cy="255.58" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+            <circle cx="61.12" cy="266.31" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+          </g>
+          <g>
+            <circle cx="83.73" cy="324.54" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+            <circle cx="88.89" cy="333.8" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+            <circle cx="94.05" cy="342.78" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+            <circle cx="74.2" cy="335.26" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+            <circle cx="79.36" cy="344.53" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+            <circle cx="67.61" cy="354.84" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+            <circle cx="84.52" cy="353.51" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+            <circle cx="73.92" cy="363.57" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+          </g>
+          <g>
+            <circle cx="72.82" cy="282.75" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+            <circle cx="61.17" cy="295.28" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+            <circle cx="64.04" cy="305.59" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+            <circle cx="66.67" cy="315.91" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+            <circle cx="74.08" cy="293.46" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+            <circle cx="76.17" cy="303.89" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+          </g>
+          <g>
+            <circle cx="72.61" cy="179.11" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+            <circle cx="60.27" cy="205.82" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+            <circle cx="73.63" cy="190.39" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+            <circle cx="74.08" cy="201.27" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+            <circle cx="74.13" cy="211.99" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+            <circle cx="61.03" cy="216.95" r="5.16" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g id="Text">
+    <g>
+      <text transform="translate(19.05 199.64) rotate(90)" style="font-family: MyriadPro-Bold, &apos;Myriad Pro&apos;; font-size: 7.62px; font-weight: 700;"><tspan x="0" y="0">L1A</tspan></text>
+      <text transform="translate(19.05 248.67) rotate(90)" style="font-family: MyriadPro-Bold, &apos;Myriad Pro&apos;; font-size: 7.62px; font-weight: 700;"><tspan x="0" y="0">L1B</tspan></text>
+      <text transform="translate(19.05 297.82) rotate(90)" style="font-family: MyriadPro-Bold, &apos;Myriad Pro&apos;; font-size: 7.62px; font-weight: 700;"><tspan x="0" y="0">L1C</tspan></text>
+      <text transform="translate(20.42 368.68) rotate(78.97)" style="font-family: MyriadPro-Bold, &apos;Myriad Pro&apos;; font-size: 7.62px; font-weight: 700;"><tspan x="0" y="0">L1C</tspan></text>
+      <text transform="translate(432.89 199.64) rotate(90)" style="font-family: MyriadPro-Bold, &apos;Myriad Pro&apos;; font-size: 7.62px; font-weight: 700;"><tspan x="0" y="0">L1A</tspan></text>
+      <text transform="translate(432.89 248.67) rotate(90)" style="font-family: MyriadPro-Bold, &apos;Myriad Pro&apos;; font-size: 7.62px; font-weight: 700;"><tspan x="0" y="0">L1B</tspan></text>
+      <text transform="translate(432.89 297.82) rotate(90)" style="font-family: MyriadPro-Bold, &apos;Myriad Pro&apos;; font-size: 7.62px; font-weight: 700;"><tspan x="0" y="0">L1C</tspan></text>
+      <text transform="translate(433.24 381.12) rotate(-76.37)" style="font-family: MyriadPro-Bold, &apos;Myriad Pro&apos;; font-size: 7.62px; font-weight: 700;"><tspan x="0" y="0">L1C</tspan></text>
+    </g>
+    <g>
+      <g>
+        <path d="M19.36,431.72h1.17v4.16h2.04v.97h-3.21v-5.13Z"/>
+        <path d="M27.66,434.24c0,1.68-1.02,2.7-2.52,2.7s-2.41-1.15-2.41-2.61c0-1.54.98-2.69,2.5-2.69s2.44,1.18,2.44,2.6ZM23.95,434.3c0,1,.47,1.71,1.25,1.71s1.23-.75,1.23-1.74c0-.92-.44-1.71-1.24-1.71s-1.24.75-1.24,1.74ZM25.66,430.51l.69.94h-.75l-.33-.48h-.02l-.33.48h-.75l.69-.94h.81ZM27.53,429.89l-1.02.87h-.55l.58-.87h.99Z"/>
+        <path d="M29.59,431.72v5.13h-1.17v-5.13h1.17Z"/>
+        <path d="M33.06,436.86l-1.65-5.13h1.27l.62,2.17c.18.61.33,1.2.46,1.83h.02c.13-.62.29-1.23.46-1.81l.65-2.19h1.23l-1.73,5.13h-1.35Z"/>
+        <path d="M37.48,435.54l-.37,1.32h-1.2l1.57-5.13h1.52l1.59,5.13h-1.25l-.4-1.32h-1.47ZM38.16,430.51l.64.92h-.93l-.93-.92h1.22ZM38.78,434.67l-.32-1.09c-.09-.3-.18-.69-.26-.99h-.02c-.08.3-.15.69-.24.99l-.3,1.09h1.13Z"/>
+        <path d="M45.79,434.24c0,1.68-1.02,2.7-2.52,2.7s-2.41-1.15-2.41-2.61c0-1.54.98-2.69,2.5-2.69s2.44,1.18,2.44,2.6ZM42.08,434.3c0,1,.47,1.71,1.25,1.71s1.23-.75,1.23-1.74c0-.92-.44-1.71-1.24-1.71s-1.24.75-1.24,1.74Z"/>
+        <path d="M15.09,439.72h1.15v2.27h.02c.11-.2.24-.38.35-.56l1.17-1.71h1.42l-1.7,2.19,1.79,2.95h-1.36l-1.26-2.22-.44.54v1.67h-1.15v-5.13Z"/>
+        <path d="M20.93,439.72v1.97h1.91v-1.97h1.16v5.13h-1.16v-2.15h-1.91v2.15h-1.17v-5.13h1.17Z"/>
+        <path d="M26.17,439.72v2.95c0,.88.34,1.33.93,1.33s.94-.43.94-1.33v-2.95h1.16v2.88c0,1.58-.8,2.34-2.14,2.34s-2.06-.72-2.06-2.35v-2.86h1.16Z"/>
+        <path d="M31.79,443.66c.31.16.79.32,1.29.32.53,0,.81-.22.81-.56s-.24-.5-.86-.72c-.85-.3-1.41-.77-1.41-1.51,0-.88.73-1.55,1.94-1.55.58,0,1.01.12,1.31.26l-.26.94c-.21-.1-.57-.24-1.07-.24s-.75.23-.75.5c0,.33.29.47.95.72.91.34,1.33.81,1.33,1.53,0,.86-.66,1.59-2.07,1.59-.59,0-1.17-.15-1.45-.31l.24-.96Z"/>
+        <path d="M40.56,442.24c0,1.68-1.02,2.7-2.52,2.7s-2.41-1.15-2.41-2.61c0-1.54.98-2.69,2.5-2.69s2.44,1.18,2.44,2.6ZM36.85,442.3c0,1,.47,1.71,1.25,1.71s1.23-.75,1.23-1.74c0-.92-.44-1.71-1.24-1.71s-1.24.75-1.24,1.74ZM38.56,438.51l.69.94h-.75l-.34-.48h-.02l-.33.48h-.75l.69-.94h.81ZM40.43,437.89l-1.02.87h-.55l.58-.87h.99Z"/>
+        <path d="M42.86,439.72h1.17v4.16h2.04v.97h-3.21v-5.13Z"/>
+        <path d="M49.8,442.69h-1.89v1.22h2.11v.95h-3.27v-5.13h3.17v.95h-2v1.07h1.89v.94ZM48.14,439.37c.11-.34.37-.4.37-.66,0-.14-.1-.23-.22-.23-.14,0-.27.15-.34.26l-.37-.22c.18-.35.46-.6.93-.6.41,0,.74.3.74.65,0,.45-.37.53-.58.91l-.53-.11Z"/>
+      </g>
+      <text transform="translate(204.57 540.59)" style="font-family: MyriadPro-Bold, &apos;Myriad Pro&apos;; font-size: 7.62px; font-weight: 700;"><tspan x="0" y="0" style="letter-spacing: -.04em;">L</tspan><tspan x="3.6" y="0">ỐI ĐI CHUNG</tspan></text>
+      <g>
+        <path d="M410.86,431.72h1.17v4.16h2.04v.97h-3.21v-5.13Z"/>
+        <path d="M419.16,434.24c0,1.68-1.02,2.7-2.52,2.7s-2.41-1.15-2.41-2.61c0-1.54.98-2.69,2.5-2.69s2.44,1.18,2.44,2.6ZM415.45,434.3c0,1,.47,1.71,1.25,1.71s1.23-.75,1.23-1.74c0-.92-.44-1.71-1.24-1.71s-1.24.75-1.24,1.74ZM417.16,430.51l.69.94h-.75l-.33-.48h-.02l-.33.48h-.75l.68-.94h.81ZM419.03,429.89l-1.02.87h-.55l.58-.87h.99Z"/>
+        <path d="M421.09,431.72v5.13h-1.17v-5.13h1.17Z"/>
+        <path d="M424.56,436.86l-1.65-5.13h1.27l.62,2.17c.18.61.34,1.2.46,1.83h.02c.13-.62.29-1.23.46-1.81l.65-2.19h1.23l-1.73,5.13h-1.35Z"/>
+        <path d="M428.98,435.54l-.37,1.32h-1.2l1.57-5.13h1.52l1.59,5.13h-1.25l-.4-1.32h-1.47ZM429.66,430.51l.64.92h-.93l-.93-.92h1.22ZM430.28,434.67l-.32-1.09c-.09-.3-.18-.69-.26-.99h-.02c-.08.3-.15.69-.24.99l-.3,1.09h1.13Z"/>
+        <path d="M437.29,434.24c0,1.68-1.02,2.7-2.52,2.7s-2.41-1.15-2.41-2.61c0-1.54.98-2.69,2.5-2.69s2.44,1.18,2.44,2.6ZM433.58,434.3c0,1,.47,1.71,1.25,1.71s1.23-.75,1.23-1.74c0-.92-.44-1.71-1.24-1.71s-1.24.75-1.24,1.74Z"/>
+        <path d="M400.56,439.72h1.15v2.27h.02c.12-.2.24-.38.35-.56l1.17-1.71h1.42l-1.7,2.19,1.79,2.95h-1.36l-1.26-2.22-.44.54v1.67h-1.15v-5.13Z"/>
+        <path d="M406.4,439.72v1.97h1.91v-1.97h1.16v5.13h-1.16v-2.15h-1.91v2.15h-1.16v-5.13h1.16Z"/>
+        <path d="M411.64,439.72v2.95c0,.88.34,1.33.93,1.33s.94-.43.94-1.33v-2.95h1.16v2.88c0,1.58-.8,2.34-2.14,2.34s-2.05-.72-2.05-2.35v-2.86h1.16Z"/>
+        <path d="M417.25,443.66c.31.16.79.32,1.29.32.53,0,.82-.22.82-.56s-.24-.5-.86-.72c-.85-.3-1.41-.77-1.41-1.51,0-.88.73-1.55,1.94-1.55.58,0,1.01.12,1.31.26l-.26.94c-.21-.1-.57-.24-1.07-.24s-.75.23-.75.5c0,.33.29.47.95.72.91.34,1.33.81,1.33,1.53,0,.86-.66,1.59-2.07,1.59-.59,0-1.17-.15-1.45-.31l.24-.96Z"/>
+        <path d="M426.02,442.24c0,1.68-1.02,2.7-2.52,2.7s-2.41-1.15-2.41-2.61c0-1.54.98-2.69,2.5-2.69s2.44,1.18,2.44,2.6ZM422.32,442.3c0,1,.47,1.71,1.25,1.71s1.23-.75,1.23-1.74c0-.92-.44-1.71-1.24-1.71s-1.24.75-1.24,1.74ZM424.02,438.51l.69.94h-.75l-.34-.48h-.02l-.33.48h-.75l.68-.94h.81ZM425.9,437.89l-1.02.87h-.55l.58-.87h.99Z"/>
+        <path d="M432.09,444.71c-.21.11-.69.22-1.32.22-1.77,0-2.69-1.1-2.69-2.57,0-1.75,1.25-2.73,2.8-2.73.6,0,1.06.12,1.26.23l-.24.92c-.24-.1-.56-.19-.97-.19-.92,0-1.64.56-1.64,1.7,0,1.03.61,1.67,1.64,1.67.35,0,.74-.08.97-.17l.18.91Z"/>
+        <path d="M434.02,439.72v1.97h1.91v-1.97h1.16v5.13h-1.16v-2.15h-1.91v2.15h-1.17v-5.13h1.17Z"/>
+        <path d="M439.3,443.54l-.37,1.32h-1.2l1.57-5.13h1.52l1.59,5.13h-1.25l-.4-1.32h-1.47ZM439.51,438.6c.05.2.22.36.56.36s.51-.14.57-.36h.51c-.05.49-.42.94-1.1.94s-1.02-.41-1.07-.94h.53ZM439.01,438.38c0-.48.23-.81.62-.81.2,0,.34.07.5.15.12.07.24.13.33.13.12,0,.18-.06.2-.3h.53c.02.62-.22.88-.62.88-.21,0-.36-.09-.52-.17-.14-.07-.21-.11-.3-.11-.11,0-.17.1-.18.23h-.55ZM440.6,442.67l-.32-1.09c-.09-.3-.18-.69-.26-.99h-.02c-.08.3-.15.69-.24.99l-.3,1.09h1.13Z"/>
+        <path d="M443.1,444.86v-5.13h1.36l1.07,1.88c.3.54.61,1.18.84,1.76h.02c-.08-.68-.1-1.37-.1-2.14v-1.5h1.07v5.13h-1.22l-1.1-1.98c-.3-.55-.64-1.21-.89-1.81h-.02c.03.69.04,1.41.04,2.25v1.55h-1.07Z"/>
+      </g>
+    </g>
+    <g>
+      <g>
+        <text transform="translate(173.38 177.94)" style="font-family: MyriadPro-Bold, &apos;Myriad Pro&apos;; font-size: 8.95px; font-weight: 700;"><tspan x="0" y="0">A</tspan></text>
+        <text transform="translate(167.98 193.99)" style="font-family: MyriadPro-Bold, &apos;Myriad Pro&apos;; font-size: 8.95px; font-weight: 700;"><tspan x="0" y="0">B</tspan></text>
+        <text transform="translate(163.49 209.4)" style="font-family: MyriadPro-Bold, &apos;Myriad Pro&apos;; font-size: 8.95px; font-weight: 700;"><tspan x="0" y="0">C</tspan></text>
+        <text transform="translate(158.31 225.16)" style="font-family: MyriadPro-Bold, &apos;Myriad Pro&apos;; font-size: 8.95px; font-weight: 700;"><tspan x="0" y="0">D</tspan></text>
+        <text transform="translate(153.3 241.27)" style="font-family: MyriadPro-Bold, &apos;Myriad Pro&apos;; font-size: 8.95px; font-weight: 700;"><tspan x="0" y="0">E</tspan></text>
+        <text transform="translate(148.03 257.09)" style="font-family: MyriadPro-Bold, &apos;Myriad Pro&apos;; font-size: 8.95px; font-weight: 700;"><tspan x="0" y="0">F</tspan></text>
+        <text transform="translate(137.95 288.05)" style="font-family: MyriadPro-Bold, &apos;Myriad Pro&apos;; font-size: 8.95px; font-weight: 700;"><tspan x="0" y="0">H</tspan></text>
+        <text transform="translate(131.69 303.1)" style="font-family: MyriadPro-Bold, &apos;Myriad Pro&apos;; font-size: 8.95px; font-weight: 700;"><tspan x="0" y="0">I</tspan></text>
+        <text transform="translate(126.86 318.53)" style="font-family: MyriadPro-Bold, &apos;Myriad Pro&apos;; font-size: 8.95px; font-weight: 700;"><tspan x="0" y="0">J</tspan></text>
+        <text transform="translate(121.89 334.44)" style="font-family: MyriadPro-Bold, &apos;Myriad Pro&apos;; font-size: 8.95px; font-weight: 700;"><tspan x="0" y="0">K</tspan></text>
+        <text transform="translate(127.87 353.16)" style="font-family: MyriadPro-Bold, &apos;Myriad Pro&apos;; font-size: 8.95px; font-weight: 700;"><tspan x="0" y="0">L</tspan></text>
+        <text transform="translate(142.05 272.5)" style="font-family: MyriadPro-Bold, &apos;Myriad Pro&apos;; font-size: 8.95px; font-weight: 700;"><tspan x="0" y="0">G</tspan></text>
+      </g>
+      <g>
+        <text transform="translate(283.03 193.99)" style="font-family: MyriadPro-Bold, &apos;Myriad Pro&apos;; font-size: 8.95px; font-weight: 700;"><tspan x="0" y="0">B</tspan></text>
+        <text transform="translate(287.59 209.4)" style="font-family: MyriadPro-Bold, &apos;Myriad Pro&apos;; font-size: 8.95px; font-weight: 700;"><tspan x="0" y="0">C</tspan></text>
+        <text transform="translate(291.88 225.16)" style="font-family: MyriadPro-Bold, &apos;Myriad Pro&apos;; font-size: 8.95px; font-weight: 700;"><tspan x="0" y="0">D</tspan></text>
+        <text transform="translate(298.33 241.27) scale(.87 1)" style="font-family: MyriadPro-Bold, &apos;Myriad Pro&apos;; font-size: 8.95px; font-weight: 700;"><tspan x="0" y="0">E</tspan></text>
+        <text transform="translate(303.66 257.09)" style="font-family: MyriadPro-Bold, &apos;Myriad Pro&apos;; font-size: 8.95px; font-weight: 700;"><tspan x="0" y="0">F</tspan></text>
+        <text transform="translate(312.29 288.05)" style="font-family: MyriadPro-Bold, &apos;Myriad Pro&apos;; font-size: 8.95px; font-weight: 700;"><tspan x="0" y="0">H</tspan></text>
+        <text transform="translate(322.17 303.1)" style="font-family: MyriadPro-Bold, &apos;Myriad Pro&apos;; font-size: 8.95px; font-weight: 700;"><tspan x="0" y="0">I</tspan></text>
+        <text transform="translate(325.88 318.53)" style="font-family: MyriadPro-Bold, &apos;Myriad Pro&apos;; font-size: 8.95px; font-weight: 700;"><tspan x="0" y="0">J</tspan></text>
+        <text transform="translate(328.98 334.44)" style="font-family: MyriadPro-Bold, &apos;Myriad Pro&apos;; font-size: 8.95px; font-weight: 700;"><tspan x="0" y="0">K</tspan></text>
+        <text transform="translate(323.97 353.16)" style="font-family: MyriadPro-Bold, &apos;Myriad Pro&apos;; font-size: 8.95px; font-weight: 700;"><tspan x="0" y="0">L</tspan></text>
+        <text transform="translate(308.25 272.5)" style="font-family: MyriadPro-Bold, &apos;Myriad Pro&apos;; font-size: 8.95px; font-weight: 700;"><tspan x="0" y="0">G</tspan></text>
+        <text transform="translate(277.16 177.94)" style="font-family: MyriadPro-Bold, &apos;Myriad Pro&apos;; font-size: 8.95px; font-weight: 700;"><tspan x="0" y="0">A</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -30,11 +30,7 @@ const SeatMap = () => {
         };
 
         const floorArr = [
-          {
-            id: 0,
-            floor: 1,
-            comp: SeatMapF1,
-          },
+          { id: 0, floor: 1, comp: SeatMapF1 },
           { id: 1, floor: 2, comp: SeatMapF2 },
           { id: 2, floor: 3, comp: SeatMapF3 },
         ];
